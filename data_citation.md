@@ -1,1 +1,1 @@
-
+Storing and sharing data via NeMO Archive can help support data tracking and citing by providing unique identifiers for each dataset in your manuscript. This practice allows for the tracking of specific datasets when these datasets are used in future publications. Unique identifiers also align with FAIR Principles (Paper: Wilkinson et al.), a growing effort to "improve the findability, accessibility, interoperability, and reuse of digital assets."
