@@ -27,7 +27,7 @@ The user may also click on one of the pre-defined queries on the left hand side 
 
 The NeMO Data Portal provides a simple faceted search query to help identify data of interest. The data page has a faceted search box on the left where the user may select one or more of the facets to filter down the samples of interest (See #1 in figure). On the top is the search box that dynamically shows the query being generated when the users selects or deselects a particular facet (See #2 in figure). On the right is a summary section that shows the summary of the currently selected data organized using different attributes (See #3 in figure).
 
-![NeMO data landing page](site_figures/nemo_data_portal/nemo-data-landing-page.png)
+![NeMO data landing page](images/nemo_data_portal/nemo-data-landing-page.png)
 
 All the pre-configured facets are shown in the facets panel. Facets can be attributes associated with samples, attributes such as projects, studies, organisms, or attributes specific to files, such as file types or formats. These are organized as two tabs in the Facet Panel, the **Samples** tab and the **Files** tab. The facets are organized into categories, for instance here the sample facet categories are *Projects* and *Studies*. The numbers next to the facet entries point to the number of samples that are associated with this particular attribute. For instance in the figure above, 48 samples were of the "methylation" modality type. As you click on the facets the page dynamically updates the number of samples, files, and data volume that match the selected criteria.
 
