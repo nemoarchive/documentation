@@ -4,17 +4,17 @@ To get started with this tutorial, it is recommended that Steps 1 - 3 are follow
 
 For this example we will start with the four files from the shopping cart as picture below.
 
-![shopping cart image](site_figures/nemo_data_portal/nemo-shopping-cart-details.png)
+![shopping cart image](images/nemo_data_portal/nemo-shopping-cart-details.png)
 
 The data portal has been designed to optimize bulk data downloads. Although the user can use the URLs to download individual files, we recommend that users use the bulk downloading capability. Bulk downloads are accomplished by creating a file manifest of the items in the cart. This file manifest can be used in conjunction with the [Portal Client](https://github.com/IGS/portal_client) or you may write a simple command line script to iterate over the manifest file to download the data.
 
 Click on the shopping cart icon in the top-right of the screen to view the contents of the shopping cart. The details include a summary of the contents including the file count, and the data volume. In addition it gives a listing of the files with some details (See Figure below).
 
-![Shopping cart display](site_figures/nemo_data_portal/nemo-shopping-cart-details.png)
+![Shopping cart display](images/nemo_data_portal/nemo-shopping-cart-details.png)
 
 The user can download the manifest file(s) which includes the information needed by the [Portal Client](https://github.com/IGS/portal_client) to fetch the data from NeMO. There are two manifest files associated with the items in the cart, the file manifest and the file metadata manifest. The file manifest has the information needed to download the files including the unique ID of the file, the MD5 check sum if available, the file size, the URL(s), and the unique ID of the sample that this file is associated with. The metadata manifest has all the metadata information associated with the samples. In this case the file includes the study name, the sample name, the unique sample ID, the BioProject ID for this study, and the overall project name. This unique sample ID in the metadata manifest can be used to correlate the samples with specific files. Please note that one sample may be associated with one or more files.
 
-![Download manifest files](site_figures/nemo_data_portal/nemo-download-manifest.png)
+![Download manifest files](images/nemo_data_portal/nemo-download-manifest.png)
 
 Click on the **Download->File-Manifest** menu item (see highlighted box in Figure above) to download the manifest file to the local computer. You may also optionally download the sample metadata associated with the files in the manifest by downloading the **Sample Metadata** file.
 

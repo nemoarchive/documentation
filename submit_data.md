@@ -8,7 +8,7 @@ There may be instances where some of the data is restricted, for instance the ra
 
 Once data is submitted to NeMO we perform basic quality checks to ensure that that the MD5 checksums are valid, and that all the related files are present. Once this criteria is met we move these files to the public area where users can use the tools at NeMO to browse and download the files. Before we can make this data searchable through the portal we need for users to submit the metadata to the BCDC which will allow us to make this data searchable through the NeMO Data Portal. The figure below shows the data flow at the NeMO Archive. It can typically can take between few days to a few weeks for processing and moving data between each of the data stores.
 
-![NeMO Data Model](site_figures/nemo_data_portal/nemo-ingest-data-flow-diagram.png)
+![NeMO Data Model](images/nemo_data_portal/nemo-ingest-data-flow-diagram.png)
 
 Links found in this section:
 

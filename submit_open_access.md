@@ -94,6 +94,6 @@ b71aacdabe99a51474ba84fa03ec61ec  my_lab/chromatin/sncell/processed/C
 
 Data submitted to NeMO is placed in a special "incoming" holding area while the data is being reviewed for quality control. While in this area, the submitted data is still browsable using the Aspera web interface. Please point your web browser to [https://aspera.nemoarchive.org](https://aspera.nemoarchive.org). After logging in with your NeMO Archive credentials, you may be prompted to download and install a web browser plugin. Please follow the directions. If you have installed the browser plugin correctly, you will be able to navigate up and down the filesystem structure with the interface that is presented, which should look very similar to the figure below:
 
-![Aspera Web Interface](site_figures/aspera_web_interface.png)
+![Aspera Web Interface](images/aspera_web_interface.png)
 
 Presently, the Aspera web interface is the only way to browse submitted data before it has been released.
