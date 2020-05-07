@@ -1,3 +1,5 @@
+# Under construction
+
 Storing and sharing data via NeMO Archive can help support data tracking and citing by providing unique identifiers for each dataset in your manuscript. This practice allows for the tracking of specific datasets when these datasets are used in future publications. Unique identifiers also align with FAIR Principles (Paper: Wilkinson et al.), a growing effort to "improve the findability, accessibility, interoperability, and reuse of digital assets."
 
 
@@ -41,3 +43,11 @@ External-Description: (Short description of study).
 External-Identifier: (Descriptive title of data - few words). 
 
 display data on nemo analytics https://github.com/nemoarchive/host-data-on-nemo/wiki/Display-manuscript-data-on-NeMO-Analytics
+
+
+From MAM:  I think in the “Organize manuscript” section, we’d really like to promote the addition of descriptive metadata that would enhance the data’s reuse and search ability.  I notice that you now have an expanded set of metadata fields available, so we would want to make sure that we encourage the investigators to provide lists of collaborators, descriptive titles and dataset descriptions.  We can then populate the section you have on data citation with this information and best practices.
+
+I have prepared a few documents that cover aspects of these:
+
+BICCN guide to data and resource citation:  https://docs.google.com/document/d/10OCVrKwzPCgdEcmxF1Bf0hX02XpqjbZS3a-z37BbnWk/edit#heading=h.qur7g0r306i0
+Here is a QC document that I have regarding dataset metadata for the SPARC consortium:  https://docs.google.com/spreadsheets/d/1EmNkgIBVefTsi-RPAtRb7KGu-v1KiMhWbm0v-0mVVUY/edit#gid=0
