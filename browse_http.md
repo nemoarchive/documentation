@@ -1,39 +1,57 @@
 # HTTP Data Browsing
 
-We have established a [HTTP server-based](http://data.nemoarchive.org) browse and download feature at NeMO. This document describes the data organization at the data browser.
+An HTTP server-based browser is available at [data.nemoarchive.org/](http://data.nemoarchive.org/). This document describes directory organization within the NeMO HTTP data browser.
 
-Data Organization
+![http browser](https://github.com/nemoarchive/documentation/blob/master/images/HTTP_browser.png)
 
-The data is organized in NeMO by projects. Within each project the data is organized by grant, lab where data was generated, the organism, or the assay type. See the directory structure shown below.
+The top, or root, level of the HTTP browser separates data based on project or release: 
+* projects:
+ * `biccc/` contains data generated within the BRAIN Initiative Cell Census Consortium, precursor to the BICCN
+ * `biccn/` contains data generated as part of the ongoing [BRAIN Initiative Cell Census Network](https://biccn.org/)
+ * `other/` In addition to hosting BRAIN Initiative data, the NeMO repository also hosts 'omics data from other neuroscience projects. Contact us if you would like to discuss submission of your dataset(s) to the NeMO Archives.
+* releases:
+ * `nemo_release/` contains a [bdbag] (link tbd) corresponding to each quarterly NeMO release. NeMO releases are synchronized to the same release schedule as the BCDC release schedule. These bags contain BICCN data only (need to double check on this)
+ * `publication_release/` contains one or more [bdbags] (link tbd) corresponding to dataset(s) analyzed for BICCN-associated publications. See Data citation for more information.
+
+Within each project, data is organized by 1) grant, 2) lab where data was generated, 3) organism, or 4) assay type. An example of the biccn project area is shown here:
+
 ```
-├── biccn
-│   ├── assay
-│   │   ├── chromatin
-│   │   ├── methylation
-│   │   └── transcriptome
-│   ├── grant
-│   │   ├── cemba
-│   │   ├── devhu
-│   │   ├── feng
-│   │   ├── huang
-│   │   └── zeng
-│   ├── lab
-│   │   ├── callaway
-│   │   ├── ecker
-│   │   ├── macosko
-│   │   ├── regev
-│   │   └── zeng
-│   └── organism
-│       ├── human
-│       ├── marmoset
-│       └── mouse
-└── other
-    └── grant
-        └── epigenome_roadmap
+biccn
+├── assay
+│   ├── chromatin
+│   ├── methylation
+│   └── transcriptome
+├── grant
+│   ├── cemba
+│   ├── devhu
+│   ├── feng
+│   ├── huang 
+│   ├── lein
+│   ├── zeng
+│   └── zhang
+├── lab
+│   ├── anderson
+│   ├── arlotta
+│   ├── callaway
+│   ├── ecker
+│   ├── feng
+│   ├── kriegstein
+│   ├── lein
+│   ├── linnarsson
+│   ├── macosko
+│   ├── regev
+│   ├── tolias
+│   └── zeng
+└── organism
+    ├── human
+    ├── marmoset
+    └── mouse
 ```
 
-Within each of these top level categories, data is organized by other dimensions. For instance within the lab directory data may be organized by modality, while within the organism directory the data is organized by grant.
+Symlinks are used to organize data across these 4 top level directories, therefore the same data is accessible from each entry point, simply organized in different ways. For example, the lab directory data is organized next by modality, while the organism directory is organized next by grant.
 
-Data can be downloaded from NeMO HTTP Download using tools that support http downloads.
+Restricted data is not yet available via the HTTP Browser.
+
+Data can be downloaded from the NeMO HTTP Browser using any tools that support http downloads.
 
 
