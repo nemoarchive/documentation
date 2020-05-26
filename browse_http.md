@@ -1,8 +1,9 @@
 # HTTP Data Browsing
 
-An HTTP server-based browser is available at [data.nemoarchive.org/](http://data.nemoarchive.org/). This document describes directory organization within the NeMO HTTP data browser.
+An HTTP server-based browser is available at [data.nemoarchive.org/](http://data.nemoarchive.org/). This document describes directory organization within the NeMO HTTP data browser.  
+&nbsp;  
 
-![http browser](https://github.com/nemoarchive/documentation/blob/master/images/HTTP_browser.png)
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/HTTP_browser.png" width=35% align=center>
 
 The top, or root, level of the HTTP browser separates data based on project or release: 
 * projects:
@@ -10,7 +11,7 @@ The top, or root, level of the HTTP browser separates data based on project or r
  * `biccn/` contains data generated as part of the ongoing [BRAIN Initiative Cell Census Network](https://biccn.org/)
  * `other/` In addition to hosting BRAIN Initiative data, the NeMO repository also hosts 'omics data from other neuroscience projects. Contact us if you would like to discuss submission of your dataset(s) to the NeMO Archives.
 * releases:
- * `nemo_release/` contains a [bdbag] (link tbd) corresponding to each quarterly NeMO release. NeMO releases are synchronized to the same release schedule as the BCDC release schedule. These bags contain BICCN data only (need to double check on this)
+ * `nemo_release/` contains a [bdbag] (link tbd) corresponding to each quarterly NeMO release. NeMO releases are synchronized to the same release schedule as the BCDC release schedule. These bags contain BICCN data only. 
  * `publication_release/` contains one or more [bdbags] (link tbd) corresponding to dataset(s) analyzed for BICCN-associated publications. See Data citation for more information.
 
 Within each project, data is organized by 1) grant, 2) lab where data was generated, 3) organism, or 4) assay type. An example of the biccn project area is shown here:
