@@ -1,5 +1,18 @@
 # Accessing Restricted Data
 
+In addition to the public data available via the NeMO HTTP Browser and the NeMO Data Portal, the archives also host a number of restricted datasets. Here you will find available datasets, instructions for requesting access preliminary download account instructions.
+
+### Restricted Datasets
+
+| Dataset | PI | Description | Funding Source |
+|---------|----|-------------|----------------|
+|Shen_TBD | Yin Shen | 3D Epigenomic Characterization Reveals Insights Into Gene Regulation and Lineage Specification During Corticogenesis |     |
+|CIRM_TBD | Steve McCarroll | Genetic neuroscience: How human genes and alleles shape neuronal phenotypes |   |
+|cross_areal (not yet available)| Ed Lein | To investigate cellular diversity across human cortex, nuclei were sampled from several regions from postmortem and neurosurgical (MTG region only) donor brains. Nuclei were dissociated and sorted using the neuronal marker NeuN, and expression was profiled with SMART-Seq v4.| BICCN |
+|multimodal (not yet available)| Ed Lein | A multimodal atlas of human brain cell types" includes sample data targeting two cell types that show species differences between mouse and human. First, it includes a detailed transcriptomic, morphological, and electrophysiological characterization of cell types in layer 1 of human middle temporal gyrus, focusing primarily on different inhibitory cell types. This project also includes gene expression data collected from nuclei in layer 5 of human fronto-insula, with a goal of identifying transcriptomic signatures of Von Economo neurons. Control samples collected as part of the same experiment are also included in the data set.| BICCN |
+|human variation (not yet available)| Ed Lein | Transcriptomic variation in cortical cells across human individuals was assessed by profiling nuclei from cortical tissue from neurosurgical donors using droplet-based single nucleus RNA-sequencing. Nuclei were dissociated and sorted using the neuronal marker NeuN, and expression was profiled with 10x Genomics Chromium v3.|  |
+
+
 ### Obtaining NDA Approval
 
 Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archives (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. We regret to inform you that prior dbGap access authorization does not transfer to NDA, therefore a separate NDA access request will need to be submitted.
@@ -13,7 +26,7 @@ The steps required for restricted data access are as follows:
 
 <img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA_requestacct.png" width=35% align=center> <img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_createacct.png" width=35% align=center>
 
-2) Log in to the NDA Permissions Dashboard, and navigate to Get Data --> Request Data Access. 
+2) Log in to the [NDA Permissions Dashboard](https://nda.nih.gov/), and navigate to Get Data --> Request Data Access. 
 
 *insert screenshot of dashboard - need to get from NDA*
 
