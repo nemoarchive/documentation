@@ -1,6 +1,6 @@
-# Accessing Restricted Data
+# Accessing Controlled Access Data
 
-In addition to the public data available via the NeMO HTTP Browser and the NeMO Data Portal, the archives also host a number of restricted datasets. Here you will find available datasets, instructions for requesting access preliminary download account instructions.
+In addition to the public data available via the NeMO HTTP Browser and the NeMO Data Portal, the archives also host a number of restricted, or controlled access, datasets. Here you will find available datasets, instructions for requesting access preliminary download account instructions.
 
 ### Restricted Datasets
 
@@ -18,7 +18,7 @@ In addition to the public data available via the NeMO HTTP Browser and the NeMO 
 
 ### Obtaining NDA Approval
 
-Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archives (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. We regret to inform you that prior dbGap access authorization does not transfer to NDA, therefore a separate NDA access request will need to be submitted.
+Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. We regret to inform you that prior dbGaP access authorization does not transfer to NDA, therefore a separate NDA access request will need to be submitted.
 
 NDA provides a [tutorial on accessing shared NIMH data here](https://nda.nih.gov/training/module?trainingModuleId=training.access&slideId=slide.access.intro). Note that only the first few steps of this tutorial are applicable in this case, as data is being stored at NeMO, rather than at NIMH. 
 
@@ -29,17 +29,31 @@ The steps required for restricted data access are as follows:
 
 <img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA_requestacct.png" width=35% align=center> <img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_createacct.png" width=35% align=center>
 
-2) Log in to the [NDA Permissions Dashboard](https://nda.nih.gov/), and navigate to Get Data --> Request Data Access. 
+2) Log in to the [NDA Permissions Dashboard](https://nda.nih.gov/user/dashboard/data_permissions.html).  
 
-*insert screenshot of dashboard - need to get from NDA*
+3) Identify the relevant BRAIN/NeMO Data Archives dataset(s). To the right is an 'Actions' dropdown. Select "Request Access".
 
-3) Identify the relevant BRAIN Data Archives dataset(s). To the right is an 'Actions' dropdown. Select "Request Access".
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_dashboard.jpeg">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_permission_grps.jpeg">
 
-*insert screenshot of dropdown - need to get from NDA*
+4) This will open the Data Access Request Tool where you can enter the title of your research, your Research Data Use Statement, and the contact information for you and your collaborators. You will also select the Signing Official at your research institution from a drop down list.  
 
-4) This will trigger generation of pdf Data Use Certification (DUC) form, which must be filled in, complete with signatures by ***both*** investigator and institution signing official. Submit completed DUC form to NDA.
+You must work at a research institution that has an active [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.  
+Data access requests for controlled access permission groups should include a Research Data Use Statement that appropriately addresses consent-based data use limitations for that permission group.  All BRAIN/NeMO datasets are listed in the NDA Controlled Access Permission Group table.  Look at the “Data Use Limitations” field to determine if there are consent-based data use limitations to which authorized researchers must adhere.  
 
-5) NDA will inform investigators and NeMO of final acess decision, at which time NeMO will reach out to all investigators and collaborators included on the access request. NeMO will grant data access to investigator for ***one year***, after which investigators will need to reply. 
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/req_access.jpeg">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/req_details.jpeg">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/auth_inst.jpeg">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/other_recip.jpeg">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_agreement.jpeg">
+
+5) Download and sign the Data Use Certification PDF from the Data Access Request Tool and complete with signatures by both investigator and institutional Signing Official. [Contact the NDA Help Desk](Email to: ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.  
+
+6) Log into the NDA Permissions Dashboard and upload the signed DUC on the “Active Requests” section on the top of the NDA Permissions Dashboard.  
+
+7)	Your data access request will be reviewed by an NIH Data Access Committee (DAC).  
+
+8) NDA will inform investigators and NeMO of a final access decision, at which time NeMO will reach out to all investigators and collaborators included on the access request. NeMO will grant data access to investigator for ***one year***, after which investigators will need to reapply for access using the process described above. 
 
 ### Creating an institutional google account
 
