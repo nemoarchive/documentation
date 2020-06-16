@@ -6,13 +6,9 @@ In addition to the public data available via the NeMO HTTP Browser and the NeMO 
 
 | Dataset | PI | Description | Funding Source |
 |---------|----|-------------|----------------|
-|Shen_TBD | Yin Shen | 3D Epigenomic Characterization Reveals Insights Into Gene Regulation and Lineage Specification During Corticogenesis |     |
-|CIRM_TBD | Steve McCarroll | Genetic neuroscience: How human genes and alleles shape neuronal phenotypes |   |
-|cross_areal (not yet available)| Ed Lein | To investigate cellular diversity across human cortex, nuclei were sampled from several regions from postmortem and neurosurgical (MTG region only) donor brains. Nuclei were dissociated and sorted using the neuronal marker NeuN, and expression was profiled with SMART-Seq v4.| BICCN |
-|multimodal (not yet available)| Ed Lein | A multimodal atlas of human brain cell types" includes sample data targeting two cell types that show species differences between mouse and human. First, it includes a detailed transcriptomic, morphological, and electrophysiological characterization of cell types in layer 1 of human middle temporal gyrus, focusing primarily on different inhibitory cell types. This project also includes gene expression data collected from nuclei in layer 5 of human fronto-insula, with a goal of identifying transcriptomic signatures of Von Economo neurons. Control samples collected as part of the same experiment are also included in the data set.| BICCN |
-|human variation (not yet available)| Ed Lein | Transcriptomic variation in cortical cells across human individuals was assessed by profiling nuclei from cortical tissue from neurosurgical donors using droplet-based single nucleus RNA-sequencing. Nuclei were dissociated and sorted using the neuronal marker NeuN, and expression was profiled with 10x Genomics Chromium v3.|  |
+|Shen_3D_epigenome | Yin Shen | Cell type-specific 3D epigenomes in the developing human cortex: Here, we analyze cis-regulatory chromatin interactions, open chromatin peaks, and transcriptomes for radial glia, intermediate progenitor cells, excitatory neurons, and interneurons isolated from mid-gestational human cortex samples. |     |      |
 |kriegstein_sc_10x| Arnold Kriegstein | A Cellular Resolution Census of the Developing Human Brain.  | BICCN |
-|lein_lein_pseq_tx | Ed Lein | Triple modality (electrophysiology, morphology and transcriptomics) Patch-seq analysis of excitatory and inhibitory neurons in neurosurgically resected human cortical tissues | BICCN | 
+|lein_lein_pseq_tx | Ed Lein | A multimodal atlas of human brain cell types: Transcriptomic profiles of individual human cortical neurons were assayed by the SMART-seq v4 single nucleus RNA-seq method following acute brain slice patch-clamp electrophysiology recordings and nucleus extraction—i.e. the Patch-seq method.  Surgically-resected brain tissue specimens were collected with patient consent and in the course of neurosurgical procedures for tumor removal or for treatment of epilepsy.  De-identified patient metadata were also collected and accompany the dataset comprised of 318 human cortical neurons from the temporal>frontal>parietal lobes of 56 unique donors. | BICCN | Other, Brain in health & disease |
 
 
 
@@ -33,7 +29,7 @@ The steps required for restricted data access are as follows:
 
 3) Identify the relevant BRAIN/NeMO Data Archives dataset(s). To the right is an 'Actions' dropdown. Select "Request Access".
 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_dashboard.jpeg">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/dashboard.jpeg">
 <img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_permission_grps.jpeg">
 
 4) This will open the Data Access Request Tool where you can enter the title of your research, your Research Data Use Statement, and the contact information for you and your collaborators. You will also select the Signing Official at your research institution from a drop down list.  
