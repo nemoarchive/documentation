@@ -1,8 +1,9 @@
 # Accessing Controlled Access Data
 
-In addition to the public data available via the NeMO HTTP Browser and the NeMO Data Portal, the archives also host a number of restricted, or controlled access, datasets. Here you will find available datasets, instructions for requesting access preliminary download account instructions.
+In addition to the public data available via the NeMO HTTP Browser and the NeMO Data Portal, the archives also host a number of restricted, or controlled access, datasets. Here you will find available datasets, instructions for requesting access, and preliminary download account instructions.
 
 ### Restricted Datasets
+The following datasets will be the initial sets made available for controlled access. Additional datasets will be added as we receive Institutional Certification documents. If you think your dataset is missing, please contact hhuot@som.umaryland.edu. 
 
 | Dataset | PI | Description | Funding Source |
 |---------|----|-------------|----------------|
