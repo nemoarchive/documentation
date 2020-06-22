@@ -44,7 +44,7 @@ Data access requests for controlled access permission groups should include a Re
 <img src="https://github.com/nemoarchive/documentation/blob/master/images/other_recip.jpeg">
 <img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_agreement.jpeg">
 
-5) Download and sign the Data Use Certification PDF from the Data Access Request Tool and complete with signatures by both investigator and institutional Signing Official. [Contact the NDA Help Desk](Email to: ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.  
+5) Download and sign the Data Use Certification PDF from the Data Access Request Tool and complete with signatures by both investigator and institutional Signing Official. [Contact the NDA Help Desk](mailto:ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.  
 
 6) Log into the NDA Permissions Dashboard and upload the signed DUC on the “Active Requests” section on the top of the NDA Permissions Dashboard.  
 
