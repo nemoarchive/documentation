@@ -24,25 +24,25 @@ The steps required for restricted data access are as follows:
 1)	[Create an NDA account](https://nda.nih.gov/user/create_account.html)  
 **NDA ACCOUNT REQUESTS MUST BE MADE USING AN INSTITUTIONAL EMAIL ADDRESS**. Account requests made from a personal account will not be honored by NeMO and will therefore greatly slow down the process of accessing data. 
 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA_requestacct.png" width=35% align=center> <img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_createacct.png" width=35% align=center>
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA_requestacct.png" alt="NDA request account" width=35% align=center> <img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_createacct.png" alt="NDA create account" width=35% align=center>
 
 2) Log in to the [NDA Permissions Dashboard](https://nda.nih.gov/user/dashboard/data_permissions.html).  
 
 3) Identify the relevant BRAIN/NeMO Data Archives dataset(s). To the right is an 'Actions' dropdown. Select "Request Access".
 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/dashboard.jpeg">
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_permission_grps.jpeg">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/dashboard.jpeg" alt="NDA dashboard overview">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_permission_grps.jpeg" alt="NDA permissions groups">
 
 4) This will open the Data Access Request Tool where you can enter the title of your research, your Research Data Use Statement, and the contact information for you and your collaborators. You will also select the Signing Official at your research institution from a drop down list.  
 
 You must work at a research institution that has an active [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.  
 Data access requests for controlled access permission groups should include a Research Data Use Statement that appropriately addresses consent-based data use limitations for that permission group.  All BRAIN/NeMO datasets are listed in the NDA Controlled Access Permission Group table.  Look at the “Data Use Limitations” field to determine if there are consent-based data use limitations to which authorized researchers must adhere.  
 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/req_access.jpeg">
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/req_details.jpeg">
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/auth_inst.jpeg">
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/other_recip.jpeg">
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_agreement.jpeg">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/req_access.jpeg" alt="NDA request access">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/req_details.jpeg" alt="NDA request access details">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/auth_inst.jpeg" alt="NDA authorized institute">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/other_recip.jpeg" alt="NDA other access recipients">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_agreement.jpeg" alt="NDA agreement">
 
 5) Download and sign the Data Use Certification PDF from the Data Access Request Tool and complete with signatures by both investigator and institutional Signing Official. [Contact the NDA Help Desk](mailto:ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.  
 
@@ -60,8 +60,8 @@ Any consented user wishing to download data must create a google account at [mya
 
 If you are ***not*** currently logged in as a google user, select "Create a Google Account" at the bottom of the screen. If you ***are*** currently logged in as a google user, you can select "Use Another Account" and then "Create Account". When creating an account, you should see an option to use a current email address instead of creating an @gmail.com address. Be sure to select this and sign up with your institutional email address. Following remaining prompts to create your account.
 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/google_newuser.png" width=35% align=center> <img src="https://github.com/nemoarchive/documentation/blob/master/images/google_currentuser.png" width=35% align=center>
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/google_curremail.png" width=35% align=center> <img src="https://github.com/nemoarchive/documentation/blob/master/images/google_instacct.png" width=35% align=center>
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/google_newuser.png" alt="google new user account set up" width=35% align=center> <img src="https://github.com/nemoarchive/documentation/blob/master/images/google_currentuser.png" alt="google current user new account set up" width=35% align=center>
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/google_curremail.png" alt="google account add email" width=35% align=center> <img src="https://github.com/nemoarchive/documentation/blob/master/images/google_instacct.png" alt="google account institutional email" width=35% align=center>
 
 
 Documentation on accessing data through google cloud platform is coming soon.
