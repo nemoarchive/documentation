@@ -52,9 +52,9 @@ Data access requests for controlled access permission groups should include a Re
 
 8) NDA will inform investigators and NeMO of a final access decision, at which time NeMO will reach out to all investigators and collaborators included on the access request. NeMO will grant data access to investigator for ***one year***, after which investigators will need to reapply for access using the process described above. 
 
-### Creating an institutional google account
+### Creating an institutional Google account
 
-Consented data will be available from NeMO through the Google cloud platform (gcp). ***Please read the following carefully:***
+Consented data will be available from NeMO through Google Cloud Platform (gcp). ***Please read the following carefully:***
 
 Any consented user wishing to download data must create a google account at [myaccount.google.com/](https://myaccount.google.com/), **USING THE SAME INSTITUTIONAL EMAIL ADDRESS USED FOR NDA ACCOUNT CREATION**. 
 
