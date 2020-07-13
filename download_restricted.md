@@ -23,7 +23,8 @@ Permissions for restricted data access at NeMO are being facilitated by the [NIM
 
 #### 2) Log in to the [NDA Permissions Dashboard](https://nda.nih.gov/user/dashboard/data_permissions.html).  
 
-#### 3) Identify the relevant BRAIN/NeMO Data Archives dataset(s). To the right is an 'Actions' dropdown. Select "Request Access".  
+#### 3) Identify dataset of interest  
+Identify the relevant BRAIN/NeMO Data Archives dataset(s). To the right is an 'Actions' dropdown. Select "Request Access".  
 &nbsp;&nbsp;&nbsp;&nbsp;**You must work at a research institution that has an active [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.**
 
 <img src="https://github.com/nemoarchive/documentation/blob/master/images/dashboard.jpeg" alt="NDA dashboard overview">
