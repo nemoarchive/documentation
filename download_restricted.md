@@ -14,7 +14,7 @@ The following datasets will be the initial sets made available for controlled ac
 
 ## Obtaining NDA Approval
 
-Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an [SOP for institutionally sponsored data access requests here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access. Users having previously been granted dbGap access for NeMO associated datasets should be contacted individually, and can proceed to [creation of an institutional google account](#-creating-an-institutional-google-account). 
+Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an [SOP for institutionally sponsored data access requests here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access. Users having previously been granted dbGap access for NeMO associated datasets should be contacted individually, and can proceed to [creation of an institutional google account](#creating-an-institutional-google-account). 
 
 #### 1) [Create an NDA account](https://nda.nih.gov/user/create_account.html)  
 &nbsp;&nbsp;&nbsp;&nbsp;**NDA ACCOUNT REQUESTS MUST BE MADE USING AN INSTITUTIONAL EMAIL ADDRESS**. Account requests made from a personal account will not be honored by NeMO and will therefore greatly slow down the process of accessing data. 
