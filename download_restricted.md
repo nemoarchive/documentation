@@ -10,62 +10,65 @@ The following datasets will be the initial sets made available for controlled ac
 |Shen_3D_epigenome | Yin Shen | Cell type-specific 3D epigenomes in the developing human cortex: Here, we analyze cis-regulatory chromatin interactions, open chromatin peaks, and transcriptomes for radial glia, intermediate progenitor cells, excitatory neurons, and interneurons isolated from mid-gestational human cortex samples. |     |      |
 |kriegstein_sc_10x| Arnold Kriegstein | A Cellular Resolution Census of the Developing Human Brain.  | BICCN |
 |lein_lein_pseq_tx | Ed Lein | A multimodal atlas of human brain cell types: Transcriptomic profiles of individual human cortical neurons were assayed by the SMART-seq v4 single nucleus RNA-seq method following acute brain slice patch-clamp electrophysiology recordings and nucleus extraction—i.e. the Patch-seq method.  Surgically-resected brain tissue specimens were collected with patient consent and in the course of neurosurgical procedures for tumor removal or for treatment of epilepsy.  De-identified patient metadata were also collected and accompany the dataset comprised of 318 human cortical neurons from the temporal>frontal>parietal lobes of 56 unique donors. | BICCN | Other, Brain in health & disease |  
-
+{empty} +
+{empty} +
 
 ## Obtaining NDA Approval
 
 Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an [SOP for institutionally sponsored data access requests here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access. Users having previously been granted dbGap access for NeMO associated datasets should be contacted individually, and can proceed to [creation of an institutional google account](#creating-an-institutional-google-account). 
 
-### 1) [Create an NDA account](https://nda.nih.gov/user/create_account.html)  
-&nbsp;&nbsp;&nbsp;&nbsp;**NDA ACCOUNT REQUESTS MUST BE MADE USING AN INSTITUTIONAL EMAIL ADDRESS**. Account requests made from a personal account will not be honored by NeMO and will therefore greatly slow down the process of accessing data. 
+### 1) Create an NDA account
+[Create an NDA account here](https://nda.nih.gov/user/create_account.html). **NDA ACCOUNT REQUESTS MUST BE MADE USING AN INSTITUTIONAL EMAIL ADDRESS**. Account requests made from a personal account will not be honored by NeMO and will therefore greatly slow down the process of accessing data. 
 
 <img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA_requestacct.png" alt="NDA request account" width=35% align=center> <img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_createacct.png" alt="NDA create account" width=35% align=center>
 
-### 2) Log in to the [NDA Permissions Dashboard](https://nda.nih.gov/user/dashboard/data_permissions.html).  
+### 2) Identify Datasets through the NDA Dashboard
+Log in to the [NDA Permissions Dashboard](https://nda.nih.gov/user/dashboard/data_permissions.html). Here you can identify relevant BRAIN/NeMO Data Archives dataset(s) within the NDA Controlled Access Permission Group table of the dashboard. To the right is an 'Actions' dropdown. Select "Request Access".  
+**You must work at a research institution that has an active [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.** 
 
-### 3) Identify dataset of interest  
-&nbsp;&nbsp;&nbsp;&nbsp;Identify the relevant BRAIN/NeMO Data Archives dataset(s). To the right is an 'Actions' dropdown. Select "Request Access". **You must work at a research institution that has an active [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.**
-
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/dashboard.jpeg" alt="NDA dashboard overview">
 <img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_permission_grps.jpeg" alt="NDA permissions groups">
 
-### 4) Data Access Request Tool. 
-&nbsp;&nbsp;&nbsp;&nbsp;This will open the Data Access Request Tool where you will enter a) the title of your research and Research Data Use Statement, b) the Signing Official at your research institution, and c) contact information for you and your collaborators*. Please carefully review the following screenshots with directions for properly filling out all sections of the request tool.
+### 3) Data Access Request Tool   
+This will open the Data Access Request Tool where you will enter a) the title of your research and Research Data Use Statement, b) the Signing Official at your research institution, and c) contact information for you and your collaborators. Please carefully review the following screenshots with directions for properly filling out all sections of the request tool.
 
 #### Request Access Instructions Page:
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/req_access.jpeg" alt="NDA request access">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/req_access.jpeg" alt="NDA request access">
 
 #### Research Data Use Statement:  
-&nbsp;&nbsp;&nbsp;&nbsp;Data access requests for controlled access permission groups should include a Research Data Use Statement that appropriately addresses consent-based data use limitations for that permission group.  All BRAIN/NeMO datasets are listed in the NDA Controlled Access Permission Group table.  Look at the “Data Use Limitations” field to determine if there are consent-based data use limitations to which authorized researchers must adhere. 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/req_details.jpeg" alt="NDA request access details">
+Data access requests for controlled access permission groups should include a Research Data Use Statement that appropriately addresses consent-based data use limitations for that permission group.  All BRAIN/NeMO datasets are listed in the NDA Controlled Access Permission Group table.  Look at the “Data Use Limitations” field to determine if there are consent-based data use limitations to which authorized researchers must adhere.  
+
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/req_details.jpeg" alt="NDA request access details">
 
 #### Authorized Research Institute:  
-&nbsp;&nbsp;&nbsp;&nbsp;**You must work at a research institution that has an active [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.** The signing official(s) associated with your institution will automatically appear as a selectable option. 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/auth_inst.jpeg" alt="NDA authorized institute">
+**You must work at a research institution that has an active [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.** The signing official(s) associated with your institution will automatically appear as a selectable option.  
+
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/auth_inst.jpeg" alt="NDA authorized institute">
 
 #### Other Access Recipients:
-&nbsp;&nbsp;&nbsp;&nbsp;**Each data access application should be restricted to users from a single institution.** If you have collaborators at other organizations, they must submit a separate data access application, **WITH THE FOLLOWING IMPORTANT EXCEPTION:**  
-**Contact information MUST include the following NeMO account in order to ensure that NeMO receives notification of your access approval:** Heather Creasy, hhuot@som.umaryland.edu. You can add this by using the 'Search for users outside yout institution' function.  
+**Each data access application should be restricted to users from a single institution.** If you have collaborators at other organizations, they must submit a separate data access application, **WITH THE FOLLOWING IMPORTANT EXCEPTION:**  
+**Contact information MUST include the following NeMO account in order to ensure that NeMO receives notification of your access approval:** Heather Creasy, hhuot@som.umaryland.edu. You can add this by using the 'Search for users outside your institution' function.  
 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/other_recip.jpeg" alt="NDA other access recipients">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/other_recip.jpeg" alt="NDA other access recipients">
 
-### 5) Download Data Use Certificate (DUC)
-&nbsp;&nbsp;&nbsp;&nbsp;Download and sign the Data Use Certification PDF from the Data Access Request Tool and complete with signatures by both investigator and institutional Signing Official. [Contact the NDA Help Desk](mailto:ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.  
+### 4) Download Data Use Certificate (DUC)
+Download and sign the Data Use Certification PDF from the Data Access Request Tool and complete with signatures by both investigator and institutional Signing Official. [Contact the NDA Help Desk](mailto:ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.  
 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/nda_agreement.jpeg" alt="NDA agreement">  
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/DUC_saved.jpg" alt="DUC saved">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/nda_agreement.jpeg" alt="NDA agreement">  
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/DUC_saved.jpg" alt="DUC saved">
 
-### 6) Upload signed DUC 
-&nbsp;&nbsp;&nbsp;&nbsp;Log into the NDA Permissions Dashboard and upload the signed DUC on the “Active Requests” section on the top of the NDA Permissions Dashboard.  
+### 5) Upload signed DUC 
+Log into the NDA Permissions Dashboard and upload the signed DUC on the “Active Requests” section on the top of the NDA Permissions Dashboard.  
 
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA_active_request.jpg" alt="Active requests">  
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA_Upload_DUC.jpg" alt="Upload DUC">  
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/NAR_upload_DUC_agreemt.jpg" alt="Upload DUC agreement">
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/NDA_active_request.jpg" alt="Active requests">  
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/NDA_Upload_DUC.jpg" alt="Upload DUC">  
+<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/NAR_upload_DUC_agreemt.jpg" alt="Upload DUC agreement">
 
-### 7)	Your data access request will be reviewed by an NIH Data Access Committee (DAC).  
+### 6)	Your data access request will be reviewed by an NIH Data Access Committee (DAC).  
 
-### 8) Access request decision
-&nbsp;&nbsp;&nbsp;&nbsp;NDA will inform investigators and NeMO of a final access decision, at which time NeMO will reach out to all investigators and collaborators included on the access request. It is critical that the NeMO account indicated above be included in your original DUC submission, in order for NeMO to receive notification of your request approval. NeMO will grant data access to investigator for ***one year***, after which investigators will need to reapply for access using the process described above. 
+### 7) Access request decision
+NDA will inform investigators and NeMO of a final access decision, at which time NeMO will reach out to all investigators and collaborators included on the access request. It is critical that the NeMO account indicated above be included in your original DUC submission in order for NeMO to receive notification of your request approval. NeMO will grant data access to investigator for ***one year***, after which investigators will need to reapply for access using the process described above. 
+{empty} +
+{empty} +
 
 ## Creating an institutional Google account
 
