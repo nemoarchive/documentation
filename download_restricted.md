@@ -14,7 +14,7 @@ The following datasets will be the initial sets made available for controlled ac
 
 ## Obtaining NDA Approval
 
-Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an [SOP for institutionally sponsored data access requests here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access. Users having previously been granted dbGap access for NeMO associated datasets should be contacted individually, and can proceed to [creation of an institutional google account](https://github.com/nemoarchive/documentation/blob/master/download_restricted.md#creating-an-institutional-google-account). 
+Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an [SOP for institutionally sponsored data access requests here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access. Users having previously been granted dbGap access for NeMO associated datasets should be contacted individually, and can proceed to [creation of an institutional google account](#creating-an-institutional-google-account). 
 
 ### 1) [Create an NDA account](https://nda.nih.gov/user/create_account.html)  
 &nbsp;&nbsp;&nbsp;&nbsp;**NDA ACCOUNT REQUESTS MUST BE MADE USING AN INSTITUTIONAL EMAIL ADDRESS**. Account requests made from a personal account will not be honored by NeMO and will therefore greatly slow down the process of accessing data. 
@@ -67,7 +67,7 @@ Permissions for restricted data access at NeMO are being facilitated by the [NIM
 ### 8) Access request decision
 &nbsp;&nbsp;&nbsp;&nbsp;NDA will inform investigators and NeMO of a final access decision, at which time NeMO will reach out to all investigators and collaborators included on the access request. It is critical that the NeMO account indicated above be included in your original DUC submission, in order for NeMO to receive notification of your request approval. NeMO will grant data access to investigator for ***one year***, after which investigators will need to reapply for access using the process described above. 
 
-## Creating an institutional Google account
+## Creating an institutional Google account {: #creating-an-institutional-google-account }
 
 Consented data will be available from NeMO through Google Cloud Platform (gcp). ***Please read the following carefully:***
 
