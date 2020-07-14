@@ -11,8 +11,8 @@ The following datasets will be the initial sets made available for controlled ac
 |kriegstein_sc_10x| Arnold Kriegstein | A Cellular Resolution Census of the Developing Human Brain.  | BICCN |
 |lein_lein_pseq_tx | Ed Lein | A multimodal atlas of human brain cell types: Transcriptomic profiles of individual human cortical neurons were assayed by the SMART-seq v4 single nucleus RNA-seq method following acute brain slice patch-clamp electrophysiology recordings and nucleus extraction—i.e. the Patch-seq method.  Surgically-resected brain tissue specimens were collected with patient consent and in the course of neurosurgical procedures for tumor removal or for treatment of epilepsy.  De-identified patient metadata were also collected and accompany the dataset comprised of 318 human cortical neurons from the temporal>frontal>parietal lobes of 56 unique donors. | BICCN | Other, Brain in health & disease |   
   
-{empty} +
-{empty} +
+  
+  
 ## Obtaining NDA Approval
 
 Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an [SOP for institutionally sponsored data access requests here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access. Users having previously been granted dbGap access for NeMO associated datasets should be contacted individually, and can proceed to [creation of an institutional google account](#creating-an-institutional-google-account). 
@@ -66,9 +66,9 @@ Log into the NDA Permissions Dashboard and upload the signed DUC on the “Activ
 ### 6)	Your data access request will be reviewed by an NIH Data Access Committee (DAC).  
 
 ### 7) Access request decision
-NDA will inform investigators and NeMO of a final access decision, at which time NeMO will reach out to all investigators and collaborators included on the access request. It is critical that the NeMO account indicated above be included in your original DUC submission in order for NeMO to receive notification of your request approval. NeMO will grant data access to investigator for ***one year***, after which investigators will need to reapply for access using the process described above. 
-{empty} +
-{empty} +
+NDA will inform investigators and NeMO of a final access decision, at which time NeMO will reach out to all investigators and collaborators included on the access request. It is critical that the NeMO account indicated above be included in your original DUC submission in order for NeMO to receive notification of your request approval. NeMO will grant data access to investigator for ***one year***, after which investigators will need to reapply for access using the process described above.  
+  
+  
 
 ## Creating an institutional Google account
 
