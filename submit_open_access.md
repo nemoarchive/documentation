@@ -81,8 +81,10 @@ submission.tar.gz
                 └── D
 ```
 
+
 ## Current file extension list
 The NeMO ingest scripts allow the file extensions [listed here](file_extensions). If you will be submitting extensions not currently on tihs list, please let us know ahead of time, if possible, to avoid processing delays. 
+
 
 
 ## Uploading Data using Aspera <a name="aspera"></a>
@@ -110,6 +112,7 @@ Uploading a directory of files would not require any changes as Aspera will reco
 
 ```$ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:/biccn/grant/cemba/ecker/```
 
+
 ## MD5 Checksum Format <a name="md5-checksum"></a>
 The checksum file must be named "md5sums.txt" (all lower case, with Unix line endings). It should be placed in the root of the tarball submission. File format is to be compatible with the standard `md5sum` utility, that is:
 
@@ -123,6 +126,8 @@ b71aacdabe99a51474ba84fa03ec61ec  my_lab/chromatin/sncell/processed/C
 4253c8c3af0c12a9188f5342841d4ec9  my_lab/chromatin/bulk/raw/B
 ```
 
+
+## Confirming Submitted Data
 Data submitted to NeMO is placed in a special "incoming" holding area while the data is being reviewed for quality control. While in this area, the submitted data is still browsable using the Aspera web interface. Please point your web browser to [https://aspera.nemoarchive.org](https://aspera.nemoarchive.org). After logging in with your NeMO Archive credentials, you may be prompted to download and install a web browser plugin. Please follow the directions. If you have installed the browser plugin correctly, you will be able to navigate up and down the filesystem structure with the interface that is presented, which should look very similar to the figure below:
 
 ![Aspera Web Interface](images/aspera_web_interface.png)
