@@ -1,8 +1,9 @@
 Data submissions to NeMO include the submission of the raw sequence files as well as derived intermediate files such as BAM files, and analyzed results including counts and cluster information. In addition, data submitters also submit metadata associated with the data to BCDC.
 
-Presently data submissions are accomplished by uploading data to the archive using Aspera. See the instructions to install the [Aspera client](Install-Aspera-Client). To upload data to NeMO you will need credentials, which can be obtained by completing the [account request form](https://nemoarchive.org/register.php).
+Presently data submissions are accomplished by uploading data to the archive using Aspera. To install Aspera, please go to the Aspera website and download the [Aspera CLI Client](http://downloads.asperasoft.com/en/downloads/62). Once installed, you should have the ascp utility available to you. Instructions for uploading data using Aspera are [continued below](#aspera).
+To upload data to NeMO you will need credentials, which can be obtained by completing the [account request form](https://nemoarchive.org/register.php).
 
-To make the data easily findable by end users we have established a consistent directory structure for the projects and studies in the repository that is shown in the figure below. We request that you please adhere to the same directory structure for your data. Please create this directory structure and place files where necessary before uploading. You do not need to include directories that will be empty.
+To make the data easily findable by end users we have established a consistent directory structure for the projects and studies in the repository that is shown in the figure below. We request that you please adhere to the same directory structure for your data. Please create this directory structure and place files where necessary *before* uploading. You do not need to include directories that will be empty.
 
 ```
 biccn
@@ -79,6 +80,36 @@ submission.tar.gz
             └── raw
                 └── D
 ```
+
+## Current file extension list
+The NeMO ingest scripts allow the file extensions [listed here](file_extensions). If you will be submitting extensions not currently on tihs list, please let us know ahead of time, if possible, to avoid processing delays. 
+
+
+## Uploading Data using Aspera <a name="aspera"></a>
+Once the Aspera client has been successfully installed, transfers to and from the NeMO Aspera server can be executed with your NeMO username and password. Commands to initiate an upload will result in a prompt for your password.
+
+Uploading with the aspera client uses the following syntax:
+
+```$ ascp [-l <Maximum upload speed>] [-k 2] [-m <Minimum upload speed>] [-Q] [-T] \
+    <path to local file or directory> <username>@aspera.nemoarchive.org \
+    /path/to/NeMO/grant/directory/
+```
+
+All parameters between the [ ... ] brackets are optional parameters described below:
+
+    l - Allows for the user to set a maximum upload/download speed that aspera should attempt to stay at or below for the duration of the transfer. A speed in Megabits must be provided with this flag.
+    k - Allow for resumable data transmission in case an interruption occurs.
+    m - Allows for the user to set a minimum upload/download sped that aspera should attempt to stay at or above for the duration of the transfer. A speed in Megabits must be provided with this flag.
+    Q - Turns adaptive rate on. Adaptive rate controls the speed of aspera with a goal of not dominating the bandwidth available. Very useful on busy networks that may have other transfers ongoing.
+    T - Turns encryption off. Turning encryption off will allow for a maximum throughput transfer but should not be provided if data being uploaded is sensitive.
+
+In the following example, my_data.tar.gz is being transferred to the Ecker lab's repository, within the cemba grant:
+```$ ascp -l 100M -k 2 -QT /home/user/my_data/my_data.tar.gz user123@aspera.nemoarchive.org:/biccn/grant/cemba/ecker/```
+
+Uploading a directory of files would not require any changes as Aspera will recognize that a folder is being transferred and will recursively step through ensuring that all files found in the directory are transferred.
+
+```$ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:/biccn/grant/cemba/ecker/```
+
 ## MD5 Checksum Format <a name="md5-checksum"></a>
 The checksum file must be named "md5sums.txt" (all lower case, with Unix line endings). It should be placed in the root of the tarball submission. File format is to be compatible with the standard `md5sum` utility, that is:
 
