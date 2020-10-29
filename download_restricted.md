@@ -21,6 +21,7 @@ The following datasets will be the initial sets made available for controlled ac
 |Shen_3D_epigenome | Yin Shen | Cell type-specific 3D epigenomes in the developing human cortex: Here, we analyze cis-regulatory chromatin interactions, open chromatin peaks, and transcriptomes for radial glia, intermediate progenitor cells, excitatory neurons, and interneurons isolated from mid-gestational human cortex samples. |     | Limited by terms of the Data Use Certification,  requestor must provide documentation of local IRB approval     |
 |kriegstein_sc_10x| Arnold Kriegstein | A Cellular Resolution Census of the Developing Human Brain. This project aims to create a spatiotemporal single cell resolution map of the developing human neocortex to establish how many distinct cell types are present and to unravel their complex developmental history. | BICCN | Limited to health, medical, biomedical purposes, use of data is limited to not-for-profit organizations.   |
 |lein_lein_pseq_tx | Ed Lein | A multimodal atlas of human brain cell types: Transcriptomic profiles of individual human cortical neurons were assayed by the SMART-seq v4 single nucleus RNA-seq method following acute brain slice patch-clamp electrophysiology recordings and nucleus extraction—i.e. the Patch-seq method.  Surgically-resected brain tissue specimens were collected with patient consent and in the course of neurosurgical procedures for tumor removal or for treatment of epilepsy.  De-identified patient metadata were also collected and accompany the dataset comprised of 318 human cortical neurons from the temporal>frontal>parietal lobes of 56 unique donors. | BICCN | Limited to neurological disorders |   
+
 &nbsp;  
 &nbsp;    
 &nbsp;  
@@ -108,7 +109,7 @@ Choose your method of download. Make sure that the box next to "Include prerequi
 ### 2) Installing Aspera CLI
 
 Run the installation script from your command line terminal of choice:  
-`$ sh aspera-cli-x.x.x.xxx.xxxxxxx-mac-xx.x-64-release.sh`
+<code>$ sh aspera-cli-x.x.x.xxx.xxxxxxx-mac-xx.x-64-release.sh<code>
 
 The script places the Aspera CLI in the $HOME/Applications/Aspera CLI directory. To install the Aspera CLI in your PATH, run the following command:  
 `$ export PATH=~/Applications/Aspera\ CLI/bin:$PATH`
