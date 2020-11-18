@@ -60,10 +60,7 @@ Data access requests for controlled access permission groups should include a Re
 <img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/auth_inst.jpeg" alt="NDA authorized institute">
 
 #### Other Access Recipients:
-**Each data access application should be restricted to users from a single institution.** If you have collaborators at other organizations, they must submit a separate data access application, **WITH THE FOLLOWING IMPORTANT EXCEPTION:**  
-**Contact information MUST include the following NeMO account in order to ensure that NeMO receives notification of your access approval:** Heather Creasy, hhuot@som.umaryland.edu. You can add this by using the 'Search for users outside your institution' function.  
-
-<img src="https://github.com/nemoarchive/documentation/blob/master/images/NDA/other_recip.jpeg" alt="NDA other access recipients">
+**Each data access application should be restricted to users from a single institution.** If you have collaborators at other organizations, they must submit a separate data access application.   
 
 ### 4) Download Data Use Certificate (DUC)
 Download and sign the Data Use Certification PDF from the Data Access Request Tool and complete with signatures by both investigator and institutional Signing Official. [Contact the NDA Help Desk](mailto:ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.  
@@ -81,7 +78,9 @@ Log into the NDA Permissions Dashboard and upload the signed DUC on the “Activ
 ### 6)	Your data access request will be reviewed by an NIH Data Access Committee (DAC).  
 
 ### 7) Access request decision
-NDA will inform investigators and NeMO of a final access decision, at which time NeMO will reach out to all investigators and collaborators included on the access request. It is critical that the NeMO account indicated above be included in your original DUC submission in order for NeMO to receive notification of your request approval. NeMO will grant data access to investigator for ***one year***, after which investigators will need to reapply for access using the process described above.  
+NDA will inform investigators and NeMO of a final access decision.  
+At this time, you will need to **forward your Access Approval email to the NeMO team** at hhuot@som.umaryland.edu. Failure to do so will delay data access through NeMO.  
+NeMO will grant data access to investigator for ***one year***, after which investigators will need to reapply for access using the process described above.  
 &nbsp;  
 &nbsp;  
 &nbsp;  
