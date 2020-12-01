@@ -4,9 +4,10 @@ In addition to the public data available via the NeMO HTTP Browser and the NeMO 
 
 ## Table of Contents
 1. [Restricted Datasets](#restricted-datasets)
-2. [Obtaining NDA Approval](#obtaining-nda-approval)
-3. [Accessing Data through Aspera](#accessing-data-through-aspera)
-4. [Accessing Data through Google Cloud Platform - Coming Soon](#accessing-data-through-google-cloud-platform)
+2. [Prior dbGaP Access](#prior-dbgap-access)
+3. [Obtaining NDA Approval](#obtaining-nda-approval)
+4. [Accessing Data through Aspera](#accessing-data-through-aspera)
+5. [Accessing Data through Google Cloud Platform - Coming Soon](#accessing-data-through-google-cloud-platform)
 &nbsp;  
 &nbsp;  
 &nbsp;  
@@ -14,7 +15,7 @@ In addition to the public data available via the NeMO HTTP Browser and the NeMO 
 &nbsp;  
 &nbsp;  
 ## Restricted Datasets
-The following datasets will be the initial sets made available for controlled access. Additional datasets will be added as we receive Institutional Certification documents. If you think your dataset is missing, please contact us via the [NeMO Website feedback form](https://nemoarchive.org/contact.php). 
+The following datasets are currently available to those with approved access: 
 
 | Dataset | PI | Description | Funding Source | Data Use Limitations |
 |---------|----|-------------|----------------|----------------------|
@@ -28,9 +29,21 @@ The following datasets will be the initial sets made available for controlled ac
 &nbsp;  
 &nbsp;  
 &nbsp;  
+## Prior dbGaP Access
+Users having previously been granted dbGaP access for NeMO associated datasets do **not** need to reapply for NDA approval, on the condition that dbGaP access is still within the date of expiration.  
+
+In order to gain access restricted NeMO datasets, users must **forward their dbGaP Data Use Certification Agreement to the NeMO team** at hhuot@som.umaryland.edu. All investigators included in the dbGaP DUC will be assigned Aspera credentials, and can follow the process described below in [Accessing Data through Aspera](#accessing-data-through-aspera).  
+ 
+Upon expiration of the dbGap DUC, renewal of access will need to be done through the NDA approval process described immedately below.  
+&nbsp;  
+&nbsp;    
+&nbsp;  
+&nbsp;  
+&nbsp;  
+&nbsp;  
 ## Obtaining NDA Approval
 
-Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an [SOP for institutionally sponsored data access requests here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access. Users having previously been granted dbGap access for NeMO associated datasets will be contacted individually by NeMO, and can proceed to [creation of an institutional google account](#accessing-data-through-google-cloud-platform). 
+Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an [SOP for institutionally sponsored data access requests here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access. 
 
 ### 1) Create an NDA account
 [Create an NDA account here](https://nda.nih.gov/user/create_account.html). **NDA ACCOUNT REQUESTS MUST BE MADE USING AN INSTITUTIONAL EMAIL ADDRESS**. Account requests made from a personal account will not be honored by NeMO and will therefore greatly slow down the process of accessing data. 
