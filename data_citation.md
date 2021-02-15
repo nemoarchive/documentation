@@ -14,7 +14,7 @@ Requesting a unique identifier for your dataset involves the following steps:
 
 1) Submit your data to NeMO [as described here](submit), or [browse the NeMO archives](https://github.com/nemoarchive/documentation/blob/master/browse_http.md) to ensure that your data has previously been submitted.
 2) Reach out to NeMO Archives staff through our [Contact page](https://nemoarchive.org/contact.php)
-3) Download and fill out the [metadata spreadsheet](googledoc). A NeMO Archives staff member will ask you to send this for accurate creation of your landing page. Complete and accurate metadata enhances data resuse and searchability.
+3) Download and fill out the [metadata spreadsheet](googledoc). A NeMO Archives staff member will ask you to send this for accurate creation of your landing page. Complete and accurate metadata enhances data reuse and searchability.
 4) NeMO Archives staff will provide a unique identifier(s) for citation in your manuscript, see next section.
 
 
@@ -36,27 +36,26 @@ If you have used data downloaded from the NeMO Archives in your own publication,
 ### Example Dataset
 
 The following is an example BDBag from the preprint [An integrated transcriptomic and epigenomic atlas of mouse primary motor cortex cell types](https://www.biorxiv.org/content/10.1101/2020.02.29.970558v2.full). This paper includes multiple data modalities. Working with the authors, we organized the data into 9 datasets and associated analysis files, accessible from [https://assets.nemoarchive.org/dat-ch1nqb7](https://assets.nemoarchive.org/dat-ch1nqb7).
-  
+
 ![Landing_Page](https://user-images.githubusercontent.com/13540148/79372611-f3421a80-7f23-11ea-97fe-b73812746743.png)
 
-  
-  
-The main landing page provides information about the manuscript and an overall snapshot of the data. The Dataset Collection URL allows interested users to download the entire bolus of data included in the publication. This downloads as a BDBag, which must be opened and explored using [BDBag software](https://bd2k.ini.usc.edu/tools/bdbag/). BDBags and BDBag manipulation are [described in more detail here](to be added). 
 
-In the upper right corner  are tabs for `raw` and `analysis` files. Clicking the `raw` tab takes the user to the following page, organized by modality and data generation lab.  
+
+The main landing page provides information about the manuscript and an overall snapshot of the data. The Dataset Collection URL allows interested users to download the entire bolus of data included in the publication. This downloads as a BDBag, which must be opened and explored using [BDBag software](https://bd2k.ini.usc.edu/tools/bdbag/). BDBags and BDBag manipulation are [described in more detail here](to be added).
+
+In the upper right corner  are tabs for `raw` and `analysis` files. Clicking the `raw` tab takes the user to the following page, organized by modality and data generation lab.
 
 ![Raw_landing_page](https://user-images.githubusercontent.com/13540148/79373826-f984c680-7f24-11ea-9f6c-ccb510980232.png)
 
-Each entry on this page can be expanded to show the unique identifier for that subset of data, a short description and a source data URL link to a manifest file listing the contents of the dataset. 
+Each entry on this page can be expanded to show the unique identifier for that subset of data, a short description and a source data URL link to a manifest file listing the contents of the dataset.
 
 ![dropdown](https://user-images.githubusercontent.com/13540148/79374549-64ce9880-7f25-11ea-8e0d-365683b09f4a.png)
 
 
-Clicking on the "Identifier" link takes the user to a new landing page for that data subset only. Here, users can download the data subset via the Dataset Collection URL, or the source data URL manifest file. The latter facilitates data download using the [HTTP Data Browser](https://github.com/nemoarchive/documentation/blob/master/browse_http.md). 
+Clicking on the "Identifier" link takes the user to a new landing page for that data subset only. Here, users can download the data subset via the Dataset Collection URL, or the source data URL manifest file. The latter facilitates data download using the [HTTP Data Browser](https://github.com/nemoarchive/documentation/blob/master/browse_http.md).
 
-The Dataset Collection URL downloads data in the form of a BDBag, which must be opened and explored using [BDBag software](https://bd2k.ini.usc.edu/tools/bdbag/). BDBags and BDBag manipulation are [described in more detail here](to be added). 
+The Dataset Collection URL downloads data in the form of a BDBag, which must be opened and explored using [BDBag software](https://bd2k.ini.usc.edu/tools/bdbag/). BDBags and BDBag manipulation are [described in more detail here](to be added).
 
 
 
 ![Directory Example](https://user-images.githubusercontent.com/13540148/79375405-9300a800-7f26-11ea-9d41-3d2844d27065.png)
-
