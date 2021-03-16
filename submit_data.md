@@ -1,64 +1,66 @@
 # Submitting Data to NeMO
 
-## This documentation & described processes are under development
+### This documentation & described processes are under development
 
 Data submitted to NeMO falls into three categories:
 * *Public* - data to be immediately distributed openly and freely to the wider research community,
 * *Embargo* - data to be held back, or embargoed, until a specific date, at which point it will be released openly and freely to the wider research community,
-* *Restricted* - Controlled access data to be distributed only to an approved group of users due to consent restrictions, e.g. human data. Often restricted datasets contain a combination of private (raw reads, alignments) and public (counts, peaks) datatypes.  In such instances, **users will submit all data to the Restricted area** and we will work with submitters to obtain consent for releasing any files publicly.
+* *Restricted* - Controlled access data to be distributed only to an approved group of users due to consent restrictions, e.g. human data. Often restricted datasets contain a combination of private (raw reads, alignments) and public (counts, peaks) datatypes.  In such instances, **users will submit all data to the Restricted area** and we will work with them to obtain consent for releasing any files publicly.
 
 
 ### In this document:
 1. [Requesting a NeMO Aspera account](#requesting-a-nemo-aspera-account)
 2. [Submitting a File Manifest](#submitting-a-file-manifest)
- * format
- * validation
-3. [Submitting data](#)
- * currently accepted data types
- * Aspera 
+3. [Submitting data](#submitting-data)
 4. [Processing workflow](#processing-workflow)
 5. [Weekly summary files](#weekly-summary-files)
 
+&nbsp;  
 
-#### Requesting a NeMO Aspera Account
+### Requesting a NeMO Aspera Account
 New data submitters can register for an account at [nemoarchive.org/register.php](https://nemoarchive.org/register.php). Upon doing so, please send an email to [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu) with the following information:
 * requested username
 * grant under which data was generated
 * PI of lab in which data was generated
-* whether data is public, for embargo or private*
+* whether data is public, for embargo or restricted*
 
-*Private data submitters are asked to request account usernames with an appended "-restricted", e.g. `doe-restricted`. If you will be submitting both public and private data, you will need to create two accounts, one without and one with the "-restricted" tag.
+*Restricted data submitters are asked to request account usernames with an appended "-restricted", e.g. `doe-restricted`. If you will be submitting both public and controlled access data, you will need to create two accounts, one without and one with the "-restricted" tag.
 
 Someone from the NeMO team will follow up with you regarding any other questions about your data or the submission process.
 
+&nbsp;  
+### Submitting a File Manifest
 
-#### Submitting a File Manifest
-
-(insert submission flowchart here)
-
-All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the (NeMO web form coming soon).  
+All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the NeMO web form (link coming soon).    
 Because we do not dictate file naming conventions, and are no longer defining the specific directory structure that your data submission must contain, it is necessary for us to collect some basic information in order to process your data properly for release. This is not a comprehensive metadata collection and should be easy to populate. 
 
-Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below.
+Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below. 
 
 
-##### Manifest format
-[Download the file manifest template](./manifest_template.txt)
-[Download this Excel-friendly manifest file for further explanation of each field, and a complete list of controlled vocabularies](coming soon)
+#### Manifest format
+[Download the file manifest template](./manifest_template.txt)  
+[Download this Excel-friendly manifest file for further explanation of each field, and a complete list of controlled vocabularies](./manifest_controlled_vocabularies.xlsx)
 
 All manifest files **must** contain the following fields:
  * File name
  * Sample ID
- * Program (e.g. BICCN) - if you are unsure of the proper program designation, please reach out to nemo@som.umaryland.edu
- * Sub-program (e.g. U19 Zeng) - for this most part, this will correspond to the name of the P.I. or the project
- * Lab - P.I. under of the lab in which data was generated
+ * Program (e.g. BICCN)
+ * Sub-program (e.g. U19 Zeng)
+ * Lab
  * Species
  * Modality
- * Sequencing Technology
+ * Technique
  * Subspecimen type
- * File types
+ * Data type
+ * File type
  * Access
- * Checksums - described below
+ * Checksum - described below
+ * Counts data only fields (optional):
+   - Counts pipeline
+ * Aligned data only fields (optional):
+   - Read aligner
+   - Genome build
+   - Gene set release
  * BRAIN initiative only fields (optional):
    - BCDC Project name
    - BCDC data collection
@@ -71,23 +73,23 @@ All manifest files **must** contain the following fields:
 The manifest file must contain **one row, including an MD5 checksum, for every file included in the submission**. If you're submitting a tarball, the manifest should contain one row for every file within the tarball. For submission of multiple, or chunked, tarballs, there is no need for a manifest per tarball, all component files can be included in a single manifest.
 The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, please be sure to save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename must be "manifest.[extension]. Only the following file extensions will be accepted: .txt, .tsv, .csv. Failure to name your manifest file accordingly will prevent detection of your manifest, delaying validation.
 
-##### Manifest validation
+#### Manifest validation
 
-Upon upload, file manifests will be validated immediately. Thus process checking for: 
-presence of checksums and all other required fields
-controlled vocabularies
-detection of novel file extensions
-checks for presence of all components of various bundle types (documentation coming)
+Upon upload, file manifests will be immediately validated for: 
+* presence of checksums and all other required fields
+* proper controlled vocabularies
+* detection of novel file extensions
+* presence of all components of various bundle types (see... documentation coming soon)
 
-Validation results will be made available right on the submission page, and sent via email.
+Validation failure in any row(s) will result in creation of a log file detailing errors. Once errors are corrected, an updated validation file is submitted in the same way and undergoes the same validation.
 
-Validation failure any row(s) will result in creation of a log file detailing errors. Once errors are corrected, an updated validation file is submitted in the same way and undergoes the same validation.
 Validation success will result in notification via the browser and email, of the Aspera path to which you will submit your data. Be sure to submit to the provided path, any other submissions will be ignored and routinely deleted.
 
+&nbsp;  
 
-#### Submitting Data
+### Submitting Data
 
-##### Currently accepted data types
+#### Currently accepted data types
 NeMO accepts both raw and derived data types of the file extensions [listed here](./file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid processing delays, by emailing nemo@som.umaryland.edu.
 
 Depending on the size of your submission, it may be preferable to submit data files individually or within a tarball. Either is fine. We don't pre-define any specific directory structure for your submission, however we ask that you **do not** submit tarballs within a tarball, as that will delay processing. Files will be reorganized during ingest based on metadata provided in the manifest.
@@ -127,38 +129,11 @@ where `v34kltf7` is the directory name provided upon manifest validation. Upload
 $ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:/v34kltf7/
 ```
 
-
-It is not possible to list, delete or move data using the Aspera CLI.
---- Subsequently uploading a file of the same name to the same Aspera path will trigger an overwrite of the original file. <-- we need rules on how long the aspera path will be maintained, in case someone wants to overwrite a submission? 
---- Submitters can use their NeMO Aspera credentials to view their pre-processed submitted data at https://aspera.nemoarchive.org. <- will we still provide access to the preprocessed data?
---- put in place a mechanism for deleting/replacing data?
+It is not possible to delete or update data using the Aspera CLI. Should you wish to do so at this point, please reach out to a NeMO team member at nemo@som.umaryland.edu. Viewing and confirming your submission is described below in the Processing workflow.
 
 
 #### Processing workflow
-Our processing workflow is shown here:
-
-<img alt="submit_data-8a030ed9.png" src="images/submit_data-8a030ed9.png" width="" height="" > (to be updated)
-
-Once a manifest is validated...
-1) begin regular scans for data in the aspera submission path
-2) once data is detected, scan for upload completion. 
-
-for each file in manifest, file status: not submitted -> transferring -> submitted -> valid --> processed --> released
-                                               ^-------------------------------------invalid
-
---- reach out to submitter if aspx files persist and/or looks like upload failed
-
-3) once all files submitted status, extract tarballs if neccessary
-4) Validation: 
- -- Ensure all ingest contents are in tarball (via preview before extracting).
- -- MD5 matches for each file.  
- -- Generate log & delete files. Email contact to resubmit only problematic files
-
-5) Version if necessary
-6) Files passing checks are moved to the Processed area, and are reorganized based on information in the submitted manifest into the directory described [here](data_model documentation coming soon). 
-7) bundle files together based on the rules described (coming soon) in the Release area
-8) Data are now available for viewing via the NeMO Data Browser. Email sent confirming successful processing
-9) Write new identifiers to mysql and (if possible) neo4j
+Description of processing workflow coming soon.
 
 **For restricted data**, the validation and ingest process is the same. Please refer to the [Restricted Data Release documentation](./release_restricted.md) for steps required to make restricted datasets available to approved users or the public, as applicable.
 
