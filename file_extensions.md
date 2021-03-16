@@ -89,6 +89,10 @@ The ingest will gzip the file(s) not already gzipped
 
 The ingest will gunzip the file(s) if gzipped.  This is to gzip the MEX tarball when ingested
 
+## SNAP
+
+* .snap
+
 ## TAB Analysis
 
 * \_COLmeta_DIMRED\_ in middle of name and .tab at end
