@@ -6,7 +6,7 @@
    1. Valid extensions accepted - .csv, .tab, or .tsv
    2. Must also provide contact email and valid Aspera name
 2. Manifest file is renamed with a temporary 7-character string to avoid colliding with another manifest submission if simultaneous.  This file is placed in a "submitted_manifest" directory while validation is happening
-   1.  A manifest object (Manifest class in manifest.py) is created and a log file is saved with the manifest
+   1.  A manifest object (Manifest class in manifest.py) is created and a log file is saved with the manifest.  Initial state is "SUBMITTED"
 3. Validation checks:
    1. Headers in manifest file match those from manifest template on Github
       1. Currently those are hard-coded into the manifest.py module so if they change in Github they will need to be changed here
@@ -18,6 +18,7 @@
    6. For each file, an attempt is made to build the "validated" filepath where a file will be copied to, based on the vocab-to-dirname mapping schema.
       1. Vocab-to-dirname mapping is currently hardcoded in a function in manifest.py
    7. For each file that can be bundled, an attempt is made to create a bundle object (from bundle_entity.py) amongst file components that constitute it, and a check is made to see if all component files are present
+   8. If any of the above checks fail for the manifest, file, or bundle, the manifest state is set to "INVALID" and errors are recorded in the Manifest-object's "errors" property. If all checks pass, the manifest status is set to "VALID".
 4. If validation fails...
    1. The user is redirected to the index page (same page with the form) and all validation errors are shown.  The user can take this time to correct and re-submit the manifest
 5. If validation succeeds...
