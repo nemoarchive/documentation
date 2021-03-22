@@ -13,9 +13,8 @@ Data submitted to NeMO falls into three categories:
 2. [Submitting a File Manifest](#submitting-a-file-manifest)
 3. [Submitting data](#submitting-data)
 4. [Processing workflow](#processing-workflow)
-5. [Weekly summary files](#weekly-summary-files)
 
-&nbsp;  
+&nbsp;
 
 ### Requesting a NeMO Aspera Account
 New data submitters can register for an account at [nemoarchive.org/register.php](https://nemoarchive.org/register.php). Upon doing so, please send an email to [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu) with the following information:
@@ -28,20 +27,20 @@ New data submitters can register for an account at [nemoarchive.org/register.php
 
 Someone from the NeMO team will follow up with you regarding any other questions about your data or the submission process.
 
-&nbsp;  
+&nbsp;
 ### Submitting a File Manifest
+All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the NeMO [manifest submission page](link coming soon).
+Because we do not dictate file naming conventions, and are no longer defining the specific directory structure that your data submission must contain, it is necessary for us to collect some basic information in order to process your data properly for release. This is not a comprehensive metadata collection and should be easy to populate.
 
-All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the NeMO web form (link coming soon).    
-Because we do not dictate file naming conventions, and are no longer defining the specific directory structure that your data submission must contain, it is necessary for us to collect some basic information in order to process your data properly for release. This is not a comprehensive metadata collection and should be easy to populate. 
-
-Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below. 
+Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below.
 
 
 #### Manifest format
-[Download the file manifest template](./manifest_template.txt)  
-[Download this Excel-friendly manifest file for further explanation of each field, and a complete list of controlled vocabularies](./manifest_controlled_vocabularies.xlsx)
+[Download file manifest template](./manifest_template.txt)
 
-All manifest files **must** contain the following fields:
+[Download Excel-friendly manifest file with field descriptions and controlled vocabularies](./manifest_controlled_vocabularies.xlsx)
+
+All manifest files must contain the following fields:
  * File name
  * Sample ID
  * Program (e.g. BICCN)
@@ -71,38 +70,41 @@ All manifest files **must** contain the following fields:
    - Tissue provider
 
 The manifest file must contain **one row, including an MD5 checksum, for every file included in the submission**. If you're submitting a tarball, the manifest should contain one row for every file within the tarball. For submission of multiple, or chunked, tarballs, there is no need for a manifest per tarball, all component files can be included in a single manifest.
-The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, please be sure to save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename must be "manifest.[extension]. Only the following file extensions will be accepted: .txt, .tsv, .csv. Failure to name your manifest file accordingly will prevent detection of your manifest, delaying validation.
+
+The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.[ext]`, where [ext] must be csv, tsv or tab. All formats will be converted to TSV. Failure to name your manifest file accordingly will prevent detection of your manifest, delaying validation.
 
 #### Manifest validation
-
-Upon upload, file manifests will be immediately validated for: 
+Upon upload to the NeMO [manifest submission page], file manifests will be immediately validated for:
 * presence of checksums and all other required fields
 * proper controlled vocabularies
-* detection of novel file extensions
+* detection of unexpected file extensions
 * presence of all components of various bundle types (see... documentation coming soon)
 
 Validation failure in any row(s) will result in creation of a log file detailing errors. Once errors are corrected, an updated validation file is submitted in the same way and undergoes the same validation.
 
-Validation success will result in notification via the browser and email, of the Aspera path to which you will submit your data. Be sure to submit to the provided path, any other submissions will be ignored and routinely deleted.
+Validation success will result in notification via the browser and email, of the Aspera path to which you will submit your data, as described below. Be sure to submit to the provided path, as any other submissions will be ignored and routinely deleted.
 
-&nbsp;  
+&nbsp;
 
 ### Submitting Data
 
 #### Currently accepted data types
 NeMO accepts both raw and derived data types of the file extensions [listed here](./file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid processing delays, by emailing nemo@som.umaryland.edu.
 
-Depending on the size of your submission, it may be preferable to submit data files individually or within a tarball. Either is fine. We don't pre-define any specific directory structure for your submission, however we ask that you **do not** submit tarballs within a tarball, as that will delay processing. Files will be reorganized during ingest based on metadata provided in the manifest.
+Depending on the size of your submission, it may be preferable to submit data files individually or within a tarball. Either is fine. We don't pre-define any specific directory structure for your submission, however we ask that you do not submit tarballs within a tarball, as that will delay processing. Files will be reorganized during ingest based on metadata provided in the manifest.
 
 
 #### Uploading using Aspera
-In order to submit data to NeMO, you will first need to download and install the IBM Aspera Command Line Interface, available from the [IBM website](https://www.ibm.com/products/aspera/downloads). You will find the download link under `Featured client software` > `IBM Aspera Command Line Interface`. Select the fix for your particular operating system. You will need to create an IBM account if you do not already have one. Follow installation instructions.
+In order to submit data to NeMO, you will first need to download and install the IBM Aspera Command Line Interface,
+available from the [IBM website](https://www.ibm.com/products/aspera/downloads).
+You will find the download link under `Featured client software` > `IBM Aspera Command Line Interface`.
+Select the most recent release for your operating system. You will need to create an IBM account if you do not already have one. Installation instructions are available [here](install_aspera.md).
 
-Once installed, you should have the `ascp` utility available to you. Have your Nemo Aspera credentials handy, as commands to initiate an upload will result in a prompt for your password.
+Once installed, the `ascp` utility will be available for use at the command line. Have your NeMO Aspera credentials handy, as commands to initiate an upload will result in a prompt for your password.
 
 Uploading with the Aspera client uses the following syntax:
 
-```
+```bash
 $ ascp [-l <Maximum download speed>] [-k 2] [-m <Minimum download speed>] [-Q] [-T] \
 <path to local file or directory> <username>@aspera.nemoarchive.org \
     /provided/path/to/NeMO/directory/
@@ -118,28 +120,30 @@ Q - Turns adaptive rate on. Adaptive rate controls the speed of aspera with a go
 T - Turns encryption off. Turning encryption off will allow for a maximum throughput transfer but should not be provided if data being uploaded is sensitive.
 ```
 
-In the following example, `my_data.tar.gz` is being transferred to NeMO:
+In the following example, `my_data.tar.gz` is being transferred to NeMO,
 
-```
+```bash
 $ ascp -l 100M -k 2 -QT /home/user/my_data/my_data.tar.gz user123@aspera.nemoarchive.org:/v34kltf7/
 ```
 where `v34kltf7` is the directory name provided upon manifest validation. Uploading a directory of files would not require any changes as Aspera will recognize that a folder is being transferred and will recursively step through ensuring all files found in the directory are transferred.
 
-```
+```bash
 $ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:/v34kltf7/
 ```
 
-It is not possible to delete or update data using the Aspera CLI. Should you wish to do so at this point, please reach out to a NeMO team member at nemo@som.umaryland.edu. Viewing and confirming your submission is described below in the Processing workflow.
+It is not possible to delete or update data using the Aspera CLI. Should you wish to do so, reach out to a NeMO team member at nemo@som.umaryland.edu.
 
+&nbsp;
 
-#### Processing workflow
-Description of processing workflow coming soon.
+### Processing workflow
+&nbsp;
 
-**For restricted data**, the validation and ingest process is the same. Please refer to the [Restricted Data Release documentation](./release_restricted.md) for steps required to make restricted datasets available to approved users or the public, as applicable.
+<img alt="submit_data-05e1b038.png" src="images/submit_data-05e1b038.png" width="" height="" >
+
+&nbsp;
+**For restricted data**, the validation and ingest process is the same. The [Restricted Data Release documentation](./release_restricted.md) outlines steps required to make restricted datasets available to approved users or the public, as applicable.
 
 
 
 #### Weekly Summary files
-Registration for a NeMO Aspera account will also trigger an invitation to join the NeMO Archive groups.io main group and appropriate grant-specific subgroups. As a member of these groups, submitters will receive weekly change logs for their incoming and release areas, and, if relevant, restricted incoming and restricted processed areas. In addition, the NeMO team will send a quarterly manifest of all public and restricted files in NeMO Archive.
-
-These groups are also used for quarterly update reminders and other important information. If you would like to be added or to add someone else from your group to groups.io, please email nemo@som.umaryland.edu.
+Registration for a NeMO Aspera account will also trigger an invitation to join the NeMO Archive groups.io main group and appropriate grant-specific subgroups. As a member of these groups, submitters will receive quarterly inventory files. These groups are also used for quarterly update reminders and other important information. If you would like to be added or to add someone else from your group to groups.io, please email nemo@som.umaryland.edu.

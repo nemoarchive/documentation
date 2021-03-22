@@ -1,4 +1,4 @@
-The NeMO ingest scripts allow the file extensions listed below. By default we ignore extensions not on this list. If you have an extension not shown here that you would like us to process for release, please let us know as soon as possible.
+The NeMO ingest scripts allow the file extensions listed below. By default we ignore extensions not on this list. If you have an extension not shown here that you would like us to process for release, please let us know as soon as possible, by emailing nemo@som.umaryland.edu.
 
 ## Manifest file
 
