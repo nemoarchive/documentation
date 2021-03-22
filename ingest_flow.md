@@ -27,46 +27,51 @@
    2. This aspera dir, along with contact email and the "validated" path for the file is appended to each row in the manifest, and this new manifest is written to the "valid_manifests" area.  The original manifest file is removed from the "submitted_manifests" area to keep the area clean.
    3. The user is sent to the next page, there they are shown an Aspera submission command to use for their submission. This command is also emailed to the contact email provided.
 
-## Aspera monitoring
+## Ingest Aspera Submissions
 
-1. Cron launches script every 30 minutes or so.
-2. Script will crawl through all "aspera-ready" text files in a "aspera ready" directory on a periodic basis.
-   1. If no manifests are present, then exit.
-3. When a new manifest is detected in the directory, things start to happen.
-   1. A .flag file is added to note the manifest is currently in use so we do not double-process it.
-4. For each row in text file the script will open the directory and check for the .aspx file for each entry
-   1. If directory is empty, the files have not begun transfer through aspera so do nothing
-   2. If .aspx file is present, we change the state of the file_entity from NOT SUBMITTED to TRANSFERRING, but do nothing else.
-      1. If .aspx file is longer than a day old, email contact about potential issue with transfer (as a warning).  May be false alarm with a large file.
-   3. Keep checking every 10 minutes or so.
-   4. If file is present and .aspx is missing, assume this file transferred.  Set file entity state to SUBMITTED
-5. If all ingestable files from manifest are present and .aspx file is missing for each file, then assume transfer finished.
-   1. Does not apply in tarball.  We'll check during validation.
-6. If tarball, extract
-7. Validation
-   1. Any file validation failures change file entity state to INVALID
-   2. Validation successes change file entity state to VALID
-   3. Ensure all ingest contents are in tarball (via preview before extracting).
-   4. MD5 matches for each file.  Make note of which files do not match.  Wipe these files.
-   5. If directory is to be ingested, ensure that the empty flag file exists within the directory.
-      1. Worry about this later.
-   6. If validation fails, keep "aspera-ready" manifest file where it is and treat as if directory uploading is not finished (since files will be wiped)
-      1. This will involve reverting state of invalid file from INVALID to NOT SUBMITTED
-   7. Email contacts sent to web-form submitter of all validation failures (kept by python logging module)
-8. Once validation succeeds
-   1. Determine if version needs to be incremented based on release area
-   2. Move to processed
-      1. Change file state to PROCESSED
-   3. Copy to release or bundle to release
-      1. Change file state to RELEASED
-   4. Write new identifiers to mysql and (if possible) neo4j
-   5. Move "aspera-ready" manifest file to "finished" directory (for tracking purposes).
-      1. Remove .flag file for file
+1. Cron will launch the "ingest_aspera_submissions.py" script.  Currently no time interval has been set for this.
+2. The "valid manifests" directory will be inspected for unprocessed manifests.
+   1. A manifest will end in "manifest.tsv"
+   2. If a manifest has a ".flag" file associated, that means the manifest is currently being processed by a previous run of "ingest_aspera_submissions.py" and will be ignored.
+3. Inside the manifest, the Aspera area the user should have submitted their files is determined.
+   1. This area can be either in "public", "embargo", or "restricted" depending on the "Access" field. Please consult "Manifest Submission - 5.1.1" for more information.
+4. If a tarball is found in the Aspera submission area, it is extracted.
+5. For each row in the manifest
+   1. A file entity object is created for each potential file name, file state set to "NOT SUBMITTED", and the expected md5 is recorded.
+   2. A check to determine if all files in Aspera are ready for transfer begins
+      1. If tarball was present and extracted, was file in tarball?  If so, set file to "SUBMITTED"
+      2. If file was transferred via Aspera, is the .aspx file gone?  If so, set file to "SUBMITTED".  If file is present along with .aspx, set state to "TRANSFERRING"
+6. If all files have "SUBMITTED" state we proceed, as we assume transfer finished.
+   1. If even a single file is not in "SUBMITTED" state, the .flag file for the manifest file is removed and the script exits.  The next cron iteration will attempt to process this manifest again.
+7. For each file, validate the observed MD5 against the expected MD5, and set state to "VALID" if md5s match.
+   1. If md5 does not match, mark state as "INVALID", and send email about validation errors to contact email found in manifest.
+   2. "INVALID" files are also removed from the Aspera submission area, so the user will have to re-upload
+   3. The manifest .flag file will be removed so that the manifest can be processed again in a future cron.
+8. For each file:
+   1. Depending on the type of file, it may be normalized (gzip or gunzip) so that all files copied or in a bundle are in the same compression state.
+   2. The validated area path and released area path are both determined
+9. For files that can be bundled:
+   1. File "component" identifiers are created for each file entity.
+   2. A bundle entity is created
+   3. The bundle release path is determined.
+      1. The bundle version is assigned depending on the presence of existing bundles in that release path.  This version counter is passed to each of the component files that make up the bundle, and their validated filepaths are altered to reflect this.  Files that are copied instead of bundled do not have incremented versions but are overwritten instead.
+   4. The bundle file identifier is created.
+   5. If this step fails, an email is sent to the NeMO team to look into the issue.
+10. All files that were in the manifest are moved to their detemined "validated" area path, and their state set to "VALIDATED".
+   1. If this step fails, an email is sent to the NeMO team to look into the issue.
+11. All files that are eventually copied to the "release" area are assigned file identifiers.
+12. Some information is written to file, which is then passed as input to "bundle_nemo_files.pl".  This script copies files to the release area or bundles them into a tarball using the grid.
+   1. If this step fails, an email is sent to the NeMO team to look into the issue.
+13. After a brief sleeping period (30 seconds) to let the filesystem sync up, all bundled files are set to "RELEASED".  Copied files are still in "VALIDATED" but could be set to "RELEASED" as a TODO
+14. Identifier information for each bundle, component file, and copied file are loaded into MySQL
+15. Identifier and release path (as https URI) per file are written to a new manifest, which is placed in the "finished_manifests" area
+16. An email is sent to the contact email from the "valid manifest":
+   1. Has the "finished_manifest" as an attachment.
+   2. Also prints all files in the Aspera submission area that were not ingested due to not being in the manifest file.
+17. The manifest from "valid_manifests" area is removed along with the .flag file.
 
 ## Periodically
 
 1. Remove non-ingestable files from an Aspera area so they are not just taking up space (wipe the directory?)
+   1. We will email the user of their non-ingestible files after successful ingestion to give them time to determine what to do with them (mark as junk, add to new manifest, potentially force us to have a new file entity class or regex pattern)
 
-## Misc
-
-* File types will be handle via a class rather than by a dictionary, which is a change from the old ingest
