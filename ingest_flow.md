@@ -22,10 +22,17 @@
 4. If validation fails...
    1. The user is redirected to the index page (same page with the form) and all validation errors are shown.  The user can take this time to correct and re-submit the manifest
 5. If validation succeeds...
-   1. A random 7-character string is used to create the Aspera submission directory in the Aspera root that the user will place their files in.
-      1. The aspera root is dependent on if at least one file is restricted ("controlled") or embargoed.  If any files is restricted, all files will be submitted to the restricted aspera root directory (though the process may be a special case).  If any files are embargoed (and none are restricted), all files will be submitted to the embargo aspera root directory
-   2. This aspera dir, along with contact email and the "validated" path for the file is appended to each row in the manifest, and this new manifest is written to the "valid_manifests" area.  The original manifest file is removed from the "submitted_manifests" area to keep the area clean.
-   3. The user is sent to the next page, there they are shown an Aspera submission command to use for their submission. This command is also emailed to the contact email provided.
+   1. A random 7-character string is generated and will serve as the user's aspera submission directory within the aspera submission root.
+   2. This generated string, along with contact email and the "validated" path for the file is appended to each row in the manifest, and this new manifest is written to the "valid_manifests" area.  The original manifest file is removed from the "submitted_manifests" area to keep the area clean.
+   3. The user is sent to the next page, where they are notificed that the manifest has successfully validated and further instructions for submission will be sent soon.
+
+## Intermediate script (name to be determined)
+
+1. This script will execute on a cron every 5-10 minutes to check for new validated manifest files
+2. Copy the valid manifest file (with appended columns) from the manifest submission server to an internal area.
+3. Aspera directory is created using info from the manifest file
+   1. The aspera root is dependent on if at least one file is restricted ("controlled") or embargoed.  If any files is restricted, all files will be submitted to the restricted aspera root directory (though the process may be a special case).  If any files are embargoed (and none are restricted), all files will be submitted to the embargo aspera root directory
+4. Email is sent to contact with aspera instructions, and a reference to their original manifest. The current saved manifest has extra information that would be used internally but would want to remove before emailing the user.
 
 ## Ingest Aspera Submissions
 
@@ -74,4 +81,5 @@
 
 1. Remove non-ingestable files from an Aspera area so they are not just taking up space (wipe the directory?)
    1. We will email the user of their non-ingestible files after successful ingestion to give them time to determine what to do with them (mark as junk, add to new manifest, potentially force us to have a new file entity class or regex pattern)
+2. Remove manifests and logs from submitted and validated areas on the manifest site server.
 
