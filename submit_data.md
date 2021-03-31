@@ -27,14 +27,14 @@ Someone from the NeMO team will follow up with you regarding any other questions
 
 &nbsp;
 ### Submitting a File Manifest
-All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the NeMO [manifest submission page](link coming soon).
+All s ubmissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the NeMO manifest submission page(link coming week of April 5).
 Because we do not dictate file naming conventions, and are no longer defining the specific directory structure that your data submission must contain, it is necessary for us to collect some basic information in order to process your data properly for release. This is not a comprehensive metadata collection and should be easy to populate.
 
 Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below.
 
 
 #### Manifest format
-[Download file manifest template](./manifest_template.txt)
+[Download file manifest template](./manifest_template.tsv)
 
 [View Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing)
 
@@ -72,7 +72,7 @@ The manifest file must contain **one row, including an MD5 checksum, for every f
 The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.[ext]`, where [ext] can be csv, tsv or tab. All formats will be converted to TSV. Failure to name your manifest file accordingly will prevent detection of your manifest, delaying validation.
 
 #### Manifest validation
-Upon upload to the NeMO [manifest submission page](link coming week of April 5), file manifests will be immediately validated for:
+Upon upload to the NeMO manifest submission page, file manifests will be immediately validated for:
 * presence of checksums and all other required fields
 * proper controlled vocabularies
 * detection of unexpected file extensions
