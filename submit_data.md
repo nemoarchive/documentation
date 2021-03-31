@@ -1,7 +1,5 @@
 # Submitting Data to NeMO
 
-### This documentation & described processes are under development
-
 Data submitted to NeMO falls into three categories:
 * *Public* - data to be immediately distributed openly and freely to the wider research community,
 * *Embargo* - data to be held back, or embargoed, until a specific date, at which point it will be released openly and freely to the wider research community,
@@ -38,7 +36,7 @@ Detection and validation of a properly formatted manifest will trigger a message
 #### Manifest format
 [Download file manifest template](./manifest_template.txt)
 
-[Download Excel-friendly manifest file with field descriptions and controlled vocabularies](./manifest_controlled_vocabularies.xlsx)
+[View Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing)
 
 All manifest files must contain the following fields:
  * File name
@@ -71,15 +69,15 @@ All manifest files must contain the following fields:
 
 The manifest file must contain **one row, including an MD5 checksum, for every file included in the submission**. If you're submitting a tarball, the manifest should contain one row for every file within the tarball. For submission of multiple, or chunked, tarballs, there is no need for a manifest per tarball, all component files can be included in a single manifest.
 
-The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.[ext]`, where [ext] must be csv, tsv or tab. All formats will be converted to TSV. Failure to name your manifest file accordingly will prevent detection of your manifest, delaying validation.
+The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.[ext]`, where [ext] can be csv, tsv or tab. All formats will be converted to TSV. Failure to name your manifest file accordingly will prevent detection of your manifest, delaying validation.
 
 #### Manifest validation
-Upon upload to the NeMO [manifest submission page], file manifests will be immediately validated for:
+Upon upload to the NeMO [manifest submission page](link coming week of April 5), file manifests will be immediately validated for:
 * presence of checksums and all other required fields
 * proper controlled vocabularies
 * detection of unexpected file extensions
-* presence of all components of various bundle types (see... documentation coming soon)
-
+* presence of all components of various bundle types
+* 
 Validation failure in any row(s) will result in creation of a log file detailing errors. Once errors are corrected, an updated validation file is submitted in the same way and undergoes the same validation.
 
 Validation success will result in notification via the browser and email, of the Aspera path to which you will submit your data, as described below. Be sure to submit to the provided path, as any other submissions will be ignored and routinely deleted.
@@ -131,7 +129,7 @@ where `v34kltf7` is the directory name provided upon manifest validation. Upload
 $ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:/v34kltf7/
 ```
 
-It is not possible to delete or update data using the Aspera CLI. Should you wish to do so, reach out to a NeMO team member at nemo@som.umaryland.edu.
+It is not possible to delete or update data using the Aspera CLI. Should you wish to do so, reach out to a NeMO team member at [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu).
 
 &nbsp;
 
@@ -145,5 +143,5 @@ It is not possible to delete or update data using the Aspera CLI. Should you wis
 
 
 
-#### Weekly Summary files
-Registration for a NeMO Aspera account will also trigger an invitation to join the NeMO Archive groups.io main group and appropriate grant-specific subgroups. As a member of these groups, submitters will receive quarterly inventory files. These groups are also used for quarterly update reminders and other important information. If you would like to be added or to add someone else from your group to groups.io, please email nemo@som.umaryland.edu.
+#### Quarterly inventories
+Registration for a NeMO Aspera account will also trigger an invitation to join the NeMO Archive groups.io main group and appropriate grant-specific subgroups. As a member of these groups, submitters will receive quarterly inventory files. These groups are also used for quarterly update reminders and other important information. If you would like to be added or to add someone else from your group to groups.io, please email [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu).
