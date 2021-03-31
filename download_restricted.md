@@ -11,7 +11,7 @@ see the list by logging into the [NIMH Data Archive](https://nda.nih.gov/) and s
 
 ### In this document:
 1. [Requesting access through the NDA Approval Process](#nda-approval-process)
-2. [Data Download](#data-download)
+2. [Downloading Data](#downloading-data-using-aspera)
 3. [Users with Prior dbGaP Access](#prior-dbgap-access)
 
 &nbsp;
@@ -43,11 +43,11 @@ an 'Actions' dropdown. Select "Request Access".
 **You must work at a research institution** that has an active
 [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.
 
-<img src="images/NDA/nda_permission_grps.jpeg" alt="NDA permissions groups">
+<img src="images/NDA/nda_permission_grps.png" alt="NDA permissions groups">
 
 #### Step 3. Data Access Request Tool
 This will open the Data Access Request Tool where you will provide information pertaining to your research,
-institution, and collaborators. Please carefully review the following screenshots with directions for properly filling out all tabs of the request tool:
+institution, and collaborators. Please carefully review the instructions for properly filling out all tabs of the request tool:
 
 ##### A) Request Access Instructions
 <img src="images/NDA/req_access.jpeg" alt="NDA request access">
@@ -58,22 +58,19 @@ appropriately addresses consent-based data use limitations for that permission g
 To determine if there are consent-based data use limitations to which authorized researchers must adhere, refer to the
 “Data Use Limitations” field next to the BRAIN/NeMO dataset of interest in the NDA Controlled Access Permission Group table.
 
-<img src="images/NDA/req_details.jpeg" alt="NDA request access details">
-
 ##### C) Authorized Research Institute
 You must work at a research institution that has an active [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.
 The signing official(s) associated with your institution will automatically appear as a selectable option.
-
-<img src="images/NDA/auth_inst.jpeg" alt="NDA authorized institute">
 
 ##### D) Other Access Recipients
 Each data access application is restricted to users from a **single institution.**
 If you have collaborators at other organizations, they must submit a separate data access application.
 
 #### Step 4. Download Data Use Certificate (DUC)
-Download the Data Use Certification PDF from the Data Access Request Tool and complete with signatures of both the investigator and the institutional Signing Official. [Contact the NDA Help Desk](mailto:ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.
+Download the Data Use Certification Agreement PDF from the Agreement tab and complete with signatures of both the investigator and the institutional Signing Official. [Contact the NDA Help Desk](mailto:ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.
 
-<img src="images/NDA/nda_agreement.jpeg" alt="NDA agreement">
+<img src="images/NDA/nda_agreement.jpeg" alt="NDA agreement">  
+
 <img src="images/NDA/DUC_saved.jpg" alt="DUC saved">
 
 #### Step 5. Upload signed DUC
@@ -95,7 +92,7 @@ NeMO will grant data access to investigator for *one year*, after which investig
 &nbsp;
 
 
-### Accessing Data through Aspera
+### Downloading Data using Aspera
 We are working closely with Google and the University of Maryland to finalize an agreement to provide
 restricted NeMO data through Google Cloud Platform. In the meantime, we have made data available through Aspera encrypted data download.
 Aspera instructions are available here, and will be replaced by Google Cloud instructions once that mechanism is available.
@@ -136,7 +133,8 @@ Downloading a directory of files requires no changes in syntax:
 $ ascp -l 100M -k 2 -QT user@aspera.nemoarchive.org:/my_project /home/user/my_data/
 ```
 
-Upon entering the command to initiate a download, you will be prompted for your password.
+Upon entering the command to initiate a download, you will be prompted for your password.  
+
 
 #### Decrypting downloaded data
 Here we recommend decryption tools and provide instructions specific to your operating system:
