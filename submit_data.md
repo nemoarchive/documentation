@@ -77,7 +77,7 @@ Upon upload to the NeMO [manifest submission page](link coming week of April 5),
 * proper controlled vocabularies
 * detection of unexpected file extensions
 * presence of all components of various bundle types
-* 
+
 Validation failure in any row(s) will result in creation of a log file detailing errors. Once errors are corrected, an updated validation file is submitted in the same way and undergoes the same validation.
 
 Validation success will result in notification via the browser and email, of the Aspera path to which you will submit your data, as described below. Be sure to submit to the provided path, as any other submissions will be ignored and routinely deleted.
