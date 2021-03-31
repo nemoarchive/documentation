@@ -12,7 +12,8 @@ NeMO is following the guidelines developed by the NIH Database of Genotypes & Ph
 for Genomic Data Sharing policy compliance. Any investigator wishing to release restricted data, either to the public or
 via controlled access, must submit an Institutional Certification (IC) form,
 [available here](https://osp.od.nih.gov/scientific-sharing/institutional-certifications/),
-indicating all consent groups included in your dataset.
+indicating all consent groups included in your dataset.  
+
 Often restricted datasets contain a combination of private (raw reads,
 alignments) and public (counts, peaks) datatypes.  In such instances, users submit **all** data to the Restricted area
 and the NeMO team works with the submitters to obtain consent for releasing any files publicly. For derived data such as counts files,
