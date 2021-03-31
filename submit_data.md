@@ -129,7 +129,7 @@ where `v34kltf7` is the directory name provided upon manifest validation. Upload
 $ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:/v34kltf7/
 ```
 
-It is not possible to delete or update data using the Aspera CLI. Should you wish to do so, reach out to a NeMO team member at [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu).
+It is not possible to delete or update data using the Aspera CLI, however submitting a file of the same name **will** overwrite the previous file. Should you wish to delete data, reach out to a NeMO team member at [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu).
 
 &nbsp;
 
