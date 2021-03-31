@@ -138,7 +138,8 @@ It is not possible to delete or update data using the Aspera CLI. Should you wis
 
 <img alt="submit_data-05e1b038.png" src="images/submit_data-05e1b038.png" width="" height="" >
 
-&nbsp;
+&nbsp;  
+
 **For restricted data**, the validation and ingest process is the same. The [Restricted Data Release documentation](./release_restricted.md) outlines steps required to make restricted datasets available to approved users or the public, as applicable.
 
 
