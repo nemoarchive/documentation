@@ -86,7 +86,7 @@ Your data access request will be reviewed by an NIH Data Access Committee (DAC).
 
 #### Step 7. Access request decision
 NDA will inform investigators of a final access decision.
-At this time, you will need to **forward your Access Approval email to the NeMO team** at [nemo@som.umaryland.edu](nemo@som.umaryland.edu). Failure to do so will delay our sending you your access credentials.
+At this time, you will need to **forward your Access Approval email to the NeMO team** at <a href=“mailto:nemo@som.umaryland.edu”>nemo@som.umaryland.edu</a>. Failure to do so will delay our sending you your access credentials.
 NeMO will grant data access to investigator for *one year*, after which investigators will need to reapply for access using the process described above.
 
 &nbsp;
@@ -101,7 +101,7 @@ Once you have been approved for restricted data access, you will receive **two**
 1) A NeMO Aspera username & password
 2) A data encryption key - if you have received access for more than one dataset, you will receive a separate key for each dataset
 
-If you **do not** already have Aspera CLI installed, see [download & installation instructions here](install_aspera.md).
+If you **do not** already have Aspera CLI installed, see [download & installation instructions here](https://github.com/nemoarchive/documentation/blob/master/install_aspera.md).
 
 #### Downloading Files
 From your command line terminal, the `aspc` utility is used to download encrypted data using the following syntax:
