@@ -87,7 +87,7 @@ Validation success will result in notification via the browser and email, of the
 ### Submitting Data
 
 #### Currently accepted data types
-NeMO accepts both raw and derived data types of the file extensions [listed here](./file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid processing delays, by emailing nemo@som.umaryland.edu.
+NeMO accepts both raw and derived data types of the file extensions [listed here](https://github.com/nemoarchive/documentation/blob/master/file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid processing delays, by emailing nemo@som.umaryland.edu.
 
 Depending on the size of your submission, it may be preferable to submit data files individually or within a tarball. Either is fine. We don't pre-define any specific directory structure for your submission, however we ask that you do not submit tarballs within a tarball, as that will delay processing. Files will be reorganized during ingest based on metadata provided in the manifest.
 
@@ -96,7 +96,7 @@ Depending on the size of your submission, it may be preferable to submit data fi
 In order to submit data to NeMO, you will first need to download and install the IBM Aspera Command Line Interface,
 available from the [IBM website](https://www.ibm.com/products/aspera/downloads).
 You will find the download link under `Featured client software` > `IBM Aspera Command Line Interface`.
-Select the most recent release for your operating system. You will need to create an IBM account if you do not already have one. Installation instructions are available [here](install_aspera.md).
+Select the most recent release for your operating system. You will need to create an IBM account if you do not already have one. Installation instructions are available [here](https://github.com/nemoarchive/documentation/blob/master/install_aspera.md).
 
 Once installed, the `ascp` utility will be available for use at the command line. Have your NeMO Aspera credentials handy, as commands to initiate an upload will result in a prompt for your password.
 
