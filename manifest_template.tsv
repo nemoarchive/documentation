@@ -1,1 +1,1 @@
-Field	File_name	Sample_ID	Program	Sub-program	Lab 	Species	Modality	Technique	Subspecimen_type	Data_type	File_type	Access	Checksum	Counts_pipeline	Read_aligner	Genome_build	Gene_set_release	BCDC_Project	BCDC_collection	CA_usage	CA_IC_id	CA_donor	CA_tissue_provider
+Field	File_name	Sample_ID	Program	Sub-program	Lab 	Species	Modality	Technique	Subspecimen_type	Data_type	File_type	Access	Checksum	Anatomical_site Counts_pipeline	Read_aligner	Genome_build	Gene_set_release	BCDC_Project	BCDC_collection	CA_usage	CA_IC_id	CA_donor	CA_tissue_provider
