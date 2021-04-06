@@ -34,9 +34,9 @@ Detection and validation of a properly formatted manifest will trigger a message
 
 
 #### Manifest format
-[Download file manifest template](./manifest_template.tsv)
+[File manifest template in tsv format](./manifest_template.tsv)
 
-[View Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing) - Please contact NeMO to discuss addition of new terms to the any of the controlled vocabularies.
+[Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing) - Please contact NeMO to discuss addition of new terms to the any of the controlled vocabularies.
 
 All manifest files must contain the following fields:
  * File name
