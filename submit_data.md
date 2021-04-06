@@ -27,8 +27,8 @@ Someone from the NeMO team will follow up with you regarding any other questions
 
 &nbsp;
 ### Submitting a File Manifest
-All s ubmissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the NeMO manifest submission page(link coming week of April 5).
-Because we do not dictate file naming conventions, and are no longer defining the specific directory structure that your data submission must contain, it is necessary for us to collect some basic information in order to process your data properly for release. This is not a comprehensive metadata collection and should be easy to populate.
+All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the NeMO manifest submission page (link coming week of April 5).
+Because we do not dictate file naming conventions, and are no longer defining the specific directory structure that your data submission must contain, it is necessary for us to collect some basic information in order to process your data properly for release. This is not a comprehensive metadata collection and should be straightforward to populate.
 
 Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below.
 
@@ -36,7 +36,7 @@ Detection and validation of a properly formatted manifest will trigger a message
 #### Manifest format
 [Download file manifest template](./manifest_template.tsv)
 
-[View Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing)
+[View Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing) - Please contact NeMO to discuss addition of new terms to the any of the controlled vocabularies.
 
 All manifest files must contain the following fields:
  * File name
@@ -52,6 +52,7 @@ All manifest files must contain the following fields:
  * File type
  * Access
  * Checksum - described below
+ * Anatomical site (optional for current release cycle)
  * Counts data only fields (optional):
    - Counts pipeline
  * Aligned data only fields (optional):
