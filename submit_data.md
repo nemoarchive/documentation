@@ -23,11 +23,11 @@ New data submitters can register for an account at [nemoarchive.org/register.php
 
 *Restricted data submitters are asked to request account usernames with an appended "-restricted", e.g. `doe-restricted`. If you will be submitting both public and controlled access data, you will need to create two accounts, one without and one with the "-restricted" tag.
 
-Someone from the NeMO team will follow up with you regarding any other questions about your data or the submission process.
+Someone from the NeMO team will follow up with you regarding any other questions about your data or the submission process. 
 
 &nbsp;
 ### Submitting a File Manifest
-All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the NeMO manifest submission page (link coming week of April 5).
+All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the [NeMO manifest submission page](https://assets.nemoarchive.org/manifest_submission/).
 Because we do not dictate file naming conventions, and are no longer defining the specific directory structure that your data submission must contain, it is necessary for us to collect some basic information in order to process your data properly for release. This is not a comprehensive metadata collection and should be straightforward to populate.
 
 Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below.
@@ -73,7 +73,7 @@ The manifest file must contain **one row, including an MD5 checksum, for every f
 The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.[ext]`, where [ext] can be csv, tsv or tab. All formats will be converted to TSV. Failure to name your manifest file accordingly will prevent detection of your manifest, delaying validation.
 
 #### Manifest validation
-Upon upload to the NeMO manifest submission page, file manifests will be immediately validated for:
+Upon upload to the [NeMO manifest submission page](https://assets.nemoarchive.org/manifest_submission/), file manifests will be immediately validated for:
 * presence of checksums and all other required fields
 * proper controlled vocabularies
 * detection of unexpected file extensions
@@ -81,7 +81,7 @@ Upon upload to the NeMO manifest submission page, file manifests will be immedia
 
 Validation failure in any row(s) will result in creation of a log file detailing errors. Once errors are corrected, an updated validation file is submitted in the same way and undergoes the same validation.
 
-Validation success will result in notification via the browser and email, of the Aspera path to which you will submit your data, as described below. Be sure to submit to the provided path, as any other submissions will be ignored and routinely deleted.
+Validation success will result in notification within minutes, via email, of the Aspera path to which you will submit your data, as described below. Be sure to submit to the provided path, as any other submissions will be ignored and routinely deleted.
 
 &nbsp;
 
