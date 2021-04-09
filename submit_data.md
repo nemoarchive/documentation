@@ -70,7 +70,7 @@ All manifest files must contain the following fields. Do not delete headers for 
 
 The manifest file must contain **one row, including an MD5 checksum, for every file included in the submission**. If you're submitting a tarball, the manifest should contain one row for every file within the tarball. For submission of multiple, or chunked, tarballs, there is no need for a manifest per tarball, all component files can be included in a single manifest.
 
-The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.[ext]`, where [ext] can be csv, tsv or tab. All formats will be converted to TSV. Failure to name your manifest file accordingly will prevent detection of your manifest, delaying validation.
+The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.[ext]`, where [ext] can be csv, tsv or tab. All formats will be converted to TSV.
 
 #### Manifest validation
 Upon upload to the [NeMO manifest submission page](https://assets.nemoarchive.org/manifest_submission/), file manifests will be immediately validated for:
