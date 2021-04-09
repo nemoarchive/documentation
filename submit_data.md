@@ -38,7 +38,7 @@ Detection and validation of a properly formatted manifest will trigger a message
 
 [Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing) - Please contact NeMO to discuss addition of new terms to the any of the controlled vocabularies.
 
-All manifest files must contain the following fields:
+All manifest files must contain the following fields. Do not delete headers for unused, optional columns:
  * File name
  * Sample ID
  * Program (e.g. BICCN)
@@ -59,7 +59,7 @@ All manifest files must contain the following fields:
    - Read aligner
    - Genome build
    - Gene set release
- * BRAIN initiative only fields (optional):
+ * BRAIN initiative only fields (optional, but highly recommended):
    - BCDC Project name
    - BCDC data collection
  * Controlled access only fields (optional):
@@ -74,12 +74,13 @@ The first column should contain the file name only, no path information. If popu
 
 #### Manifest validation
 Upon upload to the [NeMO manifest submission page](https://assets.nemoarchive.org/manifest_submission/), file manifests will be immediately validated for:
+* complete header row
 * presence of checksums and all other required fields
 * proper controlled vocabularies
 * detection of unexpected file extensions
 * presence of all components of various bundle types
 
-Validation failure in any row(s) will result in creation of a log file detailing errors. Once errors are corrected, an updated validation file is submitted in the same way and undergoes the same validation.
+Validation failure in any row(s) will result in an error message displayed on the submission page. Once errors are corrected, an updated validation file is submitted in the same way and undergoes the same validation.
 
 Validation success will result in notification within minutes, via email, of the Aspera path to which you will submit your data, as described below. Be sure to submit to the provided path, as any other submissions will be ignored and routinely deleted.
 
@@ -88,7 +89,7 @@ Validation success will result in notification within minutes, via email, of the
 ### Submitting Data
 
 #### Currently accepted data types
-NeMO accepts both raw and derived data types of the file extensions [listed here](https://github.com/nemoarchive/documentation/blob/master/file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid processing delays, by emailing nemo@som.umaryland.edu.
+NeMO accepts both raw and derived data types of the file extensions [listed here](https://github.com/nemoarchive/documentation/blob/master/file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid manifest upload and/or processing delays, by emailing nemo@som.umaryland.edu.
 
 Depending on the size of your submission, it may be preferable to submit data files individually or within a tarball. Either is fine. We don't pre-define any specific directory structure for your submission, however we ask that you do not submit tarballs within a tarball, as that will delay processing. Files will be reorganized during ingest based on metadata provided in the manifest.
 
