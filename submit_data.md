@@ -125,7 +125,7 @@ In the following example, `my_data.tar.gz` is being transferred to NeMO,
 ```bash
 $ ascp -l 100M -k 2 -QT /home/user/my_data/my_data.tar.gz user123@aspera.nemoarchive.org:v34kltf7
 ```
-where in this example, `v34kltf7` was the directory name provided upon manifest validation. Uploading a directory of files would not require any changes as Aspera will recognize that a folder is being transferred and will recursively step through ensuring all files found in the directory are transferred.
+where `v34kltf7` is the directory name that was provided to user123 upon manifest validation. Uploading a directory of files would not require any changes as Aspera will recognize that a folder is being transferred and will recursively step through ensuring all files found in the directory are transferred.
 
 ```bash
 $ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:v34kltf7
