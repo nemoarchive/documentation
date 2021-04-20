@@ -5,6 +5,7 @@ The NeMO ingest scripts allow the file extensions listed below. By default we ig
 * manifest.csv
 * manifest.tab
 * manifest.tsv
+* manifest.txt (as tab-delimited)
 
 This will be converted to TSV no matter which format is chosen for the initial manifest.
 
