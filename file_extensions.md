@@ -51,26 +51,21 @@ The ingest will gzip the file(s) not already gzipped
 
 * \_R1
 * .R1
-* -R1
 * .read1
 
 * \_R2
 * .R2
-* -R2
 * .read2
 
 * \_R3
 * .R3
-* -R3
 * .read3
 
 * \_I1
 * .I1
-* -I1
 
 * \_I2
 * .I2
-* -I2
 
 ## FPKM
 
