@@ -138,7 +138,7 @@ It is not possible to delete or update data using the Aspera CLI, however submit
 ### Processing workflow
 &nbsp;
 
-<img alt="submit_data-05e1b038.png" src="images/submit_data-05e1b038.png" width="" height="" >
+<img alt="submit_dataflow" src="images/nemo_dataflow-v3.png" width="" height="" >
 
 &nbsp;  
 
