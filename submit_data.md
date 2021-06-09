@@ -123,12 +123,12 @@ T - Turns encryption off. Turning encryption off will allow for a maximum throug
 In the following example, `my_data.tar.gz` is being transferred to NeMO,
 
 ```bash
-$ ascp -l 100M -k 2 -QT /home/user/my_data/my_data.tar.gz user123@aspera.nemoarchive.org:v34kltf7
+$ ascp -l 100M -k 2 -QT /home/user/my_data/my_data.tar.gz user123@aspera.nemoarchive.org:v34kltf7/
 ```
 where `v34kltf7` is the directory name that was provided to user123 upon manifest validation. Uploading a directory of files would not require any changes as Aspera will recognize that a folder is being transferred and will recursively step through ensuring all files found in the directory are transferred.
 
 ```bash
-$ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:v34kltf7
+$ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:v34kltf7/
 ```
 
 It is not possible to delete or update data using the Aspera CLI, however submitting a file of the same name **will** overwrite the previous file. Should you wish to delete data, reach out to a NeMO team member at [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu).
