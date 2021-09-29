@@ -11,8 +11,7 @@ see the list by logging into the [NIMH Data Archive](https://nda.nih.gov/) and s
 
 ### In this document:
 1. [Requesting access through the NDA Approval Process](#nda-approval-process)
-2. [Downloading Data](#downloading-data-using-aspera)
-3. [Users with Prior dbGaP Access](#prior-dbgap-access)
+2. [Downloading Data](#downloading-data)
 
 &nbsp;
 
@@ -92,88 +91,76 @@ NeMO will grant data access to investigator for *one year*, after which investig
 &nbsp;
 
 
-### Downloading Data using Aspera
-We are working closely with Google and the University of Maryland to finalize an agreement to provide
-restricted NeMO data through Google Cloud Platform. In the meantime, we have made data available through Aspera encrypted data download.
-Aspera instructions are available here, and will be replaced by Google Cloud instructions once that mechanism is available.
+### Downloading Data 
+#### using Google Cloud Platform
 
-Once you have been approved for restricted data access, you will receive **two** separate emails:
-1) A NeMO Aspera username & password
-2) A data encryption key - if you have received access for more than one dataset, you will receive a separate key for each dataset
+*If you are a legacy data user and still have access via Aspera, those [download instructions can be found here](https://github.com/nemoarchive/documentation/blob/master/download_restricted_aspera.md).*
+  
+Restricted NeMO data is now available through Google Cloud Platform (GCP). There are two mechanisms for access, web interface and command line. NeMO data is **requester pays**, therefore downloading by either mechanism requires set up of a billing project.  In order to avoid incurring large charges for data download, we strongly recommend that you run data analyses on GCP if possible.  
 
-If you **do not** already have Aspera CLI installed, see [download & installation instructions here](https://github.com/nemoarchive/documentation/blob/master/install_aspera.md).
-
-#### Downloading Files
-From your command line terminal, the `aspc` utility is used to download encrypted data using the following syntax:
-
-```bash
-$ ascp [-l <Maximum download speed>] [-k 2] [-m <Minimum download speed>] [-Q] [-T] \
-    <username>@aspera.nemoarchive.org:/<path to desired files on NeMO server> \
-    /path/to/local/download/directory
-```
-All parameters between the [ ... ] brackets are optional parameters that are described below:
-* l - Allows for the user to set a maximum download speed that aspera should attempt to stay at or below for the duration of the transfer. A speed in Megabits must be provided with this flag.
-* k - Allow for resumable data transmission in case an interruption occurs.
-* m - Allows for the user to set a minimum download sped that aspera should attempt to stay at or above for the duration of the transfer. A speed in Megabits must be provided with this flag.
-* Q - Turns adaptive rate on. Adaptive rate controls the speed of aspera with a goal of not dominating the bandwidth available. Very useful on busy networks that may have other transfers ongoing.
-* T - Turns encryption off. Turning encryption off will allow for a maximum throughput transfer but should not be provided if data being uploaded is sensitive.
-
-Example invocation to download a single file:
-
-```bash
-$ ascp -l 100M -k 2 -QT user@aspera.nemoarchive.org:/my_project/my_data.tar.gz /home/user/my_data/
-```
-In the above example, Aspera will attempt to keep the maximum transfer speed at 100 Megabits per second. Adaptive
-rate flow is turned on so that aspera does not monopolize the network bandwidth. The `my_data.tar.gz` file
-will be downloaded to the local `/home/user/data` area.
-
-Downloading a directory of files requires no changes in syntax:
-
-```bash
-$ ascp -l 100M -k 2 -QT user@aspera.nemoarchive.org:/my_project /home/user/my_data/
-```
-
-Upon entering the command to initiate a download, you will be prompted for your password.  
-
-
-#### Decrypting downloaded data
-Here we recommend decryption tools and provide instructions specific to your operating system:
-
-##### Mac (OSX)
-1. Install GPGSuite, available at [https://gpgtools.org/](https://gpgtools.org/)
-2. From your command line terminal, run the following command, replacing public.key with the key file provided to you via email:
-```
-gpg --import public.key
-```
-3. From your command line terminal, run the following command. Note that the file/directory that you want to write to does **not** need to be created beforehand:
-```
-gpg --output <path/to/file/to/write/to> --decrypt <path/to/encrypted/file>
-```
-
-##### Windows
-1. Download and install GPG4Win, available at [https://www.gpg4win.org/](https://www.gpg4win.org/)
-2. Open Kleopatra (included in GPG4Win)
-3. Go to File -> Import Certificate and select the public key file that was emailed to you
-4. Exit Kleopatra
-5. Right click on the encrypted file and click "Decrypt and Verify" on the next menu
-6. You can change the output folder in this menu
-
-##### Linux
-1. Install gpg through your distribution's package manager (apt, yum, etc)
-2. Execute the following command from the command line, replacing public.key with the key file provided to you via email:
-  ```
-  gpg --import public.key
-  ```
-3. Execute the following command from the command line. Note that the file/directory that you want to write to does **not** need to be created beforehand:
-```
-gpg --output <path/to/file/to/write/to> --decrypt <path/to/encrypted/file>
-```
 
 &nbsp;
 
-## Prior dbGaP Access
-Users having previously been granted dbGaP access for NeMO associated datasets do **not** need to reapply for NDA approval,
-on the condition that dbGaP access is still within the date of expiration.
-In order to gain access restricted NeMO datasets, simply **forward your dbGaP Data Use Certification Agreement to NeMO** at nemo@som.umaryland.edu.
-All investigators included in the dbGaP DUC will be assigned Aspera credentials, and can follow the steps described above.
-Upon expiration of the dbGap DUC, renewal of access will need to be done through the NDA approval process.
+<img alt="download_restricted-a77c715e.png" src="images/download_restricted-a77c715e.png" width="" height="" >
+
+&nbsp;
+
+#### Creating an institutional Google Cloud account
+Once you have received your NDA approval, the next step is to set up an institutional google account. This can be done by going to [https://myaccount.google.com/](https://myaccount.google.com/) and selecting Create Account, using the SAME institutional email address that you used for NDA account creation. *Not sure what email address is associated with your NDA account? Log in to NDA to access your user dashboard. You will find your email address under your Profile.*  
+  
+For example, if you used the email address **janedoe@som.umaryland.edu** when you set up your NDA account, then you would now create a new google account using **janedoe@som.umaryland.edu**
+
+Once set up, notify nemo@som.umaryland.edu as to your institutional google account creation. At this time, we will configure permissions and provide you with the  bucket name(s).  
+
+
+#### Setting up GCP Billing
+NeMO restricted data accesses uses a requester pays model, therefore download requires set up of a billing project. In order to avoid incurring large charges for data download, we stongly recommend that you run data analyses on GCP if possible.  
+
+To set up a new billing account go to [https://console.cloud.google.com/billing](https://console.cloud.google.com/billing), click CREATE ACCOUNT and follow instructions.  
+
+More information on billing accounts is [available here](https://cloud.google.com/billing/docs/).  
+
+
+#### Access via the GCP Browser Web Interface
+
+Go to https://console.cloud.google.com/storage/browser/[bucket name without leading gs://]  
+                For example, https://console.cloud.google.com/storage/browser/human-cortex  
+ 
+In the upper right corner, ensure that you are logged in under your institutional account, not a personal account, or you will not see any data listed.  
+If it is not already populated, click on the button to select the billing project that you previously created.  
+
+Navigate by clicking on the directory listed in the table. Individual files can be downloaded using the GCP Browser. Batch downloads require running the gsutil command line tool. Click on the directory you want to download, and click on DOWNLOAD in the menu directly above the data table. A popup will appear providing the gsutil command to run on your command line. For more on gsutil, read on.  
+
+
+#### Access via gsutil on the command line
+
+Instructions for installing gsutil as part of the Google Cloud SDK are [available here](https://cloud.google.com/storage/docs/gsutil_install).  
+
+To access restricted data, you must authenticate your account. At the command line prompt, type `gcloud auth login`  
+ 
+Follow the directions on the terminal, which will point you to a URL which you must navigate to from your browser. Here you will log in to your institutional google account. Once logged in, you will be provided with a verification code on your browser screen. Copy this and paste it onto the prompt on the command line. You should then see a message verifying your account, and billing project, if available.  
+ 
+To list bucket contents,  `gsutil -u [billing-project]  ls -l gs://bucket`
+ 
+example:  
+```
+gsutil -u my-billing-project ls -l gs://human-cortex
+```
+ 
+To download contents, `gsutil -u [billing-project] cp gs://bucket/file.txt /path/to/local/machine/file.txt`
+
+example:  
+```
+gsutil -u my-billing-project cp gs://human-cortex/transcriptome/scell/SSv4/human/raw/Ex_sample_01.fastq.tar /Users/jdoe/Desktop/Ex_sample_01.fastq.tar
+```
+ 
+ 
+Batch downloading a directory can be done in the same  way, adding the recursive option to the copy command, if necessary, `gsutil -u [billing-project] cp -r gs://bucket/* /path/to/local/machine/`
+
+example:  
+```
+gsutil -u my-billing-project cp -r gs://human-cortex/transcriptome/* /Users/jdoe/Desktop
+```
+ 
+&nbsp;  
+
