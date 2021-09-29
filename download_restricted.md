@@ -102,15 +102,14 @@ Restricted NeMO data is now available through Google Cloud Platform (GCP). There
 &nbsp;
 
 
-#### Creating an institutional Google Cloud account
+#### Step 1. Creating an institutional Google Cloud account
 Once you have received your NDA approval, the next step is to set up an institutional google account. This can be done by going to [https://myaccount.google.com/](https://myaccount.google.com/) and selecting Create Account, using the SAME institutional email address that you used for NDA account creation. *Not sure what email address is associated with your NDA account? Log in to NDA to access your user dashboard. You will find your email address under your Profile.*  
   
 For example, if you used the email address **janedoe@som.umaryland.edu** when you set up your NDA account, then you would now create a new google account using **janedoe@som.umaryland.edu**
 
 Once set up, notify nemo@som.umaryland.edu as to your institutional google account creation. At this time, we will configure permissions and provide you with the  bucket name(s).  
 
-
-#### Setting up GCP Billing
+#### Step 2. Setting up GCP Billing
 NeMO restricted data accesses uses a requester pays model, therefore download requires set up of a billing project. In order to avoid incurring large charges for data download, we stongly recommend that you run data analyses on GCP if possible.  
 
 To set up a new billing account go to [https://console.cloud.google.com/billing](https://console.cloud.google.com/billing), click CREATE ACCOUNT and follow instructions.  
@@ -118,7 +117,7 @@ To set up a new billing account go to [https://console.cloud.google.com/billing]
 More information on billing accounts is [available here](https://cloud.google.com/billing/docs/).  
 
 
-#### Access via the GCP Browser Web Interface
+#### Step 3a. Access via the GCP Browser Web Interface
 
 Go to https://console.cloud.google.com/storage/browser/[bucket name without leading gs://]  
                 For example, https://console.cloud.google.com/storage/browser/human-cortex  
@@ -129,7 +128,7 @@ If it is not already populated, click on the button to select the billing projec
 Navigate by clicking on the directory listed in the table. Individual files can be downloaded using the GCP Browser. Batch downloads require running the gsutil command line tool. Click on the directory you want to download, and click on DOWNLOAD in the menu directly above the data table. A popup will appear providing the gsutil command to run on your command line. For more on gsutil, read on.  
 
 
-#### Access via gsutil on the command line
+#### Step 3b. Access via gsutil on the command line
 
 Instructions for installing gsutil as part of the Google Cloud SDK are [available here](https://cloud.google.com/storage/docs/gsutil_install).  
 
