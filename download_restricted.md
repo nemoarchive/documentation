@@ -101,9 +101,6 @@ Restricted NeMO data is now available through Google Cloud Platform (GCP). There
 
 &nbsp;
 
-<img alt="download_restricted-a77c715e.png" src="images/download_restricted-a77c715e.png" width="" height="" >
-
-&nbsp;
 
 #### Creating an institutional Google Cloud account
 Once you have received your NDA approval, the next step is to set up an institutional google account. This can be done by going to [https://myaccount.google.com/](https://myaccount.google.com/) and selecting Create Account, using the SAME institutional email address that you used for NDA account creation. *Not sure what email address is associated with your NDA account? Log in to NDA to access your user dashboard. You will find your email address under your Profile.*  
