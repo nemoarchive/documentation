@@ -93,6 +93,7 @@ The ingest will gzip the file(s) not already gzipped
 * .genes.tsv.gz
 
 The ingest will gunzip the file(s) if gzipped.  This is to gzip the MEX tarball when ingested
+Currently, ingest requires unique files names, so each of the above must be prefixed with a sampleID. This sampleID will be stripped during processing and applied to the mex bundle. In other words, when a user gunzips and untars sampleID.mex.tar.gz, the result the result is a folder named 'sampleID' containing matrix.mtx.gz, features.tsv.gz, and barcodes.tsv.gz files
 
 ## SNAP
 
