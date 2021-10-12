@@ -96,7 +96,7 @@ NeMO will grant data access to investigator for *one year*, after which investig
 
 *If you are a legacy data user and still have access via Aspera, those [download instructions can be found here](https://github.com/nemoarchive/documentation/blob/master/download_restricted_aspera.md).*
   
-Restricted NeMO data is now available through Google Cloud Platform (GCP). There are two mechanisms for access, web interface and command line. NeMO data is **requester pays**, therefore downloading by either mechanism requires set up of a billing project.  In order to avoid incurring large charges for data download, we strongly recommend that you run data analyses on GCP if possible.  
+Restricted NeMO data is now available through Google Cloud Platform (GCP). There are two mechanisms for access, web interface and command line. NeMO data is **requester pays**, therefore downloading by either mechanism requires the use of a Google billing account.  In order to avoid incurring large charges for data download, we strongly recommend that you run data analyses on GCP if possible.  
 
 
 &nbsp;
@@ -110,20 +110,20 @@ For example, if you used the email address **janedoe@som.umaryland.edu** when yo
 Once set up, notify nemo@som.umaryland.edu as to your institutional google account creation. At this time, we will configure permissions and provide you with the  bucket name(s).  
 
 #### Step 2. Setting up GCP Billing
-NeMO restricted data accesses uses a requester pays model, therefore download requires set up of a billing project. In order to avoid incurring large charges for data download, we stongly recommend that you run data analyses on GCP if possible.  
+NeMO restricted data accesses uses a requester pays model, therefore downloading data requires the setup of a billing account. In order to avoid incurring large charges for data download, we stongly recommend that you run data analyses on GCP if possible.  
 
-To set up a new billing account go to [https://console.cloud.google.com/billing](https://console.cloud.google.com/billing), click CREATE ACCOUNT and follow instructions.  
+To set up a new billing account go to [https://console.cloud.google.com/billing](https://console.cloud.google.com/billing), click CREATE ACCOUNT and follow the instructions.  
 
 More information on billing accounts is [available here](https://cloud.google.com/billing/docs/).  
 
 
 #### Step 3a. Access via the GCP Browser Web Interface
 
-Go to https://console.cloud.google.com/storage/browser/[bucket name without leading gs://]  
+Go to https://console.cloud.google.com/storage/browser/<bucket name without leading gs:// >  
                 For example, https://console.cloud.google.com/storage/browser/human-cortex  
  
-In the upper right corner, ensure that you are logged in under your institutional account, not a personal account, or you will not see any data listed.  
-If it is not already populated, click on the button to select the billing project that you previously created.  
+In the upper right corner, ensure that you are logged in with your institutional account, not a personal account, or you will not see any data listed.  
+If it is not already populated, click on the button to select the billing account that you previously created.  
 
 Navigate by clicking on the directory listed in the table. Individual files can be downloaded using the GCP Browser. Batch downloads require running the gsutil command line tool. Click on the directory you want to download, and click on DOWNLOAD in the menu directly above the data table. A popup will appear providing the gsutil command to run on your command line. For more on gsutil, read on.  
 
@@ -151,7 +151,7 @@ gsutil -u my-billing-project cp gs://human-cortex/transcriptome/scell/SSv4/human
 ```
  
  
-Batch downloading a directory can be done in the same  way, adding the recursive option to the copy command, if necessary, `gsutil -u [billing-project] cp -r gs://bucket/* /path/to/local/machine/`
+Batch downloading a directory can be done in the same way, adding the recursive option to the copy command, if necessary, `gsutil -u [billing-project] cp -r gs://bucket/* /path/to/local/machine/`
 
 example:  
 ```
