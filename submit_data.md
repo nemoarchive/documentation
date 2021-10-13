@@ -27,7 +27,7 @@ Someone from the NeMO team will follow up with you regarding any other questions
 
 &nbsp;
 ### Submitting a File Manifest
-All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums, through the [NeMO manifest submission page](https://assets.nemoarchive.org/manifest_submission/).
+All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums. **The file manifest submission site has moved, see instructions below.** 
 Because we do not dictate file naming conventions, and are no longer defining the specific directory structure that your data submission must contain, it is necessary for us to collect some basic information in order to process your data properly for release. This is not a comprehensive metadata collection and should be straightforward to populate.
 
 Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below.
@@ -72,8 +72,9 @@ The manifest file must contain **one row, including an MD5 checksum, for every f
 
 The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.[ext]`, where [ext] can be csv, tsv or tab. All formats will be converted to TSV.
 
-#### Manifest validation
-Upon upload to the [NeMO manifest submission page](https://assets.nemoarchive.org/manifest_submission/), file manifests will be immediately validated for:
+#### Manifest submission and validation
+To submit your manifest for validation, log into [the NeMO website](https://nemoarchive.org/) using your NeMO Aspera credentials. Once logged in, select `Dashboard` in the top navigation. This will take you to a page with links to make a submission, or view your current submissions (coming soon).
+Upon upload, file manifests will be immediately validated for:
 * complete header row
 * presence of checksums and all other required fields
 * proper controlled vocabularies
