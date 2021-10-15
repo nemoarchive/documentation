@@ -27,7 +27,7 @@ Someone from the NeMO team will follow up with you regarding any other questions
 
 &nbsp;
 ### Submitting a File Manifest
-All submissions to NeMO Archives, whether public or private, begin with upload of a file manifest including MD5 checksums. **The file manifest submission site has moved, see instructions below.** 
+All submissions to NeMO Archives, whether public or private, begin with upload of a tab delimited (tsv) file manifest including MD5 checksums. **The file manifest submission site has moved, see instructions below.** 
 Because we do not dictate file naming conventions, and are no longer defining the specific directory structure that your data submission must contain, it is necessary for us to collect some basic information in order to process your data properly for release. This is not a comprehensive metadata collection and should be straightforward to populate.
 
 Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below.
@@ -70,7 +70,7 @@ All manifest files must contain the following fields. Do not delete headers for 
 
 The manifest file must contain **one row, including an MD5 checksum, for every file included in the submission**. If you're submitting a tarball, the manifest should contain one row for every file within the tarball. For submission of multiple, or chunked, tarballs, there is no need for a manifest per tarball, all component files can be included in a single manifest.
 
-The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a comma or tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.[ext]`, where [ext] can be csv, tsv or tab. All formats will be converted to TSV.
+The first column should contain the file name only, no path information. If populating the manifest in Excel or Numbers, save as a tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.tsv`.
 
 #### Manifest submission and validation
 To submit your manifest for validation, log into [the NeMO website](https://nemoarchive.org/) using your NeMO Aspera credentials. Once logged in, select `Dashboard` in the top navigation. This will take you to a page with links to make a submission, or view your current submissions (coming soon).
