@@ -94,7 +94,7 @@ The "success" property will contain a boolean value, and will indicate whether t
 
 # Paging Through Results
 
-The submission API paginates submissions 100 at a time. Therefore, if the user has made more than 100 submissions, multiple requests will need to be issued to fetch the entirety of the data. The user will alerted to the need to paginate by the presence of a "next" key in the returned JSON document. When paging through the results, the "page" property will also indicate the "page", or slice of data, that has been retrieved. Example:
+The submission API paginates submissions 100 at a time. Therefore, if the user has made more than 100 submissions, multiple requests will need to be issued to fetch the entirety of the data. The user will alerted to the need to paginate by the presence of a "next" property in the returned JSON document. When paging through the results, the "page" property will also indicate the page number, or slice of data, that has been retrieved. Example:
 
 ```
 {
