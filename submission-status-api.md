@@ -4,7 +4,7 @@ The NeMO Archive exposes a read-only REST API for users that wish to create scri
 
 # Obtaining a Token
 
-Before we can use the API, we must first be able to authenticate to it, so that the server can identify the user. To obtain a token, a JSON Web Token (JWT) to be precise, a user must POST their NeMO submission credentials to the NeMO submission API with an HTTP POST. This is the same set of credentials that NeMO data submitters use to transfer their files via aspera. Example: 
+Before one can use the API, one must first be able to authenticate to it, so that the server can identify the user. To obtain a token, a JSON Web Token (JWT) to be precise, a user must POST their NeMO submission credentials to the NeMO submission API with an HTTP POST. This is the same set of credentials that NeMO data submitters use to transfer their files via aspera. Example: 
 
 `$ curl -X POST https://nemoarchive.org/api/login -d '{"username": "USERNAME", "password": "PASSWORD"}'`
 
