@@ -20,7 +20,7 @@ Permissions for restricted data access at NeMO are being facilitated by the [NIM
 
 &nbsp;
 
-<img alt="download_restricted-a77c715e.png" src="images/download_restricted-a77c715e.png" width="" height="" >
+<img alt="download_restricted-a77c715e.png" src="images/download_restricted-a77c715e.png">
 
 &nbsp;
 
@@ -31,7 +31,7 @@ Permissions for restricted data access at NeMO are being facilitated by the [NIM
 Account requests made from a personal account will not be honored by NeMO or NDA and will therefore slow down
 the process of accessing data.
 
-<img alt="NDA request account" src="images/NDA/NDA_requestacct.png" width="40%" height="" >
+<img alt="NDA request account" src="images/NDA/NDA_requestacct.png" style="width:40%;">
 
 #### Step 2. Identify Datasets available through the NDA Dashboard
 Log in to the [NDA Permissions Dashboard](https://nda.nih.gov/user/dashboard/data_permissions.html).
