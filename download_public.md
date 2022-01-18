@@ -53,7 +53,7 @@ If you are a PI or a data submitter and would like to organize a data collection
 An HTTP server-based browser is available at [data.nemoarchive.org](http://data.nemoarchive.org/) for navigation through the NeMO Archive public data directory structure.
 Data can be downloaded from the NeMO HTTP browser using any tools that support http downloads.
 
-<img alt="HTTP browser" src="images/HTTP_browser.png">
+<img alt="HTTP browser" src="images/HTTP_browser.png" style="width:50%;">
 
 The top, or root, level of the HTTP browser separates data based on release or project:
 ##### Releases
