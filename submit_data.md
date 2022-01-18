@@ -7,13 +7,18 @@ Data submitted to NeMO falls into three categories:
 
 
 ### In this document:
-1. [Requesting a NeMO Aspera account](#requesting-a-nemo-aspera-account)
-2. [Submitting a File Manifest](#submitting-a-file-manifest)
-3. [Submitting data](#submitting-data)
-4. [Processing workflow](#processing-workflow)
-5. [Restricted data](#restricted-data)
-6. [Tracking Submissions](#tracking-submissions)
-7. [Reporting Submissions to NIH](#reporting-to-nih)
+- [Submitting Data to NeMO - Overview](#submitting-data-to-nemo---overview)
+    - [In this document:](#in-this-document)
+- [Requesting a NeMO Aspera Account](#requesting-a-nemo-aspera-account)
+- [Submitting a File Manifest](#submitting-a-file-manifest)
+  - [Manifest format](#manifest-format)
+  - [Manifest submission and validation](#manifest-submission-and-validation)
+- [Submitting Data](#submitting-data)
+  - [Uploading using Aspera](#uploading-using-aspera)
+- [Processing Workflow](#processing-workflow)
+- [Restricted Data](#restricted-data)
+- [Tracking Submissions](#tracking-submissions)
+- [Reporting to NIH](#reporting-to-nih)
 
 &nbsp;
 
@@ -155,7 +160,7 @@ It is not possible to delete or update data using the Aspera CLI, however submit
 # Processing Workflow
 &nbsp;
 
-<img alt="submit_dataflow" src="images/nemo_dataflow-v3.png" width="" height="" >
+<img alt="submit_dataflow" src="images/nemo_dataflow-v3.png">
 
 Upon successful bundling of data to the release area (either public of restricted), submitters will receive a "Successful ingest" email containing your validated manifest with additional fields capturing final file location and NeMO identifiers for individual files. This email will also list any directories or files skipped due to not being listed in the manifest, for your review.  
 
