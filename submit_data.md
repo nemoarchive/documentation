@@ -23,7 +23,7 @@ Data submitted to NeMO falls into three categories:
 &nbsp;
 
 # Requesting a NeMO Aspera Account
-New data submitters can register for an account at [nemoarchive.org/register.php](https://nemoarchive.org/register.php). Upon doing so, please send an email to [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu) with the following information:
+New data submitters can register for an account at [nemoarchive.org/register](https://nemoarchive.org/register). Upon doing so, please send an email to [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu) with the following information:
 * requested username
 * grant under which data was generated
 * PI of lab in which data was generated
@@ -182,7 +182,7 @@ This image shows the status for an individual manifest. Clicking on any of the c
 
 Incomplete steps are shown in grey, failed steps in red. Failed steps should be resolved internally by the NeMO team, and we will reach out if you need to resubmit all or a portion of your data.
 
-If you are a project manager, a PI or other role responsible for tracking submissions, and would like to have access to the tracking dashboard for one or a number of labs or submitters, please create a NeMO Aspera account at [nemoarchive.org/register.php](https://nemoarchive.org/register.php) and email [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu) explaining your role and tracking request.  
+If you are a project manager, a PI or other role responsible for tracking submissions, and would like to have access to the tracking dashboard for one or a number of labs or submitters, please create a NeMO Aspera account at [nemoarchive.org/register](https://nemoarchive.org/register) and email [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu) explaining your role and tracking request.  
 
 &nbsp;  
 
