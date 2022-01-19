@@ -103,9 +103,9 @@ Upon upload, file manifests will be immediately validated for:
 * detection of unexpected file extensions
 * presence of all components of various bundle types
 
-Validation failure in any row(s) will result in an error message displayed on the submission page, accompanied by an invalid manifest validation email with additional details about the error is applicable. Once you have corrected errors, your updated validation file is submitted in the same way and undergoes the same validation.
+Validation failure in any row(s) will result in an error message displayed on the submission page, accompanied by an invalid manifest validation email with additional details about the error, if applicable. Once you have corrected the errors, your updated validation file is submitted in the same way and undergoes the same validation.
 
-Validation success will result in notification within minutes, via email, of the Aspera path to which you will submit your data, as described below. Be sure to submit to the provided path, as any other submissions will be ignored and routinely deleted.
+Validation success will result in notification, typically within minutes, via email, of the Aspera path to which you will submit your data, as described below. Be sure to submit to the provided path, as any other submissions will be ignored and routinely deleted.
 
 &nbsp;
 
