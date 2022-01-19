@@ -94,7 +94,7 @@ If populating the manifest in Excel or Numbers, save as a tab delimited file. Th
 &nbsp;  
 
 ## Manifest submission and validation
-To submit your manifest for validation, log into [the NeMO website](https://nemoarchive.org/) using your NeMO Aspera credentials. Once logged in, select `Dashboard` in the top navigation. This will take you to a page with links to make a submission, or view your current submissions (described below).
+To submit your manifest for validation, log into [NeMO](https://nemoarchive.org/) using your NeMO Aspera credentials. Once logged in, select `Dashboard` in the top navigation. This will take you to a page with links to make a submission, or view your current submissions (described below).
 
 Upon upload, file manifests will be immediately validated for:
 * complete header row
