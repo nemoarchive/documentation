@@ -110,3 +110,9 @@ The submission API paginates submissions 100 at a time. Therefore, if the user h
   "next": "https://nemoarchive.org/api/submission?page=2"
 }
 ```
+
+# Obtaining Extended Results For Other Users' Submissions
+
+If one is a NeMO submission group leader, or a NeMO system superuser, the API is capable of returning results for your own submissions as well as those made by members of your group. Simply add a "all=y" query parameter to the request URL, and the API will return these extended results to you (if authorized). For example:
+
+`$ curl -X GET https://nemoarchive.org/api/submission?all=y -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX"`
