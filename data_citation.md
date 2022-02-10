@@ -12,15 +12,15 @@ See screenshots from an actual BICCN dataset further down this page.
 ### Requesting a BDBag and Unique Identifier
 Requesting a unique identifier for your dataset involves the following steps:
 
-1) Submit your data to NeMO [as described here](submit), or [browse the NeMO archives](https://github.com/nemoarchive/documentation/blob/master/browse_http.md) to ensure that your data has previously been submitted.
+1) Submit your data to NeMO [as described here](https://github.com/nemoarchive/documentation/blob/master/submit_data.md), or [browse the NeMO archives](https://github.com/nemoarchive/documentation/blob/master/browse_portal.md) to ensure that your data has previously been submitted.
 2) Reach out to NeMO Archives staff through our [Contact page](https://nemoarchive.org/contact.php)
-3) Download and fill out the [metadata spreadsheet](googledoc). A NeMO Archives staff member will ask you to send this for accurate creation of your landing page. Complete and accurate metadata enhances data reuse and searchability.
+3) Download and fill out the [metadata spreadsheet](https://docs.google.com/spreadsheets/d/1s7ZJaC9kYyyDnkYShRImmFXV11yxAO70mCV2ZhD1OvM/edit?usp=sharing). A NeMO Archives staff member will ask you to send this for accurate creation of your landing page. Complete and accurate metadata enhances data reuse and searchability.
 4) NeMO Archives staff will provide a unique identifier(s) for citation in your manuscript, see next section.
 
 
 ### Citing your dataset
 
-The NeMO Archives in conjunction with the BICCN (or BCDC?) endorse the following citation format:
+The NeMO Archives in conjunction with the BICCN endorse the following citation format:
 The data analyzed in this study were produced through the Brain Initiative Cell Census Network (BICCN:RRID:SCR_015820) and deposited in the NEMO Archive (RRID:SCR_002001) under identifier `NeMO unique identifier` accessible at `NeMO identifier landing page URL`
 
 Additional Resources are available here:
