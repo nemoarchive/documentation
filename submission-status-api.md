@@ -63,6 +63,7 @@ Each "RESULT" in the list of results is itself a JSON object containing the deta
 ```
 {
   "id": "ABC1234",
+  "submitter": "username",
   "creation": "2021-01-01T10:00:00Z",
   "complete": true,
   "success": true,
