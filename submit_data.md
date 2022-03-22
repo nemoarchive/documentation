@@ -40,7 +40,7 @@ All submissions to NeMO Archives, whether public or private, begin with upload o
 Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below.
 
 ## Manifest format
-[File manifest template in tsv format](./manifest_template.tsv)
+[File manifest template in tsv format](https://github.com/nemoarchive/documentation/blob/master/manifest_template.tsv)
 
 [Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing) - Please contact NeMO to discuss addition of new terms to the any of the controlled vocabularies.
 
