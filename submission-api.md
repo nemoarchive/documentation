@@ -1,6 +1,6 @@
 # Overview
 
-The NeMO Archive exposes a read-only REST API for users that wish to create scripts and automate the retrieval of the status of their data submissions. Since the API is RESTful, any modern programming language that has a suitable HTTP library should be able to easily obtain the data. Results are returned in JSON format to make the parsing of the data easier. In the examples provided here, we will be using the fairly ubiquitous `curl` command-line utility to demonstrate the operation of the submission status API.
+The NeMO Archive exposes a RESTful API for users that wish to create scripts and automate the retrieval of the status of their data submissions. Since the API is RESTful, any modern programming language that has a suitable HTTP library should be able to easily obtain the data. Results are returned in JSON format to make the parsing of the data easier. In the examples provided here, we will be using the fairly ubiquitous `curl` command-line utility to demonstrate the operation of the submission status API.
 
 # Obtaining a Token
 
@@ -116,3 +116,20 @@ The submission API paginates submissions 100 at a time. Therefore, if the user h
 If one is a NeMO submission group leader, or a NeMO system superuser, the API is capable of returning results for your own submissions as well as those made by members of your group. Simply add a "all=y" query parameter to the request URL, and the API will return these extended results to you (if authorized). For example:
 
 `$ curl -X GET https://nemoarchive.org/api/submission?all=y -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX"`
+
+# Making a Submission Through the API
+
+One call also submit a manifest through the API instead of going through the NeMO Archive website. Submitting the file still requires authentication with a JWT as shown above, but it can be done with any suitable tool like curl, or language, that supports a multipart file upload. Examples:
+
+`$ curl https://nemoarchive.org/api/submission -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" -F manifest=@/path/to/file.csv`
+
+where /path/to/file.csv is your local path to the manifest to be submitted.
+
+If one is using python with the requests module, the code might look similar to this:
+
+```
+submission_endpoint = "https://nemoarchive.org/api/submission"
+auth_header = {'Authorization': 'Bearer {}'.format(token)}
+files = {'manifest': ('manifest', open(filename, 'rb'))}
+response = requests.post(submission_endpoint, files=files, headers=auth_header)
+```
