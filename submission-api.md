@@ -119,7 +119,7 @@ If one is a NeMO submission group leader, or a NeMO system superuser, the API is
 
 # Making a Submission Through the API
 
-One call also submit a manifest through the API instead of going through the NeMO Archive website. Submitting the file still requires authentication with a JWT as shown above, but it can be done with any suitable tool like curl, or language, that supports a multipart file upload. Examples:
+One can also submit a manifest through the API instead of going through the NeMO Archive website. Submitting the file still requires authentication with a JWT as shown above, but it can be done with any suitable tool like curl, or language, that supports a multipart file upload. Examples:
 
 `$ curl https://nemoarchive.org/api/submission -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" -F manifest=@/path/to/file.csv`
 
