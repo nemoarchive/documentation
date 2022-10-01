@@ -35,34 +35,19 @@ If the credentials are accepted, a JSON message is returned that has the followi
 
 The value of the 'jwt' property should be noted, as it is this token that must be specified for future interactions with the API. The "expireAt" property contains the expiration time, after which, a new token will need to be obtained. Tokens have a lifetime of 24 hours.
 
-# Retrieving Submission Status
+Do not share your token! Treat it as a sensitive piece of information, just as your password.
 
-Once a valid token has been generated, one can use it to retrieve one's submission history and status by issuing a GET request with it. The token must be specified with an HTTP "Authorization" header. Example:
+# Retrieving Status for a Submission
 
-`$ curl -X GET https://nemoarchive.org/api/submission -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX"`
+Once a valid token has been generated, one can use it to retrieve a submission's history and status by issuing a GET request with it. The token must be specified with an HTTP "Authorization" header. In the following example, the token is shown as a series of "X" characters. This should be replaced with your actual token, which is a sensitive/private piece of information. In addition, the submissin ID is shown as a series of "Y" characters. This should be replaced with your specific submission ID.
 
-In this example, one would replace the repeated X characters with the actual JWT token that was previously obtained. Do not share your token. Treat it as a sensitive piece of information, just as your password.
+Example:
 
-# Interpreting the results
-```
-{
-  "total": 12,
-  "results": [
-    RESULT1,
-    RESULT2,
-    ...
-    RESULT12
-  ]
-}
-```
-
-The "total" property indicates how many submissions the API is aware of for the authenticated user.
-
-Each "RESULT" in the list of results is itself a JSON object containing the details of the submission, and the result of each step of the ingest process.
+`$ curl -X GET -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission/YYYYYYY`
 
 ```
 {
-  "id": "ABC1234",
+  "id": "YYYYYY",
   "submitter": "username",
   "creation": "2021-01-01T10:00:00Z",
   "complete": true,
@@ -77,7 +62,7 @@ Each "RESULT" in the list of results is itself a JSON object containing the deta
 }
 ```
 
-The "id" property is simply the randomly generated identifier for the submission. All submissions are guaranteed to have a globally unique identifier among all submissions. The "creation" property will have the UTC timestamp of when the submission was initiated, which is the when the manifest was submitted via the nemoarchive.org website. The "complete" property will indicate whether the submission is considered complete or not. This will only be true if all the steps have completed, or if there was a failure. The "success" property indicates whether the submission successfully completed. If the submission is still progressing, or if there are any failures, the value will be false. The "policy" property, if set, will show whether the manifest indicated the presence of open data, restricted data, or embargoed data. If there was an error in the manifest validation step, the policy may not have been determined, and the property may not be present.
+The "id" property is simply the randomly generated identifier for the submission. All submissions are guaranteed to have a globally unique identifier among all submissions. The "creation" property will have the UTC timestamp of when the submission was initiated, which is the when the manifest was submitted via the nemoarchive.org website or API. The "complete" property will indicate whether the submission is considered complete or not. This will only be true if all the steps have completed, or if there was a failure. The "success" property indicates whether the submission successfully completed. If the submission is still progressing. If there are any failures, this value will be false. The "policy" property, if set, will show whether the manifest indicated the presence of "open" data, controlled/restricted data, or embargoed data. If there was an error in the manifest validation step, the policy may not have been determined, and the property may not be present.
 
 Each "step" in the "steps" list property, will have the following structure:
 
@@ -91,9 +76,36 @@ Each "step" in the "steps" list property, will have the following structure:
 ```
 
 The "step" property names the ingest step, of which there are 6: manifest_validated, upload_complete, qc_complete, https_release, gcp_release and portal_release.
+
 The "success" property will contain a boolean value, and will indicate whether the step succeeded or failed. The "date" property will contain the UTC timestamp of when the step succeeded (or failed). Finally, the "msg" property will have a message containing some brief message about completion of the status, or why the step failed. Steps that are in-progress and not yet complete will not be included in the "steps" list. Since the ingest process contains 6 steps, a fully complete and successful submission will therefore have 6 objects in the "steps" list property.
 
-# Paging Through Results
+# Retrieving Submission History
+
+It's possible to retrieve one's entire submission history and status by issuing a GET request to the /submission endpoint.
+
+Example: 
+
+`$ curl -X GET https://nemoarchive.org/api/submission -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX"`
+
+```
+{
+  "total": 12,
+  "results": [
+    RESULT1,
+    RESULT2,
+    ...
+    RESULT12
+  ]
+}
+```
+
+## Interpreting the results
+
+The "total" property indicates how many submissions the API is aware of for the authenticated user.
+
+Each "RESULT" in the list of results is itself a JSON object containing the details of the submission, and the result of each step of the ingest process as previously shown.
+
+## Paging Through Results
 
 The submission API paginates submissions 100 at a time. Therefore, if the user has made more than 100 submissions, multiple requests will need to be issued to fetch the entirety of the data. The user will alerted to the need to paginate by the presence of a "next" property in the returned JSON document. When paging through the results, the "page" property will also indicate the page number, or slice of data, that has been retrieved. Example:
 
