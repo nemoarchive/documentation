@@ -1,4 +1,4 @@
-# Accessing Controlled Access Data
+# Accessing Controlled Data
 
 Data submitted to NeMO falls into three categories:
 * *Public* - data to be immediately distributed openly and freely to the wider research community,
@@ -25,7 +25,7 @@ Permissions for restricted data access at NeMO are being facilitated by the [NIM
 &nbsp;
 
 #### Step 1. Create an NDA account
-[Create an NDA account here](https://nda.nih.gov/user/create_account.html).
+[Create an NDA account here](https://nda.nih.gov/).
 
 **NDA account requests MUST be made using an institutional email address**.
 Account requests made from a personal account will not be honored by NeMO or NDA and will therefore slow down
@@ -86,7 +86,7 @@ Your data access request will be reviewed by an NIH Data Access Committee (DAC).
 #### Step 7. Access request decision
 NDA will inform investigators of a final access decision.
 At this time, you will need to **forward your Access Approval email to the NeMO team** at <a href=“mailto:nemo@som.umaryland.edu”>nemo@som.umaryland.edu</a>. Failure to do so will delay our sending you your access credentials.
-NeMO will grant data access to investigator for *one year*, after which investigators will need to reapply for access using the process described above.
+NeMO will grant data access to investigators for *one year*, after which investigators will need to reapply for access using the process described above.
 
 &nbsp;
 
@@ -96,7 +96,9 @@ NeMO will grant data access to investigator for *one year*, after which investig
 
 *If you are a legacy data user and still have access via Aspera, those [download instructions can be found here](https://github.com/nemoarchive/documentation/blob/master/download_restricted_aspera.md).*
   
-Restricted NeMO data is now available through Google Cloud Platform (GCP). There are two mechanisms for access, web interface and command line. NeMO data is **requester pays**, therefore downloading by either mechanism requires the use of a Google billing account.  In order to avoid incurring large charges for data download, we strongly recommend that you run data analyses on GCP if possible.  
+Restricted NeMO data is now available through Google Cloud Platform (GCP). There are two mechanisms for access, web interface and command line.
+
+NeMO data is **requester pays**, therefore downloading by either mechanism requires the use of a Google billing account. In order to avoid incurring large charges for data download, we strongly recommend that you run data analyses on GCP if possible.
 
 
 &nbsp;
@@ -110,7 +112,6 @@ For example, if you used the email address **janedoe@som.umaryland.edu** when yo
 Once set up, notify nemo@som.umaryland.edu as to your institutional google account creation. At this time, we will configure permissions and provide you with the  bucket name(s).  
 
 #### Step 2. Setting up GCP Billing
-NeMO restricted data accesses uses a requester pays model, therefore downloading data requires the setup of a billing account. In order to avoid incurring large charges for data download, we stongly recommend that you run data analyses on GCP if possible.  
 
 To set up a new billing account go to [https://console.cloud.google.com/billing](https://console.cloud.google.com/billing), click CREATE ACCOUNT and follow the instructions.  
 
