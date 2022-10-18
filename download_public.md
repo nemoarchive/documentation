@@ -1,12 +1,12 @@
 # Downloading Publicly Available Data
 
-Data submitted to NeMO falls into three categories:
+Data submitted to NeMO Archive falls into three categories:
 * *Public* - data to be immediately distributed openly and freely to the wider research community,
 * *Embargo* - data to be held back, or embargoed, until a specific date, at which point it will be released openly and freely to the wider research community,
 * *Restricted* - Controlled access data to be distributed only to an approved group of users due to consent restrictions, e.g. human data. Often restricted datasets contain a combination of private (raw reads, alignments) and public (counts, peaks) datatypes.  In such instances, the dataset landing page or BDBag will provide direct access to public data, in addition to a link to restricted data access instructions.
 
-There are many ways that users may be introduced to data at NeMO Archives, depending on whether you're arriving at our site directly or from another resource. For Restricted
-data access, see the [documentation here](download_restricted.md). For public data users, we've put together this handy table to recommend the most appropriate way to
+There are many ways that users may be introduced to data at NeMO Archive, depending on whether you're arriving at our site directly or from another resource. For Restricted
+data access, see the [documentation here](https://nemoarchive.org/resources/accessing-controlled-access-data). For public data users, we've put together this handy table to recommend the most appropriate way to
 access data:
 
 | So you want to... | We recommend... |
@@ -45,7 +45,7 @@ about the dataset, along with links to either the HTTP browser (see next section
 or a [BDBag](https://bd2k.ini.usc.edu/tools/bdbag/) if it contains a subset of data or data across multiple modalities, labs or cell types.
 More information about downloading and working with BDBags is [available here](./download_bdbag.md).
 
-If you are a PI or a data submitter and would like to organize a data collection into a BDBag and/or request a landing page for a data collection or publication, see our [documentation on organizing data into a BDBag](Organize_data_into_BDBag.md).
+If you are a PI or a data submitter and would like to organize a data collection into a BDBag and/or request a landing page for a data collection or publication, please contact the NeMO Archive team.
 
 &nbsp;
 
@@ -57,15 +57,15 @@ Data can be downloaded from the NeMO HTTP browser using any tools that support h
 
 The top, or root, level of the HTTP browser separates data based on release or project:
 ##### Releases
- * `nemo_release/` contains a [BDBag](download_bdbag.md) corresponding to quarterly NeMO releases. NeMO releases are synchronized to the same release schedule as the BCDC release schedule. These bags contain BICCN data only.
- * `publication_release/` contains one or more [BDBags](download_bdbag.md) corresponding to dataset(s) analyzed for BICCN-associated publications. See [Data citation](./data_citation.md) for more information.
+ * `nemo_release/` contains a [BDBag](https://bd2k.ini.usc.edu/tools/bdbag/) corresponding to quarterly NeMO releases. NeMO releases are synchronized to the same release schedule as the BCDC release schedule. These bags contain BICCN data only.
+ * `publication_release/` contains one or more [BDBags](https://github.com/nemoarchive/documentation/blob/master/download_bdbag.md) corresponding to dataset(s) analyzed for BICCN-associated publications. See [Data citation](https://github.com/nemoarchive/documentation/blob/master/data_citation.md) for more information.
 
 ##### Projects
  * `biccc/` contains data generated within the BRAIN Initiative Cell Census Consortium, precursor to the BICCN
  * `biccn/` contains data generated as part of the ongoing [BRAIN Initiative Cell Census Network](https://biccn.org/)
  * `other/` In addition to hosting BRAIN Initiative data, the NeMO repository also hosts 'omics data from other neuroscience projects. Contact us if you would like to discuss submission of your dataset(s) to the NeMO Archives.
 
-Within each project, data is organized by grant, lab, organism or modality. Read more about the [data storage model](data_model.md).
+Within each project, data is organized by grant, lab, organism or modality. Read more about the [data storage model](https://github.com/nemoarchive/documentation/blob/master/data_model.md).
 
 &nbsp;
 
@@ -80,6 +80,6 @@ The summary is displayed graphically as a set of interactive pie charts that can
 &nbsp;
 
 Additional NeMO Data Portal documentation can be found at the following pages:
-* [Browsing the NeMO Data portal](browse_portal.md)
-* [Downloading data using the portal client](download_portal_client.md)
-* [Exporting data to Terra for analysis](export_to_terra.md)
+* [Browsing the NeMO Data portal](https://github.com/nemoarchive/documentation/blob/master/browse_portal.md)
+* [Downloading data using the portal client](https://github.com/nemoarchive/documentation/blob/master/download_portal_client.md)
+* [Exporting data to Terra for analysis](https://github.com/nemoarchive/documentation/blob/master/export_to_terra.md)
