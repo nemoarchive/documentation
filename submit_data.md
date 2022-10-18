@@ -7,8 +7,6 @@ Data submitted to NeMO falls into three categories:
 
 
 ### In this document:
-- [Submitting Data to NeMO - Overview](#submitting-data-to-nemo---overview)
-    - [In this document:](#in-this-document)
 - [Requesting a NeMO Aspera Account](#requesting-a-nemo-aspera-account)
 - [Submitting a File Manifest](#submitting-a-file-manifest)
   - [Manifest format](#manifest-format)
@@ -29,7 +27,7 @@ New data submitters can register for an account at [nemoarchive.org/register](ht
 * PI of lab in which data was generated
 * whether data is public, for embargo or restricted*
 
-*Restricted data submitters are asked to request account usernames with an appended "-restricted", e.g. `doe-restricted`. If you will be submitting both public and controlled access data, you will need to create two accounts, one without and one with the "-restricted" tag.  
+*Restricted data submitters are asked to request account usernames with an appended "-restricted", e.g. `doe-restricted`. If you will be submitting both public and controlled access data, you will need to create two accounts, one without and one with the "-restricted" tag. Similarly, if you are submitting to multiple restricted projects (e.g. BICAN and SCORCH) we ask that you create a unique user for each project.
 
 Someone from the NeMO team will follow up with you regarding any other questions about your data or the submission process. 
 
@@ -37,12 +35,12 @@ Someone from the NeMO team will follow up with you regarding any other questions
 # Submitting a File Manifest
 All submissions to NeMO Archives, whether public or private, begin with upload of a tab delimited (tsv) file manifest including MD5 checksums through the User Dashboard available to logged in users at [https://nemoarchive.org/login](https://nemoarchive.org/login). More instructions on submission are below. This enables us to collect some basic information in order to organize and process your data properly for release. This is not a comprehensive metadata collection and should be straightforward to populate.  
 
-Detection and validation of a properly formatted manifest will trigger a message providing the Aspera submission path for your data, see below.
+Detection and validation of a properly formatted manifest will trigger an email message providing the Aspera submission path for your data, see below.
 
 ## Manifest format
 [File manifest template in tsv format](https://github.com/nemoarchive/documentation/blob/master/manifest_template.tsv)
 
-[Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing) - Please contact NeMO to discuss addition of new terms to the any of the controlled vocabularies.
+[Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing) - Please contact NeMO to discuss addition of new terms to any of the controlled vocabularies.
 
 All manifest files must contain the following fields. Do not delete headers for unused, optional columns:
  * File name - must be unique, described below
@@ -58,14 +56,14 @@ All manifest files must contain the following fields. Do not delete headers for 
  * File type
  * Access
  * Checksum - described below
- * Anatomical site (optional for current release cycle)
+ * Anatomical site
  * Counts data only fields (optional):
    - Counts pipeline
  * Aligned data only fields (optional):
    - Read aligner
    - Genome build
    - Gene set release
- * BRAIN initiative only fields (optional, but highly recommended):
+ * BRAIN initiative only fields
    - BCDC Project name
    - BCDC data collection
  * Controlled access only fields (optional):
@@ -90,7 +88,7 @@ sample1/barcodes.tsv
 ```
 
 **Important:**  
-If populating the manifest in Excel or Numbers, save as a tab delimited file. The manifest file can have any prefix, however the base filename **must** be `manifest.tsv`.
+Save your manifest as a tab seperated file. The manifest file can have any prefix, however the base filename must be manifest.tsv.
 &nbsp;  
 
 ## Manifest submission and validation
@@ -118,9 +116,8 @@ Depending on the size of your submission, it may be preferable to submit data fi
 
 ## Uploading using Aspera
 In order to submit data to NeMO, you will first need to download and install the IBM Aspera Command Line Interface,
-available from the [IBM website](https://www.ibm.com/products/aspera/downloads).
-You will find the download link under `Featured client software` > `IBM Aspera Command Line Interface`.
-Select the most recent release for your operating system. You will need to create an IBM account if you do not already have one. Installation instructions are available [here](https://github.com/nemoarchive/documentation/blob/master/install_aspera.md).
+available from the [IBM website](https://www.ibm.com/products/aspera/downloads). You will find IBM Aspera CLI under Developer resources.
+Installation instructions are available [here](https://github.com/nemoarchive/documentation/blob/master/install_aspera.md).
 
 Once installed, the `ascp` utility will be available for use at the command line. Have your NeMO Aspera credentials handy, as commands to initiate an upload will result in a prompt for your password.
 
@@ -139,7 +136,7 @@ l - Allows for the user to set a maximum upload/download speed that aspera shoul
 k - Allow for resumable data transmission in case an interruption occurs.
 m - Allows for the user to set a minimum upload/download sped that aspera should attempt to stay at or above for the duration of the transfer. A speed in Megabits must be provided with this flag.
 Q - Turns adaptive rate on. Adaptive rate controls the speed of aspera with a goal of not dominating the bandwidth available. Very useful on busy networks that may have other transfers ongoing.
-T - Turns encryption off. Turning encryption off will allow for a maximum throughput transfer but should not be provided if data being uploaded is sensitive.
+T - Turns encryption off. Turning encryption off will allow for a maximum throughput transfer but should not be used if data being uploaded is sensitive.
 ```
 
 In the following example, `my_data.tar.gz` is being transferred to NeMO,
@@ -156,7 +153,7 @@ $ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:v34kl
 It is not possible to delete or update data using the Aspera CLI, however submitting a file of the same name **will** overwrite the previous file. Should you wish to delete data, reach out to a NeMO team member at [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu).
 
 
-**NEW**: Once your data upload has completed, please run one more Aspera upload of a single, empty txt file titled 'DONE'. This will prompt our system to begin scanning your submission.  
+Once your data upload has completed, please run one more Aspera upload of a single, empty file named 'DONE' ,with no extension, in the top level of your submission directory (i.e. not within a folder). This will prompt our system to begin scanning your submission.
 
 &nbsp;
 
@@ -165,31 +162,31 @@ It is not possible to delete or update data using the Aspera CLI, however submit
 
 <img alt="submit_dataflow" src="images/nemo_dataflow-v3.png">
 
-Upon successful bundling of data to the release area (either public of restricted), submitters will receive a "Successful ingest" email containing your validated manifest with additional fields capturing final file location and NeMO identifiers for individual files. This email will also list any directories or files skipped due to not being listed in the manifest, for your review.  
+Upon successful bundling of data to the release area (either public or restricted), submitters will receive a "Successful ingest" email containing your validated manifest with additional fields capturing final file location and NeMO identifiers for individual files. This email will also list any directories or files skipped due to not being listed in the manifest, for your review.
 
 &nbsp;  
 
 # Restricted Data
 For restricted, or controlled access, data submissions, the validation and ingest process is the same.  
-As described above, NeMO Aspera accounts for restricted data submissions should be created with an appended "-restricted", e.g. `doe-restricted`. Restricted accounts also need to be set to mount to the proper area on our restricted server. A NeMO team member will reach out, distinctly from the automated account approval email, once your account is ready for restricted data submission, so please plan accordingly for this minimal extra time required prior to data submission.  
+As described above, NeMO Aspera accounts for restricted data submissions should be created with an appended "-restricted", e.g. `doe-restricted`. Restricted accounts need to be set to mount to the proper area on our restricted server. A NeMO team member will reach out, distinctly from the automated account approval email, once your account is ready for restricted data submission, so please plan accordingly for this minimal extra time required prior to data submission.
 
 [Restricted Data Release documentation](./release_restricted.md) outlines steps required to make restricted datasets available to approved users or the public, as applicable.  
 
 &nbsp;  
 
 # Tracking Submissions
-Submitters can track the progress of data submissions from  manifest validation through release to the NeMO Portal. To track submission, log into [the NeMO website](https://nemoarchive.org/) using your NeMO Aspera credentials. Once logged in, select `Dashboard` in the top navigation, and select `Submission status`.  
+Submitters can track the progress of data submissions from  manifest validation through release to the NeMO Portal. To track submissions, log into [the NeMO website](https://nemoarchive.org/) using your NeMO Aspera credentials. Once logged in, select `Dashboard` in the top navigation, and select `Submission status`.
 This image shows the status for an individual manifest. Clicking on any of the completed, green checkmarks provides additional details: date, time and explanation of the completed step. 
 
 <img alt="tracking database" src="images/tracking_dashboard.png">
 
-Incomplete steps are shown in grey, failed steps in red. Failed steps should be resolved internally by the NeMO team, and we will reach out if you need to resubmit all or a portion of your data.
+Incomplete steps are shown in gray, failed steps in red. Failed steps following the QC step will be resolved internally by the NeMO team, and we will reach out if you need to resubmit all or a portion of your data.
 
 If you are a project manager, a PI or other role responsible for tracking submissions, and would like to have access to the tracking dashboard for one or a number of labs or submitters, please create a NeMO Aspera account at [nemoarchive.org/register](https://nemoarchive.org/register) and email [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu) explaining your role and tracking request.  
 
 &nbsp;  
 
 # Reporting to NIH
-Depending on funding source, data submitters may be required to submit quarterly proof of data submissions. At this time, NIH is accepting the "Successful ingest" email received once data is successfully bundled as a submission receipt for an individual manifest.  
+Depending on funding source, data submitters may be required to submit quarterly proof of data submissions. At this time, BICCN is accepting the "Successful ingest" email received once data is successfully bundled as a submission receipt for an individual manifest.
 
 
