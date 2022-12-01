@@ -5,8 +5,7 @@ Data submitted to NeMO falls into three categories:
 * *Embargo* - data to be held back, or embargoed, until a specific date, at which point it will be released openly and freely to the wider research community,
 * *Restricted* - Controlled access data to be distributed only to an approved group of users due to consent restrictions, e.g. human data, through the processes described here. Often restricted datasets contain a combination of private (raw reads, alignments) and public (counts, peaks) datatypes.  In such instances, the dataset landing page or BDBag will provide direct access to public data, in addition to a link to this page for restricted data access instructions.
 
-We are in the process of updating our website to include a list of restricted datasets available for access request. In the meantime, you can
-see the list by logging into the [NIMH Data Archive](https://nda.nih.gov/) and selecting Get Data > Request Access. Under
+You can see the current list of projects available for access request by logging into the [NIMH Data Archive](https://nda.nih.gov/) and selecting Get Data > Request Access. Under
 **NDA Controlled Access permissions Groups**, you will find all BRAIN/NeMO restricted datasets currently available for access request.
 
 ### In this document:
@@ -24,20 +23,19 @@ Permissions for restricted data access at NeMO are being facilitated by the [NIM
 
 &nbsp;
 
-#### Step 1. Create an NDA account
-[Create an NDA account here](https://nda.nih.gov/).
+#### Step 1. Log in to NDA
+[Log in to your NDA account here](https://nda.nih.gov/).
 
-**NDA account requests MUST be made using an institutional email address**.
+**NDA now uses RAS for login. If you are unable to log in with RAS, please create a Login.gov account associated with your institutional email address. 
+NDA account requests MUST be made using an institutional email address**.
 Account requests made from a personal account will not be honored by NeMO or NDA and will therefore slow down
 the process of accessing data.
 
-<img alt="NDA request account" src="images/NDA/NDA_requestacct.png" style="width:40%;">
+<img alt="NDA request account" src="images/NDA/NDAlogin.png" style="width:40%;">
 
 #### Step 2. Identify Datasets available through the NDA Dashboard
-Log in to the [NDA Permissions Dashboard](https://nda.nih.gov/user/dashboard/data_permissions.html).
-
-Here you will find BRAIN/NeMO
-Data Archives dataset(s) within the NDA Controlled Access Permission Group table of the dashboard. To the right is
+Click on the Data Permissions tab.  Scroll down to the NDA Controlled Access Permission Groups. Here you will find all BRAIN/NeMO
+Data Archives datasets currently available for access request. To the right of your dataset(s) of interest is
 an 'Actions' dropdown. Select "Request Access".
 **You must work at a research institution** that has an active
 [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.
