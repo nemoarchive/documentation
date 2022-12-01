@@ -153,7 +153,7 @@ $ ascp -l 100M -k 2 -QT /home/user/my_data/ user123@aspera.nemoarchive.org:v34kl
 It is not possible to delete or update data using the Aspera CLI, however submitting a file of the same name **will** overwrite the previous file. Should you wish to delete data, reach out to a NeMO team member at [nemo@som.umaryland.edu](mailto:nemo@som.umaryland.edu).
 
 
-Once your data upload has completed, please run one more Aspera upload of a single, empty file named 'DONE' ,with no extension, in the top level of your submission directory (i.e. not within a folder). This will prompt our system to begin scanning your submission.
+**Once your data upload has completed, please run one more Aspera upload of a single, empty file named 'DONE' ,with no extension, in the top level of your submission directory (i.e. not within a folder). This will prompt our system to begin scanning your submission.**
 
 &nbsp;
 

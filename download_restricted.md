@@ -96,7 +96,7 @@ NeMO will grant data access to investigators for *one year*, after which investi
   
 Restricted NeMO data is now available through Google Cloud Platform (GCP). There are two mechanisms for access, web interface and command line.
 
-**NeMO data is requester pays**, therefore downloading by either mechanism requires the use of a Google billing account. In order to avoid incurring large charges for data download, we strongly recommend that you run data analyses on GCP if possible.
+**NeMO data is requester pays, therefore downloading by either mechanism requires the use of a Google billing account. In order to avoid incurring large charges for data download, we strongly recommend that you run data analyses on GCP if possible.**
 
 
 &nbsp;
