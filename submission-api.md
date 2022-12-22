@@ -18,7 +18,7 @@ In the case of an authentication failure, the above command will simply display 
 
 `{"message":"Login failed."}`
 
-## Sucessful login
+## Successful login
 
 If the credentials are accepted, a JSON message is returned that has the following structure:
 
