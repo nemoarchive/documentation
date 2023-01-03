@@ -35,7 +35,7 @@ Example:
 }
 ```
 
-The "submission_id" property identifies which submission the specified file was submitted with, and the "file_name" contains the actual name of the file. THe "submitter" property itself contains an object that describes who the NeMO submitter was that submitted the file. The "status" property contains the current status of the file and may take one of the following values:  COMPLETE, FAILED, IN_PROGRESS, and HOLD. Finally, the "schema" property contains a URL to a [JSON-Schema](https://json-schema.org) document that describes the JSON that is returned from calls to this endpoint. The JSON-Schema document is most usefule and relevant to developers wishing to automate interactions with this API.
+The "submission_id" property identifies which submission the specified file was submitted with, and the "file_name" contains the actual name of the file. The "submitter" property itself contains an object that describes who the NeMO submitter was that submitted the file. The "status" property contains the current status of the file and may take one of the following values:  COMPLETE, FAILED, IN_PROGRESS, and HOLD. Finally, the "schema" property contains a URL to a [JSON-Schema](https://json-schema.org) document that describes the JSON that is returned from calls to this endpoint. The JSON-Schema document is most usefule and relevant to developers wishing to automate interactions with this API.
 
 ## Retrieving Status with a Submission ID and File Name
 
