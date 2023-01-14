@@ -2,44 +2,9 @@
 
 The NeMO Archive exposes a RESTful API for users that wish to create scripts and automate the retrieval of the status of their data submissions. Since the API is RESTful, any modern programming language that has a suitable HTTP library should be able to easily obtain the data. Results are returned in JSON format to make the parsing of the data easier. In the examples provided here, we will be using the fairly ubiquitous `curl` command-line utility to demonstrate the operation of the submission status API.
 
-# Obtaining a Token
+## Retrieving Status for a Submission
 
-Before one can use the API, one must first be able to authenticate to it, so that the server can identify the user. To obtain a token, a JSON Web Token (JWT) to be precise, a user must POST their NeMO submission credentials to the NeMO submission API with an HTTP POST. This is the same set of credentials that NeMO data submitters use to transfer their files via aspera. Example: 
-
-`$ curl -X POST https://nemoarchive.org/api/login -d '{"username": "USERNAME", "password": "PASSWORD"}'`
-
-where "USERNAME" and "PASSWORD" are replaced with the user's actual username and password.
-
-> **Note:** We do not recommend putting the actual password in the terminal as most shells will save it in the shell's history. We encourage the use of environment variables and other techniques (beyond the scope of this document) to avoid the password being exposed.
-
-## Login Failure
-
-In the case of an authentication failure, the above command will simply display the following message:
-
-`{"message":"Login failed."}`
-
-## Successful login
-
-If the credentials are accepted, a JSON message is returned that has the following structure:
-
-```
-{
-  "message": "Successful login.",
-  "jwt": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
-  "email": "jdoe@example.com",
-  "first": "John",
-  "last": "Doe",
-  "expireAt": 12345678901
-}
-```
-
-The value of the 'jwt' property should be noted, as it is this token that must be specified for future interactions with the API. The "expireAt" property contains the expiration time, after which, a new token will need to be obtained. Tokens have a lifetime of 24 hours.
-
-Do not share your token! Treat it as a sensitive piece of information, just as your password.
-
-# Retrieving Status for a Submission
-
-Once a valid token has been generated, one can use it to retrieve a submission's history and status by issuing a GET request with it. The token must be specified with an HTTP "Authorization" header. In the following example, the token is shown as a series of "X" characters. This should be replaced with your actual token, which is a sensitive/private piece of information. In addition, the submissin ID is shown as a series of "Y" characters. This should be replaced with your specific submission ID.
+Once a valid [JWT](https://jwt.io) has been obtained as decribed [here](api-logins.md), one can use it to retrieve a submission's history and status by issuing a GET request with it. The token must be specified with an HTTP "Authorization" header. In the following example, the token is shown as a series of "X" characters. This should be replaced with your actual token, which is a sensitive/private piece of information. In addition, the submission ID is shown as a series of "Y" characters. This should be replaced with your specific submission ID.
 
 Example:
 
@@ -79,7 +44,7 @@ The "step" property names the ingest step, of which there are 6: manifest_valida
 
 The "success" property will contain a boolean value, and will indicate whether the step succeeded or failed. The "date" property will contain the UTC timestamp of when the step succeeded (or failed). Finally, the "msg" property will have a message containing some brief message about completion of the status, or why the step failed. Steps that are in-progress and not yet complete will not be included in the "steps" list. Since the ingest process contains 6 steps, a fully complete and successful submission will therefore have 6 objects in the "steps" list property.
 
-# Retrieving Submission History
+## Retrieving Submission History
 
 It's possible to retrieve one's entire submission history and status by issuing a GET request to the /submission endpoint.
 
@@ -99,13 +64,13 @@ Example:
 }
 ```
 
-## Interpreting the results
+### Interpreting the results
 
 The "total" property indicates how many submissions the API is aware of for the authenticated user.
 
 Each "RESULT" in the list of results is itself a JSON object containing the details of the submission, and the result of each step of the ingest process as previously shown.
 
-## Paging Through Results
+### Paging Through Results
 
 The submission API paginates submissions 100 at a time. Therefore, if the user has made more than 100 submissions, multiple requests will need to be issued to fetch the entirety of the data. The user will alerted to the need to paginate by the presence of a "next" property in the returned JSON document. When paging through the results, the "page" property will also indicate the page number, or slice of data, that has been retrieved. Example:
 
@@ -123,13 +88,13 @@ The submission API paginates submissions 100 at a time. Therefore, if the user h
 }
 ```
 
-# Obtaining Extended Results For Other Users' Submissions
+## Obtaining Extended Results For Other Users' Submissions
 
 If one is a NeMO submission group leader, or a NeMO system superuser, the API is capable of returning results for your own submissions as well as those made by members of your group. Simply add a "all=y" query parameter to the request URL, and the API will return these extended results to you (if authorized). For example:
 
 `$ curl -X GET https://nemoarchive.org/api/submission?all=y -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX"`
 
-# Making a Submission Through the API
+## Making a Submission Through the API
 
 One can also submit a manifest through the API instead of going through the NeMO Archive website. Submitting the file still requires authentication with a JWT as shown above, but it can be done with any suitable tool like curl, or language, that supports a multipart file upload. Examples:
 
