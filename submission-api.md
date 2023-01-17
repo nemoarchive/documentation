@@ -50,7 +50,7 @@ It's possible to retrieve one's entire submission history and status by issuing 
 
 Example: 
 
-`$ curl -X GET https://nemoarchive.org/api/submission -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX"`
+`$ curl -X GET -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission`
 
 ```
 {
@@ -92,13 +92,13 @@ The submission API paginates submissions 100 at a time. Therefore, if the user h
 
 If one is a NeMO submission group leader, or a NeMO system superuser, the API is capable of returning results for your own submissions as well as those made by members of your group. Simply add a "all=y" query parameter to the request URL, and the API will return these extended results to you (if authorized). For example:
 
-`$ curl -X GET https://nemoarchive.org/api/submission?all=y -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX"`
+`$ curl -X GET -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission?all=y`
 
 ## Making a Submission Through the API
 
 One can also submit a manifest through the API instead of going through the NeMO Archive website. Submitting the file still requires authentication with a JWT as shown above, but it can be done with any suitable tool like curl, or language, that supports a multipart file upload. Examples:
 
-`$ curl https://nemoarchive.org/api/submission -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" -F manifest=@/path/to/file.csv`
+`$ curl -X POST -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission -F manifest=@/path/to/file.csv`
 
 where /path/to/file.csv is your local path to the manifest to be submitted.
 
