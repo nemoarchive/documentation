@@ -66,4 +66,4 @@ The response to this endpoint is very similar to the previous endpoint that requ
 
 ## Swagger/OpenAPI documentation
 
-In addition to this documentation, developers may also consult the [Swagger](https://swagger.io) specification that NeMO maintains [here](https://app.swaggerhub.com/apis-docs/UMIGS/NeMO_file_status/1.1).
+In addition to this documentation, developers may also consult the OpenAPI specification on [Swagger](https://swagger.io) that NeMO maintains [here](https://app.swaggerhub.com/apis-docs/UMIGS/NeMO_file_status/1.1).
