@@ -2,6 +2,14 @@
 
 The NeMO Archive exposes a RESTful API for users that wish to create scripts and automate the retrieval of the status of their data submissions. Since the API is RESTful, any modern programming language that has a suitable HTTP library should be able to easily obtain the data. Results are returned in JSON format to make the parsing of the data easier. In the examples provided here, we will be using the fairly ubiquitous `curl` command-line utility to demonstrate the operation of the submission status API.
 
+- [Retrieving Status for a Submission](#retrieving-status-for-a-submission)
+- [Retrieving Submission History](#retrieving-submission-history)
+  - [Interpreting the Results](#interpreting-the-results)
+  - [Paging Through Results](#paging-through-results)
+- [Obtaining Extended Results For Other Users' Submissions](#obtaining-extended-results-for-other-users-submissions)
+- [Making a Submission Through the API](#making-a-submission-through-the-api)
+- [Dry Runs](#dry-runs)
+
 ## Retrieving Status for a Submission
 
 Once a valid [JWT](https://jwt.io) has been obtained as decribed [here](api-logins.md), one can use it to retrieve a submission's history and status by issuing a GET request with it. The token must be specified with an HTTP "Authorization" header. In the following example, the token is shown as a series of "X" characters. This should be replaced with your actual token, which is a sensitive/private piece of information. In addition, the submission ID is shown as a series of "Y" characters. This should be replaced with your specific submission ID.
@@ -64,7 +72,7 @@ Example:
 }
 ```
 
-### Interpreting the results
+### Interpreting the Results
 
 The "total" property indicates how many submissions the API is aware of for the authenticated user.
 
@@ -104,9 +112,26 @@ where /path/to/file.csv is your local path to the manifest to be submitted.
 
 If one is using python with the requests module, the code might look similar to this:
 
-```
+```python
 submission_endpoint = "https://nemoarchive.org/api/submission"
 auth_header = {'Authorization': 'Bearer {}'.format(token)}
-files = {'manifest': ('manifest', open(filename, 'rb'))}
-response = requests.post(submission_endpoint, files=files, headers=auth_header)
+
+fh = open(filename, 'rb')
+manifest_data = {'manifest': ('manifest', fh)}
+
+response = requests.post(submission_endpoint, files=manifest_data, headers=auth_header)
+
+fh.close()
+```
+
+## Dry Runs
+
+Data submitters may wish to test a manifest that they have prepared for errors before actually submitting it to NeMO. The submission API allows users to submit "dry runs." A key difference between a dry run and an actual submission is that a dry run does not trigger the complete ingest process. It simply checks that the submitted manifest file is well formed, that it has the correct number of columns, and that the columns that must adhere to controlled vocabularies are not using any invalid terms. The deeper quality control measures that happen during the QC step of the ingest process are not performed. When the validation is complete the submitter of the dry run is informed of the outcome of the dry run via email, but the generated ID for the submission will NOT appear in the user's submission history in the dashboard.
+
+To submit a manifest as a dry run, simply add "dryrun=y" to the submission creation endpoint as a query string parameter.
+
+Example:
+
+```python
+submission_endpoint = "https://nemoarchive.org/api/submission?dryrun=y"
 ```
