@@ -124,6 +124,17 @@ response = requests.post(submission_endpoint, files=manifest_data, headers=auth_
 fh.close()
 ```
 
+A successful manifest submission will produce a response having the following structure:
+
+```
+{
+  "result": "success",
+  "id": "XXXXXXX"
+}
+```
+
+where the "id" property will contain the generated id for the submission.
+
 ## Dry Runs
 
 Data submitters may wish to test a manifest that they have prepared for errors before actually submitting it to NeMO. The submission API allows users to submit "dry runs." A key difference between a dry run and an actual submission is that a dry run does not trigger the complete ingest process. It simply checks that the submitted manifest file is well formed, that it has the correct number of columns, and that the columns that must adhere to controlled vocabularies are not using any invalid terms. The deeper quality control measures that happen during the QC step of the ingest process are not performed. When the validation is complete the submitter of the dry run is informed of the outcome of the dry run via email, but the generated ID for the submission will NOT appear in the user's submission history in the dashboard.
