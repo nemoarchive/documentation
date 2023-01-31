@@ -105,6 +105,8 @@ Validation failure in any row(s) will result in an error message displayed on th
 
 Validation success will result in notification, typically within minutes, via email, of the Aspera path to which you will submit your data, as described below. Be sure to submit to the provided path, as any other submissions will be ignored and routinely deleted.
 
+**NEW:** To help users validate their manifest, we have implemented a 'dry-run' feature which allows users to test if their manifest meets the validation criteria without recording each attempt in our system. While using the 'dry-run' feature (i.e. selecting the 'dry-run' box on the manifest upload page) submitters are notified of the results of validation via email similar to a normal submission but no further action is taken and the submission is NOT listed in the user's submission dashboard.
+
 &nbsp;
 
 # Submitting Data
