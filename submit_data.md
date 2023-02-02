@@ -107,6 +107,8 @@ Validation success will result in notification, typically within minutes, via em
 
 **NEW:** To help users validate their manifest, we have implemented a 'dry-run' feature which allows users to test if their manifest meets the validation criteria without recording each attempt in our system. While using the 'dry-run' feature (i.e. selecting the 'dry-run' box on the manifest upload page) submitters are notified of the results of validation via email similar to a normal submission but no further action is taken and the submission is NOT listed in the user's submission dashboard.
 
+To perform a dry run using the submission API, add "dryrun=y" to the submission creation endpoint as a query string parameter. More information can be found here [Dry runs using submission API](https://github.com/nemoarchive/documentation/blob/master/submission-api.md#dry-runs)
+
 &nbsp;
 
 # Submitting Data
