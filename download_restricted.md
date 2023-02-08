@@ -12,9 +12,7 @@ You can see the current list of projects available for access request by logging
 1. [Restricted access datasets currently available for request at NDA](#restricted-access-datasets-currently-available-for-request-at-nda)
 2. [Requesting access through the NDA Approval Process](#nda-approval-process)
 3. [Downloading Data](#downloading-data)
-
 &nbsp;
-
 ### Restricted access datasets currently available for request at NDA
 The NIMH Data Archive will review data access requests in consideration of the data use limitations on these datasets before approval. For further instructions on how to access these datasets, go to https://nemoarchive.org/resources/accessing-controlled-access-data.php.
 | Dataset | Description | Data Use Limitations | BICCN Webpage | Dataset Page |
