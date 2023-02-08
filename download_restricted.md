@@ -9,7 +9,7 @@ You can see the current list of projects available for access request by logging
 **NDA Controlled Access permissions Groups**, you will find all BRAIN/NeMO restricted datasets currently available for access request.
 
 ### In this document:
-1. [Restricted access datasets currently available for request at NDA](#current-restricted-access-datasets-available-for-request-at-nda)
+1. [Restricted access datasets currently available for request at NDA](#restricted-access-datasets-currently-available-for-request-at-nda)
 2. [Requesting access through the NDA Approval Process](#nda-approval-process)
 3. [Downloading Data](#downloading-data)
 
