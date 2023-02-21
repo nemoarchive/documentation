@@ -9,7 +9,7 @@ The NeMO Archive exposes a RESTful API for users that wish to create code to mak
 
 Additional information and examples:
 - [Github link](https://github.com/nemoarchive/documentation/blob/master/submission-api.md)
-- **Swagger link?**
+- [Swagger link](https://app.swaggerhub.com/apis/UMIGS/NeMO_submissions/)
 
 ## File status API
 This API can be used to determine if a particular file has been submitted to NeMO and return the ingest status of that file. File status can be queried with either a NeMO identifier (e.g. nemo:sqc-0000001) or with a file name and submission ID. 
