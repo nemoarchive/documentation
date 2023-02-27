@@ -7,27 +7,17 @@ visibility into bandwidth utilization.
 
 ### Download
 From the [IBM Aspera website](https://www.ibm.com/products/aspera/downloads),
-Scroll to Featured Client Software, and select the IBM Aspera Command Line Interface Client > Download now.
+Scroll to Developer Resources, and select the IBM Aspera Command Line Interface Client > Getting started. Installation instructions can be found here [Aspera CLI Install](https://github.com/IBM/aspera-cli#installation). 
 
-<img alt="download aspera" src="images/aspera_download.png" width="" height="" >
 
-Select the most recent release for your operating system. Log into your IBMid account, or set up a free account if you have not previously done so.
+While the method at the link above is the preferred install method, a second method of installing ascp is below:
 
-Choose your method of download. Make sure that the box next to "Include prerequisites and co-requisite fixes" is checked.
-Follow download instructions.
+1. Go to the Aspera website and download/install the Web connect browser plugin [Plugin](https://www.ibm.com/aspera/connect/)
+2. Depending on your operating system, you’ll find the ascp binary file at:
+* Windows: <INSTALLDIR>\Aspera\Aspera Connect\bin (e.g. C:\Program Files\Aspera...)
+* Mac: /Applications/Aspera\ Connect.app/Contents/Resources
+* Linux: /home/<USERNAME>/.aspera/connect/bin/ (e.g. /home/user/.aspera...)
+3. cd to the directory above that matches your system, you should see ‘ascp’ in the directory
+4. Run  export so you can call ascp from elsewhere (e.g for a mac, change path as needed):
+export PATH=/Applications/Aspera\ Connect.app/Contents/Resources/:$PATH 
 
-### Install
-To install the Aspera CLI, run the installation script from your command line terminal of choice:
-
-```
-$ sh aspera-cli-x.x.x.xxx.xxxxxxx-mac-xx.x-64-release.sh
-```
-
-The script places the Aspera CLI in the $HOME/Applications/Aspera CLI directory. To install the Aspera CLI in your PATH,
-run the following command:
-
-```
-$ export PATH=~/Applications/Aspera\ CLI/bin:$PATH
-```
-
-The `ascp` utility will now be available for use at the command line.
