@@ -95,9 +95,18 @@ The ingest will gzip the file(s) not already gzipped
 The ingest will gunzip the file(s) if gzipped.  This is to gzip the MEX tarball when ingested
 Currently, ingest requires unique files names, so each of the above must be prefixed with a sampleID. This sampleID will be stripped during processing and applied to the mex bundle. In other words, when a user gunzips and untars sampleID.mex.tar.gz, the result the result is a folder named 'sampleID' containing matrix.mtx.gz, features.tsv.gz, and barcodes.tsv.gz files. For barcodes, feature, or genes files that are a part of MEX format, those files should be labeled as mtx format in the file type column of the mainfest.
 
+## R
+
+NeMO Archive accepts several types of files created in R. Currently, we only support the ingestion of data formats that are relatively stable. If you have a specific data or compression format different than below (i.e. one used by a specific R package) please contact us to identify options. The currently supported extensions include:
+* .rds
+* .rda
+* .rdata
+* .Robj
+
 ## SNAP
 
 * .snap
+* .snap.qc
 
 ## TAB Analysis
 
@@ -127,3 +136,8 @@ The ingest will gzip the file(s) if not already gzipped
 
 * tar.bz2
 * tar.gz
+
+## VCF
+
+* .vcf
+* .vcf.gz.tbi
