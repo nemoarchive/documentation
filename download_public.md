@@ -5,9 +5,10 @@ Data submitted to NeMO Archive falls into three categories:
 * *Embargo* - data to be held back, or embargoed, until a specific date, at which point it will be released openly and freely to the wider research community,
 * *Restricted* - Controlled access data to be distributed only to an approved group of users due to consent restrictions, e.g. human data. Often restricted datasets contain a combination of private (raw reads, alignments) and public (counts, peaks) datatypes.  In such instances, the dataset landing page or BDBag will provide direct access to public data, in addition to a link to restricted data access instructions.
 
+While we endeavor to make accessing data on NeMO Archive as quick as possible, in cases of extraordinary activity (e.g. downloading all public data present in the archive) we may temporarily limit the bandwith available to individual users to ensure activites do not cause undue slowdowns in site performance. 
+
 There are many ways that users may be introduced to data at NeMO Archive, depending on whether you're arriving at our site directly or from another resource. For Restricted
-data access, see the [documentation here](https://nemoarchive.org/resources/accessing-controlled-access-data). For public data users, we've put together this handy table to recommend the most appropriate way to
-access data:
+data access, see the [documentation here](https://nemoarchive.org/resources/accessing-controlled-access-data). For public data users, we've put together this handy table to recommend the most appropriate way to access data:
 
 | So you want to... | We recommend... |
 | --- | --- |
