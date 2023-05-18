@@ -72,7 +72,7 @@ All manifest files must contain the following fields. Do not delete headers for 
    - Donor id/name
    - Tissue provider
 
-The manifest file must contain **one row, including an MD5 checksum, for every file included in the submission**. If you're submitting a tarball, the manifest should contain one row for every file within the tarball. For submission of multiple, or chunked, tarballs, there is no need for a manifest per tarball, all component files can be included in a single manifest.
+The manifest file must contain **one row, including an MD5 checksum, for every file included in the submission**. If you're submitting a tarball, the manifest should contain one row for every file within the tarball. For submission of multiple, or chunked, tarballs, there is no need for a manifest per tarball, all component files can be included in a single manifest. Individual manifests are limited to 25,000 files. If you are submitting more than 25,000 files, please seperate into multiple manifests.
 
 The first column should contain the file name only, with no path information. **File name must be unique**. In the case of sample-specific bundles, for example mex bundles containing a genes, features and barcodes file, prepend the sample id to your file name. We will strip that off during processing and place the three files in a sample id directory, as expected by many downstream tools. As an example, three files are submitted to NeMO with the following sample names:
 ```
@@ -113,7 +113,7 @@ To perform a dry run using the submission API, add "dryrun=y" to the submission 
 
 # Submitting Data
 
-NeMO accepts both raw and derived data types of the file extensions [listed here](https://github.com/nemoarchive/documentation/blob/master/file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid manifest upload and/or processing delays, by emailing nemo@som.umaryland.edu.
+NeMO accepts both raw and derived data types of the file extensions [listed here](https://github.com/nemoarchive/documentation/blob/master/file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid manifest upload and/or processing delays, by emailing nemo@som.umaryland.edu. NeMO Archive discourages the submission of aggregate files through our ingest process (i.e. files containing counts from multiple samples). If you have a need to submit aggregated files, please contact us prior to attempting a submission.
 
 Depending on the size of your submission, it may be preferable to submit data files individually or within a tarball. Either is fine. We don't pre-define any specific directory structure for your submission, however we ask that you do not submit tarballs within a tarball, as that will delay processing. Files will be reorganized during ingest based on metadata provided in the manifest.
 
