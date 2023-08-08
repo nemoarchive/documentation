@@ -184,7 +184,7 @@ As described above, NeMO Aspera accounts for restricted data submissions should 
 Submitters can track the progress of data submissions from  manifest validation through release to the NeMO Portal. To track submissions, log into [the NeMO website](https://nemoarchive.org/) using your NeMO Aspera credentials. Once logged in, select `Dashboard` in the top navigation, and select `Submission status`.
 This image shows the status for an individual manifest. Clicking on any of the completed, green checkmarks provides additional details: date, time and explanation of the completed step. 
 
-<img alt="tracking database" src="images/tracking_dashboard.png">
+<img alt="tracking database" src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/tracking_dashboard.png">
 
 Incomplete steps are shown in gray, failed steps in red. Failed steps following the QC step will be resolved internally by the NeMO team, and we will reach out if you need to resubmit all or a portion of your data.
 
