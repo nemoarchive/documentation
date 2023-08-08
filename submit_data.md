@@ -166,7 +166,7 @@ It is not possible to delete or update data using the Aspera CLI, however submit
 # Processing Workflow
 &nbsp;
 
-<img alt="submit_dataflow" src="images/nemo_dataflow-v3.png">
+<img alt="submit_dataflow" src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/nemo_dataflow-v3.png">
 
 Upon successful bundling of data to the release area (either public or restricted), submitters will receive a "Successful ingest" email containing your validated manifest with additional fields capturing final file location and NeMO identifiers for individual files. This email will also list any directories or files skipped due to not being listed in the manifest, for your review.
 
