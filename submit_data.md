@@ -176,7 +176,7 @@ Upon successful bundling of data to the release area (either public or restricte
 For restricted, or controlled access, data submissions, the validation and ingest process is the same.  
 As described above, NeMO Aspera accounts for restricted data submissions should be created with an appended "-restricted", e.g. `doe-restricted`. Restricted accounts need to be set to mount to the proper area on our restricted server. A NeMO team member will reach out, distinctly from the automated account approval email, once your account is ready for restricted data submission, so please plan accordingly for this minimal extra time required prior to data submission.
 
-[Restricted Data Release documentation](./release_restricted.md) outlines steps required to make restricted datasets available to approved users or the public, as applicable.  
+[Restricted Data Release documentation](https://github.com/nemoarchive/documentation/blob/master/release_restricted.md) outlines steps required to make restricted datasets available to approved users or the public, as applicable.  
 
 &nbsp;  
 
