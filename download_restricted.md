@@ -33,7 +33,7 @@ Permissions for restricted data access at NeMO are being facilitated by the [NIM
 
 &nbsp;
 
-<img alt="download_restricted-a77c715e.png" src="images/download_restricted-a77c715e.png">
+<img alt="download_restricted-a77c715e.png" src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/download_restricted-a77c715e.png">
 
 &nbsp;
 
@@ -45,7 +45,7 @@ NDA account requests MUST be made using an institutional email address**.
 Account requests made from a personal account will not be honored by NeMO or NDA and will therefore slow down
 the process of accessing data.
 
-<img alt="NDA request account" src="images/NDA/NDAlogin.png" style="width:40%;">
+<img alt="NDA request account" src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/NDA/NDAlogin.png" style="width:40%;">
 
 #### Step 2. Identify Datasets available through the NDA Dashboard
 Click on the Data Permissions tab.  Scroll down to the NDA Controlled Access Permission Groups. Here you will find all BRAIN/NeMO
@@ -54,14 +54,14 @@ an 'Actions' dropdown. Select "Request Access".
 **You must work at a research institution** that has an active
 [Federal-Wide Assurance](https://www.hhs.gov/ohrp/federalwide-assurances-fwas.html) in order to initiate a data access request.
 
-<img src="images/NDA/nda_permission_grps.png" alt="NDA permissions groups">
+<img src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/NDA/nda_permission_grps.png" alt="NDA permissions groups">
 
 #### Step 3. Data Access Request Tool
 This will open the Data Access Request Tool where you will provide information pertaining to your research,
 institution, and collaborators. Please carefully review the instructions for properly filling out all tabs of the request tool:
 
 ##### A) Request Access Instructions
-<img src="images/NDA/req_access.jpeg" alt="NDA request access">
+<img src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/NDA/req_access.jpeg" alt="NDA request access">
 
 ##### B) Research Data Use Statement
 Access requests for controlled access permission groups should include a Research Data Use Statement that
@@ -80,17 +80,17 @@ If you have collaborators at other organizations, they must submit a separate da
 #### Step 4. Download Data Use Certificate (DUC)
 Download the Data Use Certification Agreement PDF from the Agreement tab and complete with signatures of both the investigator and the institutional Signing Official. [Contact the NDA Help Desk](mailto:ndahelp@mail.nih.gov) if you need assistance identifying Signing Officials at your research institution.
 
-<img src="images/NDA/nda_agreement.jpeg" alt="NDA agreement">  
+<img src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/NDA/nda_agreement.jpeg" alt="NDA agreement">  
 
-<img src="images/NDA/DUC_saved.jpg" alt="DUC saved">
+<img src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/NDA/DUC_saved.jpg" alt="DUC saved">
 
 #### Step 5. Upload signed DUC
 Log into the NDA Permissions Dashboard and upload the signed DUC to the “Active Requests” section at the top of the NDA Permissions Dashboard.
 
-<img src="images/NDA/NDA_Upload_DUC.jpg" alt="Upload DUC">
+<img src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/NDA/NDA_Upload_DUC.jpg" alt="Upload DUC">
 &nbsp;
 
-<img src="images/NDA/NAR_upload_DUC_agreemt.jpg" alt="Upload DUC agreement">
+<img src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/NDA/NAR_upload_DUC_agreemt.jpg" alt="Upload DUC agreement">
 
 #### Step 6. Review
 Your data access request will be reviewed by an NIH Data Access Committee (DAC). This process typically takes about one week.
