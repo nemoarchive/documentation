@@ -15,6 +15,7 @@ You can see the current list of projects available for access request by logging
 &nbsp;
 ### Restricted access datasets currently available for request at NDA
 The NIMH Data Archive will review data access requests in consideration of the data use limitations on these datasets before approval. For further instructions on how to request and get access to these datasets, go to [Requesting access through the NDA Approval Process](#nda-approval-process).
+
 | Dataset | Description | Data Use Limitations | BICCN Webpage | Dataset Page |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 | BRAIN/NeMO: A multimodal atlas of human brain cell types: Patch-Seq | This study (NIH Grant 1U01MH114812-01; PI: Lein, Ed) is part of an international consortium approach using single cell transcriptomics, human cellular physiology and anatomy and neuronal modeling to begin to create an atlas of human brain cell types. In this dataset, transcriptomic profiles of individual human cortical neurons were assayed by the SMART-seq v4 single nucleus RNA-seq method following acute brain slice patch-clamp electrophysiology recordings and nucleus extraction, i.e. the Patch-seq method. | Use of data is limited to brain in health and disease | [Glutamatergic Neuron Types in Layer 2 and Layer 3 of the Human Cortex](https://knowledge.brain-map.org/data/0R94W5U07IHCMVJ4TVK/collections) | [dat-18e8800](https://assets.nemoarchive.org/dat-18e8800) |
