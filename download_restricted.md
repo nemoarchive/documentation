@@ -13,7 +13,7 @@ You can see the current list of projects available for access request by logging
 2. [Requesting access through the NDA Approval Process](#nda-approval-process)
 3. [Downloading Data](#downloading-data)
 &nbsp;
-### Restricted access datasets currently available for request at NDA
+### <a name="restricted-access-datasets-currently-available-for-request-at-nda"></a> Restricted access datasets currently available for request at NDA
 The NIMH Data Archive will review data access requests in consideration of the data use limitations on these datasets before approval. For further instructions on how to request and get access to these datasets, go to [Requesting access through the NDA Approval Process](#nda-approval-process).
 
 | Dataset | Description | Data Use Limitations | BICCN Webpage | Dataset Page |
@@ -30,7 +30,7 @@ The NIMH Data Archive will review data access requests in consideration of the d
 
 &nbsp;
 
-### NDA Approval Process
+### <a name="nda-approval-process"></a> NDA Approval Process
 Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an SOP for institutionally sponsored data access requests [here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access.
 
 &nbsp;
@@ -105,7 +105,7 @@ NeMO will grant data access to investigators for *one year*, after which investi
 &nbsp;
 
 
-### Downloading Data 
+### <a name="downloading-data"></a> Downloading Data 
 #### using Google Cloud Platform
 
 *If you are a legacy data user and still have access via Aspera, those [download instructions can be found here](https://github.com/nemoarchive/documentation/blob/master/download_restricted_aspera.md).*
