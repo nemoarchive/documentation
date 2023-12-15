@@ -160,7 +160,7 @@ For users with elevated permissions, search results can be refined in combinatio
 
 The search feature may not yield ALL the search results in a single response. In such a case, the user will be required to retrieve the next "page" of results by specifying the page number in the URL:
 
-Just as in the documentation for pagination, the response document will specify what page of results the response contains. If a page is requested that is out of the range of possible pages for the given query, only the last page is returned. Similarly, if no page is specified, or if an invalid page is specified, only 1 is returned.
+Just as in the earlier documentation for pagination, the response document will specify what page of results it contains. If a page is requested that is out of the range of possible pages for the given query, only the last page is returned. Similarly, if no page is specified, or if an invalid page is specified, only 1 is returned.
 
 ```
 $ curl -X POST -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission/search?page=3 -d '{SEARCH_DOC}'
