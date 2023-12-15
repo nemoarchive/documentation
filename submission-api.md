@@ -124,7 +124,7 @@ where {SEARCH_DOC} is a small JSON document that can contain one or more of the 
 }
 ```
 
-In this example, a fully completed search document has been used that would translate into a search for submissions with the ID of "XXXXXXX", submitted by user "user", submitted between "2023-01-01" and "2023-03-31" (first quarter of 2023), with an "open" data policy (no "restricted" data, and having fully completed the ingest process (no "in-progress" or "error" submissions should be returned). With such a search document, there can only be 1 result returned because the submission ID, which is globally unique across all NeMO submissions is fully specified. However, if that submission were to not match because of other reasons (status, dates, etc), then no result would be returned.
+In this example, a fully completed search document has been used that would translate into a search for submissions with the ID of "XXXXXXX", submitted by user "user", submitted between "2023-01-01" and "2023-03-31" (first quarter of 2023), with an "open" data policy (no "restricted" data), and having fully completed the ingest process (no "in-progress" or "error" submissions should be returned). With such a search document, there can only be 1 result returned because the submission ID, which is globally unique across all NeMO submissions is fully specified. However, if that submission were to not match because of other reasons (status, dates, etc), then no result would be returned.
 
 A more permissive search can be performed by excluding some to the fields above. For example:
 
