@@ -7,6 +7,9 @@ The NeMO Archive exposes a RESTful API for users that wish to create code to mak
   - [Interpreting the Results](#interpreting-the-results)
   - [Paging Through Results](#paging-through-results)
 - [Obtaining Extended Results For Other Users' Submissions](#obtaining-extended-results-for-other-users-submissions)
+- [Searching Submissions](#searching-submissions)
+  - [Searching with Substrings](#searching-with-substrings)
+  - [Pagination Through Search Results](#pagination-through-search-results)
 - [Making a Submission Through the API](#making-a-submission-through-the-api)
 - [Dry Runs](#dry-runs)
 
@@ -101,6 +104,77 @@ The submission API paginates submissions 100 at a time. Therefore, if the user h
 If one is a NeMO submission group leader, or a NeMO system superuser, the API is capable of returning results for your own submissions as well as those made by members of your group. Simply add a "all=y" query parameter to the request URL, and the API will return these extended results to you (if authorized). For example:
 
 `$ curl -X GET -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission?all=y`
+
+## Searching Submissions
+
+The NeMO submissions API also has a search feature to search through the submissoins that one has access to using various fields to narrow the search results down. This feature is particularly useful if one has a large number of submissions in the NeMO archive and one is interested in obtaining the data using various criteria such as those submissions made after a particular date, having a particular policy (open data / restricted data), or having a certain status ("complete", "error"). The feature can also be used to obtain data about submissions if the original submission ID is no longer available or unknown.
+
+`$ curl -X POST -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission/search -d '{SEARCH_DOC}'`
+
+where {SEARCH_DOC} is a small JSON document that can contain one or more of the fields as shown below:
+
+```
+{
+  "id": "XXXXXXX",
+  "submitter: "user",
+  "start-date": "2023-01-01",
+  "end-date": "2023-03-31",
+  "policy": "open",
+  "status": [ "complete" ]
+}
+```
+
+In this example, a fully completed search document has been used that would translate into a search for submissions with the ID of "XXXXXXX", submitted by user "user", submitted between "2023-01-01" and "2023-03-31" (first quarter of 2023), with an "open" data policy (no "restricted" data, and having fully completed the ingest process (no "in-progress" or "error" submissions should be returned). With such a search document, there can only be 1 result returned because the submission ID, which is globally unique across all NeMO submissions is fully specified. However, if that submission were to not match because of other reasons (status, dates, etc), then no result would be returned.
+
+A more permissive search can be performed by excluding some to the fields above. For example:
+
+```
+{
+  "start-date": "2023-01-01",
+  "end-date": "2023-03-31"
+}
+```
+
+Return submissions made between 2023-01-01 and 2023-03-31 regardless of status or policy, etc.
+
+### Search with Substrings
+
+Some of the fields of the search document support searching for submissions with only partial data, such as substring. For example, a complete 7 character ID is not necessary to find the submission by ID. If the ID is known to have the letter "x" in it, then a search document like the one below can be used to retrieve it:
+
+```
+{
+  "id": "x"
+}
+```
+
+For users with elevated permissions, search results can be refined in combination with substrings of submitter usernames. For example, the document below would retrieve submission data for submissions with "x" in the submission ID and made by submitters with "jo" in their username.
+
+```
+{
+  "id": "x",
+  "submitter": "jo"
+}
+```
+
+### Pagination Through Search Results
+
+The search feature may not yield ALL the search results in a single response. In such a case, the user will be required to retrieve the next "page" of results by specifying the page number in the URL:
+
+Just as in the documentation for pagination, the response document will specify what page of results the response contains. If a page is requested that is out of the range of possible pages for the given query, only the last page is returned. Similarly, if no page is specified, or if an invalid page is specified, only 1 is returned.
+
+```
+$ curl -X POST -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission/search?page=3 -d '{SEARCH_DOC}'
+
+{
+  "total": 121,
+  "results": [
+    RESULT1,
+    RESULT2,
+    ...
+  ]
+  "page": 3
+}
+```
 
 ## Making a Submission Through the API
 
