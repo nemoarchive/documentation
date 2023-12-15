@@ -107,7 +107,7 @@ If one is a NeMO submission group leader, or a NeMO system superuser, the API is
 
 ## Searching Submissions
 
-The NeMO submissions API also has a search feature to search through the submissoins that one has access to using various fields to narrow the search results down. This feature is particularly useful if one has a large number of submissions in the NeMO archive and one is interested in obtaining the data using various criteria such as those submissions made after a particular date, having a particular policy (open data / restricted data), or having a certain status ("complete", "error"). The feature can also be used to obtain data about submissions if the original submission ID is no longer available or unknown.
+The NeMO submissions API also has a search feature to search through the submissions that one has access to using various fields to narrow the search results down. This feature is particularly useful if one has a large number of submissions in the NeMO archive and is interested in obtaining the data using various criteria such as those submissions made before or after a particular date, having a particular policy (open data / restricted data), or having a certain status ("complete", "in-progress", "error"). The search feature can also be used to obtain data about submissions if the submission ID is no longer available or unknown.
 
 `$ curl -X POST -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission/search -d '{SEARCH_DOC}'`
 
