@@ -110,7 +110,6 @@ NeMO will grant data access to investigators for *one year*, after which investi
 
 ### <a name="broad-dac-approval-process"></a> Requesting access through the Broad's DAC Approval Process
 To access the data, the requester must first create an account in [DUOS](https://duos.broadinstitute.org/) using their institutional email address. If the requester's institutional account is not already a Google account, it can be made a Google account by following [these instructions](https://broad-duos.zendesk.com/hc/en-us/articles/6160103983771-How-to-Create-a-Google-Account-with-a-Non-Google-Email).  The Signing Official from the requester's institution must also register in DUOS to issue the requester a Library Card Agreement. The requester will then need to fill out a Data Access Request through DUOS, which will be reviewed by the Broad Institute's Data Access Committee. Once a request is approved, NeMO will be notified to authorize access to the data.
-
 &nbsp;
 
 ### <a name="downloading-data"></a> Downloading Data 
