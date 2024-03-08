@@ -6,8 +6,8 @@ To ensure files are associated with the correct metadata, SCORCH manifest submis
 - File-level information
 
 Currently, SCORCH manifests are submitted as an Excel document (.xlsx) with four tabs (future versions of the SCORCH manifest will use JSON format). 
-Each tab contains one level of metadata and blank templates for human and nonhuman submissions can be found here ([human](), [nonhuman]()). 
-Each row in the spreadsheet is a single record and required metadata fields are bolded. You can also descriptions (and controlled vocabularies, if applicable) for each field [here](). 
+Each tab contains one level of metadata and blank templates for human and nonhuman submissions can be found here ([human](https://docs.google.com/spreadsheets/d/1bt7VB-zNt-MvgkAbrijh7UgOanDC2TtDIfuiHCszs9E/edit?usp=sharing), [nonhuman](https://docs.google.com/spreadsheets/d/1HrhZaOWK4MYohzLHJK9PbWV87YHBACNMPwDmUZxrAeA/edit?usp=sharing)). Before submitting remove the row with field descriptions.
+Each row in the spreadsheet is a single record and bolded fields are required. You can find descriptions, required fields, and controlled vocabularies for each field [here](). 
 
 ## Cohort/project information
 To ensure that files associated with a subject are assigned to the correct data access groups, every subject in SCORCH will be assigned to a cohort. 
