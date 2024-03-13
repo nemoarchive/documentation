@@ -190,12 +190,11 @@ If one is using python with the requests module, the code might look similar to 
 submission_endpoint = "https://nemoarchive.org/api/submission"
 auth_header = {'Authorization': 'Bearer {}'.format(token)}
 
-fh = open(filename, 'rb')
-manifest_data = {'manifest': ('manifest', fh)}
+filename = "/path/to/my/manifest.tsv"
+original_name = filename.split("/")[-1]
+manifest_data = {'manifest': (original_name, open(filename, 'rb'))}
 
 response = requests.post(submission_endpoint, files=manifest_data, headers=auth_header)
-
-fh.close()
 ```
 
 A successful manifest submission will produce a response having the following structure:
