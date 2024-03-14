@@ -39,7 +39,7 @@ Detection and validation of a properly formatted manifest will trigger an email 
 
 ## <a name="manifest-format"></a> Manifest format
 
-**For SCORCH submitters**, please see the SCORCH specific documentation located [here].(https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md)
+**For SCORCH submitters**, please see the SCORCH specific documentation located [here](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md).
 
 
 **For other submitters:**
