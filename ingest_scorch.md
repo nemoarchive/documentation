@@ -12,7 +12,7 @@ The SCORCH consortium has implemented consortium-wide metadata standards for inc
   - Library information
   - File-level information
 
-At this step, users submit a formatted manifest ([see PLACEHOLDER for formatting details](###manifest-format)), either by logging into [nemoarchive.org](https://nemoarchive.org) and using the 'Make a submission' option on your dashboard or using an API ([NeMO API details](https://nemoarchive.org/resources/nemo-api-overview.php)).
+At this step, users submit a formatted manifest ([see PLACEHOLDER for formatting details](https://github.com/nemoarchive/documentation/blob/master/manifest_formatting_scorch.md)), either by logging into [nemoarchive.org](https://nemoarchive.org) and using the 'Make a submission' option on your dashboard or using an API ([NeMO API details](https://nemoarchive.org/resources/nemo-api-overview.php)).
 The formatting validation can be run as a 'dry run' where the uploaded manifest is validated for correctness but the submission process does not continue (i.e. no Aspera upload path is given). This is useful for testing new submissions so that any manifest failures do not show up in your dashboard. 
 Every submission made without the dry run checkbox selected will be displayed in your user dashboard. 
 
