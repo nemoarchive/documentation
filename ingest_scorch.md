@@ -5,6 +5,8 @@ The SCORCH consortium has implemented consortium-wide metadata standards for inc
 - Validation
 - Data release
 
+To contact the NeMO team about any questions or issues, please use the form [here](https://github.com/nemoarchive/helpdesk/issues/new/choose).
+
 ## Initial formatting validation
   To ensure files are associated with the correct metadata, SCORCH manifest submissions consist of:
   - Subject metadata
