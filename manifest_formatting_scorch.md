@@ -30,7 +30,7 @@ We are including much more subject level metadata information in the human manif
 To receive access to the pre-formatted SCORCH subject metadata to put in your manifest, contact Joe Receveur (jreceveur@som.umaryland.edu). If you are planning on submitting tissue from subjects not from NNTC or Dr. Mash/NSU please let us know in advance: the tissue bank, subject IDs, and a contact individual at the tissue bank.
 
 ## Nonhuman subject information
-Descriptions and controlled vocabularies for nonhuman subject level metadata fields can be found [here](). If you need additional controlled vocabulary terms added, please use the form [here](https://github.com/nemoarchive/helpdesk/issues/new/choose)
+Descriptions and controlled vocabularies for nonhuman subject level metadata fields can be found [here](https://docs.google.com/spreadsheets/d/1QnxfdijS-dwtlJyy1uBn97nUArGgkpBxTbaO4Vl5nRM/edit#gid=1905044666). If you need additional controlled vocabulary terms added, please use the form [here](https://github.com/nemoarchive/helpdesk/issues/new/choose)
 
 
 # Sample level information
@@ -46,7 +46,10 @@ While the same library can be sequenced repeatedly at different times, each inst
 For example: A library is prepared and sequenced once, that data would be associated with the first library aliquot (e.g. LIB001_1). 
 Upon analysis, it was discovered that the sequencing depth was too low so that same library preperation was sequenced a second time and would be associated with another aliquot (e.g. LIB001_2).
 
-Descriptions and controlled vocabularies for library level metadata fields can be found [here](). If you need additional controlled vocabulary terms added, please use the form [here](https://github.com/nemoarchive/helpdesk/issues/new/choose)
+Descriptions and controlled vocabularies for library level metadata fields can be found [here](). If you need additional controlled vocabulary terms added, please use the form [here](https://github.com/nemoarchive/helpdesk/issues/new/choose).
+
+## Submitting multiplexed files to NeMO Archive
+When submitting multiplexed files to NeMO Archive, each component of a library should be included with enough information for a later user to demultiplex the files. For example if a multiplexed library is submitted with 4 component libraries (e.g. 4 samples with barcodes present in one set of files), each component should be added to the manifest along with library demultiplexing information as well as a library record for the entire library (library type = multiplexed composite). The library aliquot name for the multiplexed composite record should be used on the file tab as the parent of all files from the combined library. Files should not be matched to the individual component libraries unless the files only contain information from that component. 
 
 # File level information
 File level metadata includes information about the individual files to be submitted. If a file is present in the manifest, it must be uploaded during the submission process or ingest will fail. 
