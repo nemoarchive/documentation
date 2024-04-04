@@ -10,7 +10,7 @@ To ensure files are associated with the correct metadata, SCORCH manifest submis
 
 Currently, SCORCH manifests are submitted as an Excel document (.xlsx) with four tabs (future versions of the SCORCH manifest will use JSON format). 
 Each tab contains one level of metadata and templates for human and nonhuman submissions can be found here ([human](https://docs.google.com/spreadsheets/d/1bt7VB-zNt-MvgkAbrijh7UgOanDC2TtDIfuiHCszs9E/edit?usp=sharing), [nonhuman](https://docs.google.com/spreadsheets/d/1HrhZaOWK4MYohzLHJK9PbWV87YHBACNMPwDmUZxrAeA/edit?usp=sharing)). Before submitting, remove the row with field descriptions.
-Each row in the spreadsheet is a single record. You can find the controlled vocabularies and definitions for each field here [human subject level CVs](https://docs.google.com/spreadsheets/d/1-vwK_3tTUby6dvEK2ZomtnnI0W8tJKwF-YI0ywL8V8o/edit#gid=945951358), [nonhuman subject level CVs](https://docs.google.com/spreadsheets/d/1QnxfdijS-dwtlJyy1uBn97nUArGgkpBxTbaO4Vl5nRM/edit#gid=1905044666), [sample level CVs](), [file level CVs](). 
+Each row in the spreadsheet is a single record. You can find the controlled vocabularies and definitions for each field here [human subject level CVs](https://docs.google.com/spreadsheets/d/1-vwK_3tTUby6dvEK2ZomtnnI0W8tJKwF-YI0ywL8V8o/edit#gid=945951358), [nonhuman subject level CVs](https://docs.google.com/spreadsheets/d/1QnxfdijS-dwtlJyy1uBn97nUArGgkpBxTbaO4Vl5nRM/edit#gid=1905044666). 
 
 ## Cohort/project information
 To ensure that files associated with a subject are assigned to the correct data access groups, every subject in SCORCH will be assigned to a cohort and a project. 
