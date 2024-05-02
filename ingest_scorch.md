@@ -30,6 +30,8 @@ If your submission is not a dry run, you will also receive an Aspera command and
 Once you have received a message that your manifest was successfully validated for format, the files can be submitted via Aspera. In your validation email, you will receive an Aspera command to be used for upload 
 (e.g. ascp -l 1000M -k 2 -QT user@aspera.nemoarchive.org:89qteg4/). Note: You will need to add in the path where the files are to be uploaded from to this command (e.g. ascp -l 1000M -k 2 -QT SCORCH/FilesForUpload user@aspera.nemoarchive.org:89qteg4/).
 
+**Files must be submitted in a flattened format (i.e. no directory structure present in the upload). Files in subdirectories will not be found by the ingest process and you will receive an error saying files are missing.**
+
 ### Once all files are uploaded
 To let us know that your upload is complete, submit a single empty file named 'DONE' using the same Aspera command as used to submit your files (running touch DONE on Linux is an easy way to make this file). 
 
