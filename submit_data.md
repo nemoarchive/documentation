@@ -33,7 +33,7 @@ Someone from the NeMO team will follow up with you regarding any other questions
 
 &nbsp;
 # <a name="submitting-a-file-manifest"></a> Submitting a File Manifest
-All submissions to NeMO Archives, whether public or private, begin with upload of a tab delimited (tsv) file manifest including MD5 checksums through the User Dashboard available to logged in users at [https://nemoarchive.org/login](https://nemoarchive.org/login). More instructions on submission are below. This enables us to collect some basic information in order to organize and process your data properly for release. This is not a comprehensive metadata collection and should be straightforward to populate.  
+All submissions to NeMO Archives, whether public or private, begin with upload of a  file manifest including MD5 checksums through the User Dashboard available to logged in users at [https://nemoarchive.org/login](https://nemoarchive.org/login) or via an API. More instructions on submission are below. This enables us to collect some basic information in order to organize and process your data properly for release.
 
 Detection and validation of a properly formatted manifest will trigger an email message providing the Aspera submission path for your data, see below.
 
