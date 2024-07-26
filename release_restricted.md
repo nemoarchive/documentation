@@ -23,8 +23,8 @@ publicly available, the investigator must submit an IC form indicating Open Acce
 will be released to the public.
 
 Institutional Certification forms should be sent to **both**:
-1. NIMH Genomic Program Administrator, currently Geetha Senthil, senthilgs[at]mail.nih.gov
-2. NeMO Archives, directly to Heather Creasy or to nemo@som.umaryland.edu
+1. NIMH Genomic Program Administrator
+2. NeMO Archives, via nemo@som.umaryland.edu
 
 ### NDA Controlled Access Permission Groups
 Once NeMO receives the IC form, we will contact you to ensure that we have all of the information
