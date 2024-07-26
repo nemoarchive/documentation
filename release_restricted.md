@@ -23,7 +23,7 @@ publicly available, the investigator must submit an IC form indicating Open Acce
 will be released to the public.
 
 Institutional Certification forms should be sent to **both**:
-1. NIMH Genomic Program Administrator
+1. Genomic Program Administrator for your program (to find the correct individual you can use the contact list [here](https://sharing.nih.gov/genomic-data-sharing-policy/resources/contacts-and-help).
 2. NeMO Archives, via nemo@som.umaryland.edu
 
 ### NDA Controlled Access Permission Groups
