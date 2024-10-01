@@ -72,21 +72,18 @@ There are two ways of finding NeMO collection data at Brain Knowledge Platform D
 
 * **<h3 style = "display:inline-block" id="landing-pages">NeMO Collection landing pages linked in Project pages of BKP’s Data Catalog</h3>**
 
-The NeMO collection landing page URLs are linked under each collection listed in “DATA COLLECTIONS” section in the master BICAN program page - “[BICAN Rapid Release Inventory: Single cell transcriptomics and epigenomics](https://knowledge.brain-map.org/data/BUQ7G50XHDCFCJCQ03A/summary)” in BKP Data Catalog. 
+The NeMO collection landing page URLs are linked under each collection listed in “DATA COLLECTIONS” section in the master BICAN program page - “[BICAN Rapid Release Inventory: Single cell transcriptomics and epigenomics](https://knowledge.brain-map.org/data/BUQ7G50XHDCFCJCQ03A/summary)” in BKP’s Data Catalog. 
+
+1. Click on the [BICAN program page URL](https://knowledge.brain-map.org/data/BUQ7G50XHDCFCJCQ03A/summary)	
 
 
 
-1. Select BICAN Program in Data Catalog search filters:
-
-
-
-![alt_text](images/bican_data_selection.png "image_tooltip")
+![alt_text](images/brain_knowledge_screenshot.png "image_tooltip")
 
 
 
 
-2. Click on the “DATA COLLECTIONS” option in the Program page, then click on the “NEMO” link to navigate to the corresponding collection landing page where you will find links to collection BDBag and HTTPS path for file download. Details on downloading the files from a BDBag are in the section “[Data collections and landing pages](#data-collections) “ of this document. Details on accessing files from HTTPS links are in the section “[HTTPS public access browser](#public-access-browser)” of this document”. Allen’s documentation on finding collections is [here](https://community.brain-map.org/t/bican-rapid-release-reference-documentation/3693).
-
+2. Click on the “DATA COLLECTIONS” option in the Program page, then click on the “NEMO” links to navigate to the corresponding collection landing pages where you will find links to collection BDBag and HTTPS path for file download. Details on downloading the files from a BDBag are in the section “[Data collections and landing pages](#data-collections)“ of this document. Details on accessing files from HTTPS links are in the section “[HTTPS public access browser](#public-access-browser)” of this document”. Allen Institute’s documentation on finding data for a collections is [here](https://community.brain-map.org/t/bican-rapid-release-reference-documentation/3693).
 
  
 
