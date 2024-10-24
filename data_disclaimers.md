@@ -6,5 +6,4 @@ Released data in NeMO Archive falls under a number of different use conditions. 
 ## [Single Cell Opioid Use in the Context of HIV (SCORCH)](https://scorch.igs.umaryland.edu/data-use-disclaimer.php)
 
 
-## Brain Initiative Cell Atlas Network (BICAN)
-coming soon
+## [Brain Initiative Cell Atlas Network (BICAN)](https://www.portal.brain-bican.org/bican-by-nr)
