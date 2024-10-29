@@ -4,7 +4,6 @@ The SCORCH consortium has implemented consortium-wide metadata standards for inc
 - [File upload](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md#file-upload)
 - [Validation](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md#validation)
 - [Data release](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md#release)
-- [Citing SCORCH data in manuscripts]
 
 To contact the NeMO team about any questions or issues, please use the form [here](https://github.com/nemoarchive/helpdesk/issues/new/choose).
 
