@@ -1,9 +1,10 @@
 # SCORCH Data Ingestion Overview
 The SCORCH consortium has implemented consortium-wide metadata standards for incoming data which results in the ingest process being different than a standard data upload. Submission of SCORCH files consists of 4 parts:
-- Initial formatting validation
-- File upload
-- Validation
-- Data release
+- [Initial formatting validation](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md#initial-formatting-validation)
+- [File upload](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md#file-upload)
+- [Validation](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md#validation)
+- [Data release](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md#release)
+- [Citing SCORCH data in manuscripts]
 
 To contact the NeMO team about any questions or issues, please use the form [here](https://github.com/nemoarchive/helpdesk/issues/new/choose).
 
@@ -57,3 +58,4 @@ Following validation, the next step in the process is data release. The exact lo
 The [NeMO Archive portal](https://portal.nemoarchive.org/) will contain only public SCORCH data (and is accessible to users from outside the consortium).
 
 Once files reach the release step, they are considered fully ingested to NeMO. At this point you will receive a receipt with your file information as well as persistent NeMO identifiers for each file submitted. 
+
