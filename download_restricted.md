@@ -11,8 +11,9 @@ You can see the current list of projects available for access request by logging
 ### In this document:
 1. [Restricted access datasets currently available for request at NDA](#restricted-access-datasets-currently-available-for-request-at-nda)
 2. [Requesting access through the NDA Approval Process](#nda-approval-process)
-3. [Requesting access through the Broad's DAC Approval Process](#broad-dac-approval-process)
-4. [Downloading Data](#downloading-data)
+3. [Restricted access datasets currently available for request at Broad](#restricted-access-datasets-currently-available-for-request-at-broad)
+4. [Requesting access through the Broad's DAC Approval Process](#broad-dac-approval-process)
+5. [Downloading Data](#downloading-data)
 
 &nbsp;
 
@@ -111,6 +112,14 @@ At this time, you will need to **forward your Access Approval email to the NeMO 
 NeMO will grant data access to investigators for *one year*, after which investigators will need to reapply for access using the process described above.
 
 &nbsp;
+
+### <a name="restricted-access-datasets-currently-available-for-request-at-broad"></a> Restricted access datasets currently available for request at Broad
+The Broad Institute's Data Access Committee (DAC) will review data access requests in consideration of the data use limitations on these datasets before approval. For further instructions on how to request and get access to these datasets, go to [Requesting access through the Broad's DAC Approval Process](#broad-dac-approval-process).
+
+| Publication Dataset | DUOS Dataset | Description | Data Use Limitations | Dataset Page |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Concerted neuron-astrocyte program declines in aging and schizophrenia | SCZ_GeneExpression_McCarrollBerretta | We used single-nucleus RNA-seq to analyze 1.2 million nuclei from the prefrontal cortex of 191 persons, including 94 affected by schizophrenia. | Use of this dataset is limited to disease specific research - neurobiologic and psychiatric disorders | [dat-bmx7s1t](https://assets.nemoarchive.org/dat-bmx7s1t) |
+| Long somatic DNA-repeat expansion drives neurodegeneration in Huntington's disease | HD_GeneExpression_McCarrollBerretta | To understand how the HTT CAG repeat might underlie pathological changes in Huntington's disease, we developed a method to sequence and measure the CAG repeat together with genome-wide RNA expression in the same cells. This dataset contains long-read PacBio data from the caudate of 9 persons, and single-nucleus RNAseq data from the caudate of 103 persons. | Use of this dataset is limited to disease specific research - neurobiologic and psychiatric disorders | [dat-ztfn3cc](https://assets.nemoarchive.org/dat-ztfn3cc) |
 
 ### <a name="broad-dac-approval-process"></a> Requesting access through the Broad's DAC Approval Process
 To access the data, the requester must first create an account in [DUOS](https://duos.broadinstitute.org/) using their institutional email address. If the requester's institutional account is not already a Google account, it can be made a Google account by following [these instructions](https://broad-duos.zendesk.com/hc/en-us/articles/6160103983771-How-to-Create-a-Google-Account-with-a-Non-Google-Email).  The Signing Official from the requester's institution must register for an institutional Library Card Agreement (“LCA”) in DUOS if one is not already in place. The LCA enables requesters from that institution to request access to data managed by DUOS. The requester will then need to fill out a Data Access Request through DUOS, which will be reviewed by the Broad Institute's Data Access Committee. Once a request is approved, the requester should forward their DUOS approval e-mail to nemo@som.umaryland.edu, and NeMO will authorize access to the data.
