@@ -28,7 +28,7 @@ If your submission is not a dry run, you will also receive an Aspera command and
 
 ## File upload
 Once you have received a message that your manifest was successfully validated for format, the files can be submitted via Aspera. In your validation email, you will receive an Aspera command to be used for upload 
-(e.g. ascp -l 1000M -k 2 -QT user@aspera.nemoarchive.org:89qteg4/). Note: You will need to add in the path where the files are to be uploaded from to this command (e.g. ascp -l 1000M -k 2 -QT SCORCH/FilesForUpload user@aspera.nemoarchive.org:89qteg4/).
+(e.g. ascp -l 1000M -k 2 -QT user@aspera.nemoarchive.org:89qteg4/). Note: You will need to add in the path where the files are to be uploaded from to this command (e.g. ascp -l 1000M -k 2 -QT SCORCH/FilesForUpload/*.fastq user@aspera.nemoarchive.org:89qteg4/).
 
 **Files must be submitted in a flattened format (i.e. no directory structure present in the upload). Files in subdirectories will not be found by the ingest process and you will receive an error saying files are missing.**
 
@@ -50,11 +50,10 @@ If an error is found at this step, you will receive an automated email from nemo
 
 ## Release
 Following validation, the next step in the process is data release. The exact locations of released files will depend on the data use/access restrictions but for open data (i.e. with no release limitations) files are made available in the following locations:
-1) Through our https site
-2) Through the data portal/s
+1) Through the data portal/s for open data
+2) Via dbGaP for restricted human data
 
-**Note for SCORCH**: NeMO Archive currently maintains two data portals which host SCORCH data. The [SCORCH data portal](https://scorch-portal.nemoarchive.org/) is for SCORCH consortium members only (requires log in credentials) and will contain public data as well as data and metadata currently under embargo prior to public release.
-The [NeMO Archive portal](https://portal.nemoarchive.org/) will contain only public SCORCH data (and is accessible to users from outside the consortium).
+**Note for SCORCH**: NeMO Archive currently maintains two data portals which host SCORCH data. The [Public SCORCH portal](https://scorch-portal.nemoarchive.org/) will contain only public SCORCH data (and is accessible to users from outside the consortium).The [Internal SCORCH data portal](https://private-scorch-portal.nemoarchive.org/) is for SCORCH consortium members only (requires log in credentials) and will contain public data as well as data and metadata currently under embargo prior to public release.
 
 Once files reach the release step, they are considered fully ingested to NeMO. At this point you will receive a receipt with your file information as well as persistent NeMO identifiers for each file submitted. 
 
