@@ -54,7 +54,7 @@ When submitting multiplexed files to NeMO Archive, each component of a library s
 # File level information
 File level metadata includes information about the individual files to be submitted. If a file is present in the manifest, it must be uploaded during the submission process or ingest will fail. If you need additional controlled vocabulary terms added, please use the form [here](https://github.com/nemoarchive/helpdesk/issues/new/choose).
 
-**Note for techniques**: Manifest validation checks that for a given technique, we receive all the necessiary files. For example if a technique is selected for which we expect a forward read, reverse read, and an index, and those data subtypes are not included for a particular library aliquot, the validation will fail. Valid components for each technique can be found [here](https://drive.google.com/file/d/1MAHWU1CNbriv1F9zknqd1mSgFCv3KPw0/view?usp=drive_link)
+**Note for techniques**: Manifest validation checks that for a given technique, we receive all the necessary files. For example if a technique is selected for which we expect a forward read, reverse read, and an index, and those data subtypes are not included for a particular library aliquot, the validation will fail. Valid components for each technique can be found [here](https://drive.google.com/file/d/1MAHWU1CNbriv1F9zknqd1mSgFCv3KPw0/view?usp=drive_link)
 
 **Note for analysis files**
 If you are submitting derived summary files (e.g. counts, alignment, etc.) the raw files used in creating that summary file must be submitted at the same time or already in NeMO Archive.
