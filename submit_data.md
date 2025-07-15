@@ -46,7 +46,7 @@ Detection and validation of a properly formatted manifest will trigger an email 
 
 - [File manifest template in tsv format](https://github.com/nemoarchive/documentation/blob/master/manifest_template.tsv)
 
-- [Excel-friendly manifest file with field descriptions and controlled vocabularies](https://drive.google.com/file/d/1Z7h1_6Wgw8OurEoOAXU94yQcU5n0rLBK/view?usp=sharing) - Please contact NeMO to discuss addition of new terms to any of the controlled vocabularies.
+- [Excel-friendly manifest file with field descriptions and controlled vocabularies](https://docs.google.com/spreadsheets/d/1RGBDhiOEufXHGDNGXrMen6v-YUV4-K53qibszf31lII/edit?usp=sharing) - Please contact NeMO to discuss addition of new terms to any of the controlled vocabularies.
 
 All manifest files must contain the following fields. Do not delete headers for unused, optional columns:
  * File name - must be unique, described below
