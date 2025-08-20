@@ -27,6 +27,8 @@ New data submitters can register for an account at [nemoarchive.org/register](ht
 * PI of lab in which data was generated
 * whether data is public, for embargo or restricted*
 
+* **NEW: Due to new security policies, NeMO Archive will only approve submission account requests from institutional email addresses. Personal email addresses (e.g. @gmail.com, @outlook.com etc) will not be accepted**
+
 *Restricted data submitters are asked to request account usernames with an appended "-restricted", e.g. `doe-restricted`. If you will be submitting both public and controlled access data, you will need to create two accounts, one without and one with the "-restricted" tag. Similarly, if you are submitting to multiple restricted projects (e.g. BICAN and SCORCH) we ask that you create a unique user for each project.
 
 Someone from the NeMO team will follow up with you regarding any other questions about your data or the submission process. 
