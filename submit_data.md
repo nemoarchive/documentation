@@ -17,6 +17,7 @@ Data submitted to NeMO falls into three categories:
 - [Restricted Data](#restricted-data)
 - [Tracking Submissions](#tracking-submissions)
 - [Reporting to NIH](#reporting-to-nih)
+- [Leaving a lab](#Offboarding)
 
 &nbsp;
 
@@ -32,6 +33,8 @@ New data submitters can register for an account at [nemoarchive.org/register](ht
 *Restricted data submitters are asked to request account usernames with an appended "-restricted", e.g. `doe-restricted`. If you will be submitting both public and controlled access data, you will need to create two accounts, one without and one with the "-restricted" tag. Similarly, if you are submitting to multiple restricted projects (e.g. BICAN and SCORCH) we ask that you create a unique user for each project.
 
 Someone from the NeMO team will follow up with you regarding any other questions about your data or the submission process. 
+
+Prior to leaving a lab or otherwise changing roles in a way that would alter your access to data avaliable at NeMO, please complete the offboarding form [here](https://docs.google.com/forms/d/e/1FAIpQLSdVt74rw6W4jKHlhH7eRaGNmOGx8aVcCq6Qc948YZ-mYRmqGA/viewform?usp=sharing). 
 
 &nbsp;
 # <a name="submitting-a-file-manifest"></a> Submitting a File Manifest
@@ -205,5 +208,4 @@ If you are a project manager, a PI or other role responsible for tracking submis
 
 # <a name="reporting-to-nih"></a> Reporting to NIH
 Depending on funding source, data submitters may be required to submit quarterly proof of data submissions. At this time, BICCN is accepting the "Successful ingest" email received once data is successfully bundled as a submission receipt for an individual manifest.
-
 
