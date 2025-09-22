@@ -209,3 +209,6 @@ If you are a project manager, a PI or other role responsible for tracking submis
 # <a name="reporting-to-nih"></a> Reporting to NIH
 Depending on funding source, data submitters may be required to submit quarterly proof of data submissions. At this time, BICCN is accepting the "Successful ingest" email received once data is successfully bundled as a submission receipt for an individual manifest.
 
+# <a name="Offboarding"></a> Leaving a lab or position & verification of continuing accounts
+In addition to regular audits of lab members by NeMO staff (individuals noted as PIs will regularly be asked to verify the status of members of their lab) individuals leaving a lab or otherwise changing roles in a way that would alter your access to data avaliable at NeMO, should complete the offboarding form [here](https://docs.google.com/forms/d/e/1FAIpQLSdVt74rw6W4jKHlhH7eRaGNmOGx8aVcCq6Qc948YZ-mYRmqGA/viewform?usp=sharing).
+
