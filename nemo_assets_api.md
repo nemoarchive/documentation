@@ -1,9 +1,7 @@
-# NeMO Assets API and Landing Pages
+# NeMO Assets API for retrieval of metadata
 NeMO API  and landing pages enable users to access and download data related to grant, project, subject, samples (includes libraries and aliquots), collection (includes publication) and files.
 Currently, all API endpoints and landing pages necessitate the use of NeMO identifiers for metadata entities to retrieve information. NeMO plans to facilitate data retrieval utilizing NIMP’s NHASH IDs soon. To access public landing pages and API data at https://assets.nemoarchive.org, login credentials are not needed. Only publically accessible metadata is shown on landing pages and APIs. 
 
-
-NeMO Identifier API: REST API to retrieve information about the data being represented by a NeMO identifier.
 [Swagger Documentation](https://app.swaggerhub.com/apis/UMIGS/Identifiers/1.2)
 
 ### Metadata entities
