@@ -4,6 +4,16 @@ The NeMO Archive makes available a number of application programming interfaces 
 ## APIs at NeMO: Getting started
 Most APIs at the NeMO Archive are secured with the use of JWT (Javascript Web Tokens). The linked document here goes through the steps to obtain a token and important considerations about maintaining the security of tokens ([Obtaining a Javascript token for NeMO](https://github.com/nemoarchive/documentation/blob/master/api-logins.md)). 
 
+## Metadata access via API
+
+NeMO APIs enable users to access and download metadata related to grant, project, subject, samples (includes libraries and aliquots), collection (includes publication) and files using NeMO identifiers. 
+Additional information and examples:
+
+- [Github link](https://github.com/nemoarchive/documentation/blob/master/nemo_assets_api.md)
+- [Swagger link](https://app.swaggerhub.com/apis/UMIGS/Identifiers/1.2)
+
+
+
 ## Submission API
 The NeMO Archive exposes a RESTful API for users that wish to create code to make submissions and retrieve the status of their past submissions. Since the API is RESTful, any modern programming language that has a suitable HTTP library should be able to easily obtain the data. Results are returned in JSON format to make the parsing of the data easier. 
 
