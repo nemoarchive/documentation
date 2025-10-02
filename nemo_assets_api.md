@@ -20,7 +20,7 @@ Replace <metadata_entity> with one of the metadata entities listed above.
 Replace <nemo_identifier> with a valid nemo identifier for the metadata entity of interest.
 
 ### Examples of usage:
-#### Collection:
+### Collection:
 The collection landing page provides metadata about the datasets included in the collection. The page doesn’t display all files included in the collection, for display of all files please use the pagenated API end point.
 
 Example: nemo:col-rmf5gdy - BICAN transcriptome collection
@@ -42,7 +42,7 @@ nemo:dat-ek5dbmu (BICCN publication collection)
 
 nemo:col-2j1kset (BICCN collection)
 
-#### File
+### File
 
 Example: nemo:fil-bkygq2h - BICAN fastq file
 
@@ -58,7 +58,7 @@ nemo:seq-mxsv0g2 (BICCN fastq.tar file)
 
 nemo:alc-hmf2jpb (BICCN alignment bam component file)
 
-#### Sample
+### Sample
 The metadata for various samples such as ROIs, tissues, dissociated_cell_samples, enriched_cell_samples, barcoded_cell_samples, amplified cDNA, libraries and library_aliquots can be retrieved using sample endpoint.
 
 Example: nemo:lib-v2x1q6r - BICAN library_aliquot
@@ -76,11 +76,12 @@ nemo:smp-xgkecu9 (BICCN sample)
 nemo:smp-qo4j90y (BICCN sample)
 
 
-#### Subject
+### Subject
 
 Example: nemo:sbj-dq4ms3e (BICCN)
 
 **Landing page:** `https://assets.nemoarchive.org/subject/nemo:sbj-dq4ms3e`	
+
 **API endpoint:** `https://assets.nemoarchive.org/api/subject/nemo:sbj-dq4ms3e`	
 
 NeMO Identifiers for some subjects:
@@ -91,7 +92,7 @@ nemo:sbj-asemfa0
 nemo:sbj-3e6ik4e
 
 
-#### Project
+### Project
 Example: nemo:std-zn3fi33 (BICCN project: zeng_sc_10x_proj)	
 
 **Landing page:** `https://assets.nemoarchive.org/project/nemo:std-zn3fi33`		
@@ -105,7 +106,7 @@ nemo:std-5jvcwm1
 
 nemo:std-27tq25v
 	
-#### Grant
+### Grant
 Example: nemo:grn-37wairu	(BICCN grant)
 
 **Landing page:** `https://assets.nemoarchive.org/grant/nemo:grn-37wairu`		
@@ -113,7 +114,7 @@ Example: nemo:grn-37wairu	(BICCN grant)
 
 
 
-### Use Cases:
+## Use Cases:
 
 Retrieving the files associated with a BICAN dynamic collection (eg: 10x v3.1 RNA Seq), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
 NeMO will provide the dynamic collection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve the NeMO identifier for the most recent static child collection associated with the latest Rapid Release. Although the current example of the dynamic collection does not yet include a child static collection, it is expected that there will be one static collection for each Rapid Release moving forward. The following is the flow of steps for retrieving the files for a collection:
@@ -138,18 +139,20 @@ This will provide the file API endpoint URLs for all the files associated with t
  	↓
 
 Use the file API endpoint URLs from the previous step to retrieve file metadata (using the first file endpoint URL from the previous output as an example). Some of the metadata in the file endpoint include the HTTPS location of the file and nemo identifier for the parent library_aliquot for the file ( example: NY-TX14001-1 - nemo:lib-v2x1q6r)
-API endpoint:
+
+**API endpoint:**
 `https://assets.nemoarchive.org/api/file/nemo:fil-bkygq2h`
-Landing page:
+
+**Landing page:**
 `https://assets.nemoarchive.org/file/nemo:fil-bkygq2h`		
 ↓
 
 Use the sample API endpoint to retrieve metadata associated with the library aliquot retrieved by using the nemo identifier for the aliquot from the step above.
 (NHASH ID can be obtained from the “alternate_id” field in sample endpoint)
-API endpoint:
+**API endpoint:**
 `https://assets.nemoarchive.org/api/sample/nemo:lib-v2x1q6r`	
 
-Landing page: 
+**Landing page:**
 `https://assets.nemoarchive.org/sample/nemo:lib-v2x1q6r`	
 
 Retrieving the files associated with a BICAN dynamic metacollection (eg: multiome), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
