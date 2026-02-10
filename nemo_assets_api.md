@@ -182,7 +182,7 @@ Query collection API endpoint using dynamic meta-cumulative collection identifie
 
      	            	 ↓
 						 
-Retrieve the most recent child static meta-snapshot collection API endpoint URLs from the latest Rapid Release under 'child_collections'.
+Retrieve the most recent child static meta-snapshot collection API endpoint URL from the latest Rapid Release under 'child_collections'.
 `https://assets.nemoarchive.org/api/collection/nemo:col-myr9nn1`
 
                          ↓
