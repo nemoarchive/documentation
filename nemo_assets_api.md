@@ -95,7 +95,8 @@ nemo:sbj-3e6ik4e
 ### Project
 Example: nemo:std-zn3fi33 (BICCN project: zeng_sc_10x_proj)	
 
-**Landing page:** `https://assets.nemoarchive.org/project/nemo:std-zn3fi33`		
+**Landing page:** `https://assets.nemoarchive.org/project/nemo:std-zn3fi33`	
+
 **API endpoint:** `https://assets.nemoarchive.org/api/project/nemo:std-zn3fi33`	
 
 NeMO Identifiers for some projects:
@@ -109,86 +110,85 @@ nemo:std-27tq25v
 ### Grant
 Example: nemo:grn-37wairu	(BICCN grant)
 
-**Landing page:** `https://assets.nemoarchive.org/grant/nemo:grn-37wairu`		
+**Landing page:** `https://assets.nemoarchive.org/grant/nemo:grn-37wairu`	
+
 **API endpoint:** `https://assets.nemoarchive.org/api/grant/nemo:grn-37wairu`		
 
 
 
-## Use Cases:
 
-Retrieving the files associated with a BICAN dynamic collection (eg: 10x v3.1 RNA Seq), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
-NeMO will provide the dynamic collection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve the NeMO identifier for the most recent static child collection associated with the latest Rapid Release. Although the current example of the dynamic collection does not yet include a child static collection, it is expected that there will be one static collection for each Rapid Release moving forward. The following is the flow of steps for retrieving the files for a collection:
+## Use Cases for using APIs
+
+Use case 1: Retrieving the files associated with a cumulative collection (eg: 10x v3.1 RNA Seq), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
+NeMO will provide the dynamic collection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve the NeMO identifier for the most recent static child collection associated with the latest Rapid Release. The following are the steps for retrieving the files for a collection:
 
 
 
-Query collection API endpoint using dynamic collection identifier - nemo:col-rmf5gdy
+Query collection API endpoint using cumulative collection identifier - nemo:col-afddrzj
 
-**API endpoint:** `https://assets.nemoarchive.org/api/collection/nemo:col-rmf5gdy`	
+**API endpoint:** `https://assets.nemoarchive.org/api/collection/nemo:col-afddrzj`	
 
-**Landing page:** `https://assets.nemoarchive.org/collection/nemo:col-rmf5gdy`	
+**Landing page:** `https://assets.nemoarchive.org/collection/nemo:col-afddrzj`	
 
-Retrieve the recent static child collection API endpoint URL associated with the latest Rapid Release under the 'child_collections' field in the API output from the query above (currently the static child collection is not available)
-      	  ↓
+      	               ↓
 
-Retrieve the metadata associated with the child collection using the API endpoint URL from above (currently the static child collection is not available)
-       	 ↓
+Retrieve the recent static snapshot child collection API endpoint URL associated with the latest Rapid Release under the 'child_collections' field in the API output from the query above
 
-Query the child collection identifier using a paginated file endpoint.
-This will provide the file API endpoint URLs for all the files associated with this collection (for example purposes using the dynamic collection identifier in the paginated endpoint query).
-`https://assets.nemoarchive.org/api/collection/nemo:col-rmf5gdy/files?page=1&page_size=100`	
- 	↓
+**API endpoint:** `https://assets.nemoarchive.org/api/collection/nemo:col-7x7snh7`
+ 
+       	              ↓
 
-Use the file API endpoint URLs from the previous step to retrieve file metadata (using the first file endpoint URL from the previous output as an example). Some of the metadata in the file endpoint include the HTTPS location of the file and nemo identifier for the parent library_aliquot for the file ( example: NY-TX14001-1 - nemo:lib-v2x1q6r)
+Query the child snapshot collection identifier using a paginated file endpoint.
+This will provide the file API endpoint URLs for all the files associated with this collection.
+`https://assets.nemoarchive.org/api/collection/nemo:col-7x7snh7/files?page=1&page_size=100`	
+ 	     
+		              ↓
+
+Use the file API endpoint URLs from the previous step to retrieve file metadata (using the first file endpoint URL from the previous output as an example). Some of the metadata in the file endpoint include the HTTPS location of the file, file nemo identifier and NHASH id for the parent library_aliquot ( example: name -NY-TX14001-1; nemo identifier -nemo:lib-v2x1q6r; NHASH id -LA-JFFKEH205984JOILGE819914)
 
 **API endpoint:**
+
 `https://assets.nemoarchive.org/api/file/nemo:fil-bkygq2h`
 
 **Landing page:**
+
 `https://assets.nemoarchive.org/file/nemo:fil-bkygq2h`		
-↓
 
-Use the sample API endpoint to retrieve metadata associated with the library aliquot retrieved by using the nemo identifier for the aliquot from the step above.
-(NHASH ID can be obtained from the “alternate_id” field in sample endpoint)
-**API endpoint:**
-`https://assets.nemoarchive.org/api/sample/nemo:lib-v2x1q6r`	
 
-**Landing page:**
-`https://assets.nemoarchive.org/sample/nemo:lib-v2x1q6r`	
 
-Retrieving the files associated with a BICAN dynamic metacollection (eg: multiome), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
-NeMO will provide the dynamic metacollection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve the API endpoint URLs for the most recent static child metacollection associated with the latest Rapid Release. Although the current example of the dynamic metacollection does not yet include a child static metacollection, it is expected that there will be one static metacollection for each Rapid Release moving forward. The endpoint for the static metacollection will return endpoint URLs for the two child collections containing ATAC and RNA datasets. The following is the flow of steps for retrieving the files for a metacollection:
+Use Cae 2: Retrieving the files associated with a BICAN meta-cumulative collection (eg: multiome), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
+NeMO will provide the dynamic metacollection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve the API endpoint URLs for the most recent static child metacollection associated with the latest Rapid Release. The endpoint for the static metacollection will return endpoint URLs for the two child collections containing ATAC and RNA datasets. The following is the flow of steps for retrieving the files for a metacollection:
 
-Query collection API endpoint using dynamic metacollection identifier - nemo:col-4hjv07d	
-**Landing page:** `https://assets.nemoarchive.org/collection/nemo:col-4hjv07d`	
-**API:** `https://assets.nemoarchive.org/api/collection/nemo:col-4hjv07d`
-                            	       	 ↓
+Query collection API endpoint using dynamic meta-cumulative collection identifier - nemo:col-iefmnby
+
+**Landing page:** `https://assets.nemoarchive.org/collection/nemo:col-iefmnby`	
+
+**API:** `https://assets.nemoarchive.org/api/collection/nemo:col-iefmnby`
+
+     	            	 ↓
+						 
+Retrieve the most recent child static meta-snapshot collection API endpoint URLs from the latest Rapid Release under 'child_collections'.
+`https://assets.nemoarchive.org/api/collection/nemo:col-myr9nn1`
+
+                         ↓
 	
-Retrieve the most recent static child collection API endpoint URLs for the ATAC and RNA datasets associated with the latest Rapid Release under the 'child_collections' field in the API output from the query above.
+Retrieve the snapshot collection API endpoint URLs for the ATAC and RNA datasets under 'child collections'
+`https://assets.nemoarchive.org/api/collection/nemo:col-0onu0di`	(ATAC)
 
-`https://assets.nemoarchive.org/api/collection/nemo:col-64xrgxd`	(RNA)
+`https://assets.nemoarchive.org/api/collection/nemo:col-o29aa39`	(RNA)
 
-`https://assets.nemoarchive.org/api/collection/nemo:col-5grzfnz`	(ATAC)
-      			 ↓
+      			        ↓
 
-Retrieve the metadata associated with each of the child collections using the API endpoint URLs from above.
-API endpoints:
-`https://assets.nemoarchive.org/api/collection/nemo:col-64xrgxd` (RNA)	
-
-`https://assets.nemoarchive.org/api/collection/nemo:col-5grzfnz` (ATAC)	
-
-**Landing pages:** `https://assets.nemoarchive.org/collection/nemo:col-64xrgxd`	
-`https://assets.nemoarchive.org/collection/nemo:col-5grzfnz`	
-       	 ↓
-
-Query the child collection identifiers using paginated file endpoints.
+Query the snapshot collection identifiers using paginated file endpoints.
 This will provide the file API endpoint URLs for all the files associated with this collection.
 
-`https://assets.nemoarchive.org/api/collection/nemo:col-64xrgxd/files?page=1&page_size=100`	(RNA)
+`https://assets.nemoarchive.org/api/collection/nemo:col-o29aa39/files?page=1&page_size=100`	(RNA)
 
-`https://assets.nemoarchive.org/api/collection/nemo:col-5grzfnz/files?page=1&page_size=100`	(ATAC)
- 	↓
+`https://assets.nemoarchive.org/api/collection/nemo:col-0onu0di/files?page=1&page_size=100`	(ATAC)
 
-Use the file API endpoint URLs from the previous step to retrieve file metadata (using first file endpoint URL from the previous output as an example). Some of the metadata in the file endpoint include the HTTPS location of the file and nemo identifier for the parent library_aliquot for the file.
+ 	                    ↓
+
+Use the file API endpoint URLs from the previous step to retrieve file metadata (using the first file endpoint URL from the previous output as an example). Some of the metadata in the file endpoint include the HTTPS location of the file, file nemo identifier and NHASH id for the parent library_aliquot.
 API endpoint:
 
 `https://assets.nemoarchive.org/api/file/nemo:fil-0kv21as` (RNA)
@@ -200,22 +200,7 @@ API endpoint:
 `https://assets.nemoarchive.org/file/nemo:fil-0kv21as`	
 
 `https://assets.nemoarchive.org/file/nemo:fil-25cr79p`	
-↓
-
-Use the sample API endpoint to retrieve metadata associated with the library aliquot retrieved by using the nemo identifier for the aliquot from the step above.
-(NHASH ID can be obtained from the “alternate_id” field in sample endpoint)
-
-**API endpoints:**
-`https://assets.nemoarchive.org/api/sample/nemo:lib-tw3jgvv`	
-(ATAC aliquot NY-AT16001-1)
-
-`https://assets.nemoarchive.org/api/sample/nemo:lib-iajck4t`	
-(RNA aliquot NY-MX12001-1)
-
-**Landing pages:**
-`https://assets.nemoarchive.org/sample/nemo:lib-tw3jgvv`	
-
-`https://assets.nemoarchive.org/sample/nemo:lib-iajck4t`	
+	
 
 
 
