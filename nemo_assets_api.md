@@ -119,8 +119,9 @@ Example: nemo:grn-37wairu	(BICCN grant)
 
 ## Use Cases for using APIs
 
-Use case 1: Retrieving the files associated with a cumulative collection (eg: 10x v3.1 RNA Seq), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
-NeMO will provide the dynamic collection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve the NeMO identifier for the most recent static child collection associated with the latest Rapid Release. The following are the steps for retrieving the files for a collection:
+Use case 1: Retrieving files associated with the latest snapshot collection within a cumulative collection (eg: 10x v3.1 RNA Seq), followed by extraction of metadata (including the aliquot NHASH ID) for the files.
+
+NeMO will provide the cumulative collection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve NeMO identifier for snapshot collection associated with the latest Rapid Release. The following are the steps for retrieving the files for the snapshot collection, a child of cumulative collection.
 
 
 
@@ -156,8 +157,9 @@ Use the file API endpoint URLs from the previous step to retrieve file metadata 
 
 ------------
 
-Use case 2: Retrieving the files associated with a BICAN meta-cumulative collection (eg: multiome), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
-NeMO will provide the dynamic metacollection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve the API endpoint URLs for the most recent static child metacollection associated with the latest Rapid Release. The endpoint for the static metacollection will return endpoint URLs for the two child collections containing ATAC and RNA datasets. The following is the flow of steps for retrieving the files for a metacollection:
+Use case 2: Retrieving files associated with a latest meta-snapshot collection from a meta-cumulative collection (eg: multiome) followed by extraction of metadata (including the aliquot NHASH ID) for the files.
+
+NeMO will provide the meta-cumulative collection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve the API endpoint URL for the meta-snapshot collection associated with the latest Rapid Release. The endpoint for the  meta-snapshot collection will return endpoint URLs for the two child snapshot collections containing ATAC and RNA datasets. The following are the steps for retrieving the files for ATAC and RNA datasets.
 
 Query collection API endpoint using dynamic meta-cumulative collection identifier - nemo:col-iefmnby
 
