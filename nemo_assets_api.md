@@ -1,23 +1,36 @@
 # NeMO Assets API for retrieval of metadata
-NeMO API  and landing pages enable users to access and download data related to grant, project, subject, samples (includes libraries and aliquots), collection (includes publication) and files.
-Currently, all API endpoints and landing pages necessitate the use of NeMO identifiers for metadata entities to retrieve information. NeMO plans to facilitate data retrieval utilizing NIMP’s NHASH IDs soon. To access public landing pages and API data at https://assets.nemoarchive.org, login credentials are not needed. Only publically accessible metadata is shown on landing pages and APIs. 
+NeMO API  and landing pages enable users to access and download data associated with grant, project, subject, samples (includes libraries and aliquots), collection (includes publication) and files.
+Both landing pages and API endpoints support metadata retrieval using NeMO identifiers and NIMP's NHASH identifiers. To access public landing pages and API data at https://assets.nemoarchive.org, login credentials are not needed. Only publically accessible metadata is shown on landing pages and APIs. 
 
 [Swagger Documentation](https://app.swaggerhub.com/apis/UMIGS/Identifiers/1.2)
 
 ### Metadata entities
 Identifiers at NeMO are divided into several groups to help users determine what an identifier is referring to. Current entities include:
 `collection`, `file`, `library`, `sample`, `subject`, `project`, and `grant`.
-### API URL:
+### API URL using NeMO identifiers:
 `https://assets.nemoarchive.org/api/<metadata_entity>/<nemo_identifier>`
 
 Replace <metadata_entity> with one of the metadata entities listed above.
 Replace <nemo_identifier> with a valid nemo identifier for the metadata entity of interest.
 
-### Landing page URL:
+### API URL using alt-ids (NIMP's NHASH ids)
+`https://assets.nemoarchive.org/api/alt-id/nhash/<metadata_entity>/<nhash_identifier>`
+
+Replace <metadata_entity> with one of the metadata entities listed above.
+Replace <nhash_identifier> with a valid NIMP's NHASH identifier for the metadata entity of interest.
+
+### Landing page URL using NeMO identifiers:
 `https://assets.nemoarchive.org<metadata_entity>/<nemo_identifier>`
 
 Replace <metadata_entity> with one of the metadata entities listed above.
 Replace <nemo_identifier> with a valid nemo identifier for the metadata entity of interest.
+
+### Landing page URL using alt-ids (NIMP's NHASH ids):
+`https://assets.nemoarchive.org/alt-id/nhash/<metadata_entity>/<nhash_identifier>`
+
+Replace <metadata_entity> with one of the metadata entities listed above.
+Replace <nhash_identifier> with a valid NIMP's NHASH identifier for the metadata entity of interest.
+
 
 ### Examples of usage:
 ### Collection:
