@@ -154,9 +154,9 @@ Use the file API endpoint URLs from the previous step to retrieve file metadata 
 
 `https://assets.nemoarchive.org/file/nemo:fil-bkygq2h`		
 
+------------
 
-
-Use Cae 2: Retrieving the files associated with a BICAN meta-cumulative collection (eg: multiome), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
+Use case 2: Retrieving the files associated with a BICAN meta-cumulative collection (eg: multiome), followed by the extraction of metadata (including the NHASH ID) for the parent library aliquots corresponding to those files.
 NeMO will provide the dynamic metacollection identifier to BCDC prior to a Rapid Release. BCDC will then use the collection API endpoint to retrieve the API endpoint URLs for the most recent static child metacollection associated with the latest Rapid Release. The endpoint for the static metacollection will return endpoint URLs for the two child collections containing ATAC and RNA datasets. The following is the flow of steps for retrieving the files for a metacollection:
 
 Query collection API endpoint using dynamic meta-cumulative collection identifier - nemo:col-iefmnby
