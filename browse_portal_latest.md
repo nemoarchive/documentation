@@ -7,7 +7,7 @@ The NeMO Data Portal ([portal.nemoarchive.org](https://portal.nemoarchive.org/))
 The portal landing page is broken up into 3 sections:
 
  * The **Welcome box** provides your entry to querying data, described in more detail below.
- * A **Bar graph** breaks down number of files per modality per study. This currently tracks open access, BICCN-funded data only.
+ * A **Bar graph** breaks down number of files per modality per study. 
  * The **Data Portal Summary bar** at the bottom provides a high level summary of all data currently available through the NeMO portal.<br><br>
 
 ![NeMO portal home page](images/nemo_data_portal_latest/nemo-portal-landing-page.png)
