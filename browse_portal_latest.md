@@ -83,7 +83,7 @@ The results from the faceted search box and additional filters are organized int
 
 Under the **Summary** tab, results are displayed as pie charts showing file counts by project, taxonomy, data type, modality, anatomy and file format. 
 
-The number displayed next to each facet in the faceted search box corresponds to the total number of samples associated with this attribute across all projects in the portal. This number does not change dynamically as facets are selected or deselected. What does change is the summary results panel. As facets are selected, the file count, sample count and total file volume will update to reflect the current filter(s). The pie charts also update accordingly. 
+The number displayed next to each facet in the faceted search box corresponds to the total number of files associated with this attribute across all projects in the portal. As facets are selected, the file count, sample count and total file volume will update to reflect the current filter(s). The pie charts also update accordingly. 
 
 Hovering over a pie chart displays count information for each component. Each summary pie chart also includes a table icon in the upper right corner. Selecting this icon switches the view to a table showing counts of files and total file size for each component, allowing users to toggle between chart and table views.<br><br>
 
