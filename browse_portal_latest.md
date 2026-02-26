@@ -65,7 +65,7 @@ Additional facets can be added to the Faceted Search box using *Add a Filter* in
 
 *<p align="center">Fig. 5: Adding filters to the Faceted search box. A pop up appears where you can search for available file, sample, subject and study-specific facets</p>*<br>
 
-Figure 5 illustrates how to add a filter and search for available facets using the search bar that pops up.  Note that **Assay** is not listed as a default facet under **Samples** tab in the faceted search panel. However, when you add **Assay** as a filter, it appears under **Samples** in the faceted search panel, as you can see in the figure below (*Fig. 6*). 
+Figure 5 illustrates how to add a filter and search for available filters using the search bar that pops up.  Note that **Assay** is not listed as a default facet under **Samples** tab in the faceted search panel. However, when you add **Assay** as a filter, it appears under **Samples** in the faceted search panel, as you can see in the figure below (*Fig. 6*). 
 
 Users can search for and add additional filters that are file-, sample-, subject- or study-specific. All study-specific facets can be searched for by typing *study* in the *Add a filter* search box. Similarly,  file-, sample- and subject-specific facets can be searched and added. All study-, sample- and subject-level facets that are added will appear under the **Samples** tab in the faceted search panel, while file-specific facets will appear under the **Files** tab. 
 
@@ -85,7 +85,9 @@ Under the **Summary** tab, results are displayed as pie charts showing file coun
 
 The number displayed next to each facet in the faceted search box corresponds to the total number of files associated with this attribute across all projects in the portal. As facets are selected, the file count, sample count and total file volume will update to reflect the current filter(s). The pie charts also update accordingly. 
 
-Hovering over a pie chart displays count information for each component. Each summary pie chart also includes a table icon in the upper right corner. Selecting this icon switches the view to a table showing counts of files and total file size for each component, allowing users to toggle between chart and table views.<br><br>
+Hovering over a pie chart displays count information for each component. Each summary pie chart also includes a table icon in the upper right corner. Selecting this icon switches the view to a table showing counts of files and total file size for each component, allowing users to toggle between chart and table views.
+
+Under the Summary tab in the Summary Results Panel, there is an ‘Add all files to Cart’ button, which allows users to add all files resulting from their queries to the shopping cart, although users can add only a maximum of 10,000 files. This functionality is described in detail below.<br><br>
 
 
 <p float="left">
