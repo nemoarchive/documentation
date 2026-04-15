@@ -41,7 +41,7 @@ The NIMH Data Archive will review data access requests in consideration of the d
 &nbsp;
 
 ### <a name="nda-approval-process"></a> NDA Approval Process
-Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides an SOP for institutionally sponsored data access requests [here](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access.
+Permissions for restricted data access at NeMO are being facilitated by the [NIMH Data Archive (NDA)](https://nda.nih.gov/). NDA and NeMO are working together to ensure a smooth process. NDA provides a [Standard Operating Procedure (SOP) for institutionally sponsored data access requests](https://nda.nih.gov/about/standard-operating-procedures.html#sop4), however this page outlines the steps required for **NeMO-specific** restricted data access.
 
 &nbsp;
 
@@ -151,7 +151,7 @@ Once set up, notify nemo@som.umaryland.edu as to your institutional google accou
 
 To set up a new billing account go to [https://console.cloud.google.com/billing](https://console.cloud.google.com/billing), click CREATE ACCOUNT and follow the instructions.  
 
-More information on billing accounts is [available here](https://cloud.google.com/billing/docs/).  
+More information is available in the [Google Cloud billing account documentation](https://cloud.google.com/billing/docs/).  
 
 
 #### Step 3a. Access via the GCP Browser Web Interface
@@ -167,7 +167,7 @@ Navigate by clicking on the directory listed in the table. Individual files can 
 
 #### Step 3b. Access via gsutil on the command line
 
-Instructions for installing gsutil as part of the Google Cloud SDK are [available here](https://cloud.google.com/storage/docs/gsutil_install).  
+See the [gsutil installation instructions](https://cloud.google.com/storage/docs/gsutil_install) for installing gsutil as part of the Google Cloud SDK.  
 
 To access restricted data, you must authenticate your account. At the command line prompt, type `gcloud auth login`  
  

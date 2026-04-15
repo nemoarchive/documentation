@@ -3,12 +3,12 @@
 Data submitted to NeMO Archive falls into three categories:
 * *Public* - data to be immediately distributed openly and freely to the wider research community,
 * *Embargo* - data to be held back, or embargoed, until a specific date, at which point it will be released openly and freely to the wider research community,
-* *Restricted* - Controlled access data to be distributed only to an approved group of users due to consent restrictions, e.g. human data. Often restricted datasets contain a combination of private (raw reads, alignments) and public (counts, peaks) datatypes.  In such instances, the dataset landing page or BDBag will provide direct access to public data, in addition to a link to restricted data access instructions.
+* *Restricted* - Controlled access data to be distributed only to an approved group of users due to consent restrictions, e.g. human data. Often restricted datasets contain a combination of private (raw reads, alignments) and public (counts, peaks) datatypes.  In such instances, the dataset landing page or BDBag will provide direct access to public data, in addition to [restricted data access instructions](https://nemoarchive.org/resources/accessing-controlled-access-data).
 
 While we endeavor to make accessing data on NeMO Archive as quick as possible, in cases of extraordinary activity (e.g. downloading all public data present in the archive) we may temporarily limit the bandwith available to individual users to ensure activites do not cause undue slowdowns in site performance. 
 
 There are many ways that users may be introduced to data at NeMO Archive, depending on whether you're arriving at our site directly or from another resource. For Restricted
-data access, see the [documentation here](https://nemoarchive.org/resources/accessing-controlled-access-data). For public data users, we've put together this handy table to recommend the most appropriate way to access data:
+data access, see the [controlled access data documentation](https://nemoarchive.org/resources/accessing-controlled-access-data). For public data users, we've put together this handy table to recommend the most appropriate way to access data:
 
 | So you want to... | We recommend... |
 | --- | --- |
@@ -44,7 +44,7 @@ assets.nemoarchive.org/dat-ch1nqb7
 Each data collection landing page corresponds to a defined dataset, either from a publication or a direct link from [biccn.org](biccn.org). Landing pages contain basic metadata
 about the dataset, along with links to either the HTTP browser (see next section) if the dataset corresponds to a single branch of the directory structure,
 or a [BDBag](https://bd2k.ini.usc.edu/tools/bdbag/) if it contains a subset of data or data across multiple modalities, labs or cell types.
-More information about downloading and working with BDBags is [available here](./download_bdbag.md).
+See the [BDBag download and usage guide](./download_bdbag.md) for more information about downloading and working with BDBags.
 
 If you are a PI or a data submitter and would like to organize a data collection into a BDBag and/or request a landing page for a data collection or publication, please contact the NeMO Archive team.
 

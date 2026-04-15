@@ -34,7 +34,7 @@ New data submitters can register for an account at [nemoarchive.org/register](ht
 
 Someone from the NeMO team will follow up with you regarding any other questions about your data or the submission process. 
 
-Prior to leaving a lab or otherwise changing roles in a way that would alter your access to data avaliable at NeMO, please complete the offboarding form [here](https://docs.google.com/forms/d/e/1FAIpQLSdVt74rw6W4jKHlhH7eRaGNmOGx8aVcCq6Qc948YZ-mYRmqGA/viewform?usp=sharing). 
+Prior to leaving a lab or otherwise changing roles in a way that would alter your access to data avaliable at NeMO, please complete the [NeMO offboarding form](https://docs.google.com/forms/d/e/1FAIpQLSdVt74rw6W4jKHlhH7eRaGNmOGx8aVcCq6Qc948YZ-mYRmqGA/viewform?usp=sharing). 
 
 &nbsp;
 # <a name="submitting-a-file-manifest"></a> Submitting a File Manifest
@@ -44,7 +44,7 @@ Detection and validation of a properly formatted manifest will trigger an email 
 
 ## <a name="manifest-format"></a> Manifest format
 
-### For SCORCH submitters, please see the SCORCH specific documentation located here ([link](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md)).
+### For SCORCH submitters, please see the [SCORCH-specific submission documentation](https://github.com/nemoarchive/documentation/blob/master/ingest_scorch.md).
 
 
 ### **For other submitters:**
@@ -124,7 +124,7 @@ To perform a dry run using the submission API, add "dryrun=y" to the submission 
 
 # <a name="submitting-data"></a> Submitting Data
 
-NeMO accepts both raw and derived data types of the file extensions [listed here](https://github.com/nemoarchive/documentation/blob/master/file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid manifest upload and/or processing delays, by emailing nemo@som.umaryland.edu. NeMO Archive discourages the submission of aggregate files through our ingest process (i.e. files containing counts from multiple samples). If you have a need to submit aggregated files, please contact us prior to attempting a submission.
+NeMO accepts both raw and derived data types of the [supported file extensions](https://github.com/nemoarchive/documentation/blob/master/file_extensions.md). If you plan to submit data extensions not currently on this list, please let us know ahead of time to avoid manifest upload and/or processing delays, by emailing nemo@som.umaryland.edu. NeMO Archive discourages the submission of aggregate files through our ingest process (i.e. files containing counts from multiple samples). If you have a need to submit aggregated files, please contact us prior to attempting a submission.
 
 Depending on the size of your submission, it may be preferable to submit data files individually or within a tarball. Either is fine. We don't pre-define any specific directory structure for your submission, however we ask that you do not submit tarballs within a tarball, as that will delay processing. Files will be reorganized during ingest based on metadata provided in the manifest.
 
@@ -132,7 +132,7 @@ Depending on the size of your submission, it may be preferable to submit data fi
 ## <a name="uploading-using-aspera"></a> Uploading using Aspera
 In order to submit data to NeMO, you will first need to download and install the IBM Aspera Command Line Interface,
 available from the [IBM website](https://www.ibm.com/products/aspera/downloads). You will find IBM Aspera CLI under Developer resources.
-Installation instructions are available [here](https://github.com/nemoarchive/documentation/blob/master/install_aspera.md).
+See the [Aspera CLI installation instructions](https://github.com/nemoarchive/documentation/blob/master/install_aspera.md) for setup details.
 
 Once installed, the `ascp` utility will be available for use at the command line. Have your NeMO Aspera credentials handy, as commands to initiate an upload will result in a prompt for your password.
 
@@ -210,5 +210,5 @@ If you are a project manager, a PI or other role responsible for tracking submis
 Depending on funding source, data submitters may be required to submit quarterly proof of data submissions. At this time, BICCN is accepting the "Successful ingest" email received once data is successfully bundled as a submission receipt for an individual manifest.
 
 # <a name="Offboarding"></a> Leaving a lab or position & verification of continuing accounts
-In addition to regular audits of lab members by NeMO staff (individuals noted as PIs will regularly be asked to verify the status of members of their lab) individuals leaving a lab or otherwise changing roles in a way that would alter your access to data avaliable at NeMO, should complete the offboarding form [here](https://docs.google.com/forms/d/e/1FAIpQLSdVt74rw6W4jKHlhH7eRaGNmOGx8aVcCq6Qc948YZ-mYRmqGA/viewform?usp=sharing).
+In addition to regular audits of lab members by NeMO staff (individuals noted as PIs will regularly be asked to verify the status of members of their lab) individuals leaving a lab or otherwise changing roles in a way that would alter your access to data avaliable at NeMO, should complete the [NeMO offboarding form](https://docs.google.com/forms/d/e/1FAIpQLSdVt74rw6W4jKHlhH7eRaGNmOGx8aVcCq6Qc948YZ-mYRmqGA/viewform?usp=sharing).
 
