@@ -11,7 +11,7 @@ NeMO APIs enable users to access and download metadata related to grant, project
 Additional information and examples:
 
 - [NeMO Assets API documentation on GitHub](https://github.com/nemoarchive/documentation/blob/master/nemo_assets_api.md)
-- [NeMO Assets API Swagger documentation](https://app.swaggerhub.com/apis/UMIGS/Identifiers/1.2)
+- [NeMO Assets API Swagger documentation](https://app.swaggerhub.com/apis/UMIGS/Identifiers/1.4)
 
 
 
