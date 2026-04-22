@@ -1,4 +1,4 @@
-# Accessing SCORCH data and metadata
+# Accessing SCORCH consensus data
 
 ## Access policies
 SCORCH consensus processed data is provided under a [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en) license. The SCORCH consortium makes all effort to ensure files are as accurate as possible but please note that data and derived products may not always be in their final state at the time of release and are provided as-is [more details](https://scorch.igs.umaryland.edu/data-use-disclaimer.php).
