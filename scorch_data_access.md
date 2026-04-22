@@ -16,7 +16,7 @@ The SCORCH data center provides consensus processed outputs of all our SCORCH da
 are [Optimus](https://broadinstitute.github.io/warp/docs/Pipelines/Optimus_Pipeline/README) and
 [Multiome](https://broadinstitute.github.io/warp/docs/Pipelines/Multiome_Pipeline/README). Details of the pipelines and file contents can be found at those links.
 
-To see what consensus processed data is available via open access you can use the link [here](https://scorch-portal.nemoarchive.org/search?facetTab=Samples&filters=%7B%22op%22:%22and%22,%22content%22:%5B%7B%22op%22:%22in%22,%22content%22:%7B%22field%22:%22file.genome_build%22,%22value%22:%5B%22GRCh38-HIV%22,%22GRCm39_EcoHIV%22,%22GCF_003339765.1-103_SIV%22,%22mRatBN7.2_HIV%22%5D%7D%7D%5D%7D) to see the files in the SCORCH data portal.
+To see what consensus processed data is available via open access you can use the link [here](https://scorch-portal.nemoarchive.org/search/s?facetTab=Samples&filters=%7B%22op%22:%22and%22,%22content%22:%5B%7B%22op%22:%22in%22,%22content%22:%7B%22field%22:%22file.genome_build%22,%22value%22:%5B%22GRCh38-HIV%22,%22GRCm39_EcoHIV%22,%22GCF_003339765.1-103_SIV%22,%22mRatBN7.2_HIV%22%5D%7D%7D%5D%7D) to see the files in the SCORCH data portal.
 ## Access to restricted raw data
 Access to restricted raw data (i.e. human fastq files) is managed by dbGaP.
 Current datasets available for dbGaP request:
@@ -26,7 +26,7 @@ Current datasets available for dbGaP request:
 
 ## Requesting additional human subject metadata
 
-The data dictionary for fields collect at NeMO for SCORCH data can be found here ([human](), [nonhuman]()). In the case of certain tissue banks such as NNTC, the source tissue bank may have additional metadata of interest. To see the source where a human donor or nonhuman subject was obtained from, you can add the filter subject source to the portal facet display. In particular, human samples obtained from nntc (nntc.org) have extensive metadata available beyond what is displayed at NeMO. Requests for access to this additional metadata can be submitted at [nntc.org](https://nntc.org/form/contact).
+The data dictionary for fields collect at NeMO for SCORCH data can be found here ([human subject level CVs](https://docs.google.com/spreadsheets/d/1-vwK_3tTUby6dvEK2ZomtnnI0W8tJKwF-YI0ywL8V8o/edit#gid=945951358), [nonhuman subject level CVs](https://docs.google.com/spreadsheets/d/1QnxfdijS-dwtlJyy1uBn97nUArGgkpBxTbaO4Vl5nRM/edit#gid=1905044666)). In the case of certain tissue banks such as NNTC, the source tissue bank may have additional metadata of interest. To see the source where a human donor or nonhuman subject was obtained from, you can add the filter subject source to the portal facet display. In particular, human samples obtained from nntc (nntc.org) have extensive metadata available beyond what is displayed at NeMO. Requests for access to this additional metadata can be submitted at [nntc.org](https://nntc.org/form/contact).
 
 
 ## More information/ user help
