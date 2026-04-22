@@ -30,4 +30,4 @@ The data dictionary for fields collect at NeMO for SCORCH data can be found here
 
 
 ## More information/ user help
-If you need more information, please use our contact form [here]() to contact the SCORCH Data Coordinating Center.
+If you need more information, please use our contact form [here](https://scorch.igs.umaryland.edu/contact.php) to contact the SCORCH Data Coordinating Center.
