@@ -31,7 +31,7 @@ Please refer to the section "[Accessing Rapid Release Data](#accessing-rapid-rel
 
 **Diagram 1:**
 
-<img src="images/image1.png" style = "display:block; margin: 0 auto" />
+<img src="images/image1.png" alt="Diagram 1: Illustration of how snapshot and meta-snapshot collections are generated for each Rapid Release" style = "display:block; margin: 0 auto" />
 
 
 ### <h3 id = "cumulative-collections" style = "display: inline">**Cumulative Collections (dynamic)**</h3>
@@ -41,18 +41,18 @@ A “Meta-Cumulative” collection is a specialized cumulative collection that t
 
 **Diagram 2:**
 
-<img src="images/image2.png" style = "display:block; margin: 0 auto" />
+<img src="images/image2.png" alt="Diagram 2: Illustration of cumulative and meta-cumulative collections as stable containers tracking datasets across multiple Rapid Releases" style = "display:block; margin: 0 auto" />
 
 ### <h3 id = "rapid-release-collection" style = "display: inline">**Rapid Release Collection (static)**</h3>
 A “Rapid Release” collection represents a specific point-in-time snapshot of various datasets i.e., temporal grouping of all data released during a specific window of time. Each rapid release collection is composed of multiple unique static snapshot and meta-snapshot collections generated during that period. A new persistent rapid release NeMO identifier is generated with every rapid release. Each rapid release has a dedicated landing page including links to member snapshot collection landing pages. The landing page does not include a BDBag, nor does it provide HTTPS or GCP release bucket paths. Please refer to  ‘Diagram 3’ below. The landing page can be identified as a rapid release collection by the presence of "BICAN Rapid Release Inventory" in the beginning of the collection name. The Rapid Release version is provided as "(BICAN-\<year\>-\<month\>-RR-\<release type\>)" in the end of the collection name.
 
 **Diagram 3:**
 
-<img src="images/image3.png" width="100%" />
+<img src="images/image3.png" alt="Diagram 3: Illustration of a Rapid Release collection as a temporal grouping of all datasets released during a specific window of time" width="100%" />
 
 ### <h3 id = "overview-collection-types" style = "display: inline">**Overview of Collection Types**</h3>
 
-<img src="images/image4.png" width="100%" />
+<img src="images/image4.png" alt="Overview comparison of NeMO Rapid Release collection types (Snapshot, Meta-Snapshot, Cumulative, Meta-Cumulative, and Rapid Release)" width="100%" />
 
 
 
@@ -123,7 +123,7 @@ Individual files can be downloaded directly from the browser by right-clicking t
 HTTPS location of BICAN data: [https://data.nemoarchive.org/bican/grant/](https://data.nemoarchive.org/bican/grant/)
 
 
-![](images/image5.png)
+![Screenshot of the BICAN HTTPS data directory listing at https://data.nemoarchive.org/bican/grant/](images/image5.png)
 
 
 
@@ -143,7 +143,7 @@ There are two ways of finding NeMO collection data at Brain Knowledge Platform D
 The NeMO collection landing page URLs are linked in each collection listed in "DATA COLLECTIONS" section in the project page - "[BICAN Rapid Release Inventory: Single cell transcriptomics and epigenomics](https://knowledge.brain-map.org/data/BUQ7G50XHDCFCJCQ03A/summary)". Click on the "NEMO" links to navigate to the corresponding collection landing pages where you will find links to collection BDBag and HTTPS path for file download. Refer to the [document](https://docs.google.com/document/d/19saVuxG3H3j7i535eXoQEn6ypEUtIdvMnVjdbSMiKkU/edit) with details on downloading files using a BDBag. Details on accessing files from HTTPS links are in the section "[HTTPS location](#https-location)" of this document. Allen Institute's documentation on finding data for collections is [here](https://community.brain-map.org/t/bican-rapid-release-reference-documentation/3693).
 
 
-<img src="images/image6.png" width="100%" />
+<img src="images/image6.png" alt="Screenshot of the Brain Knowledge Platform (BKP) project page for the BICAN Rapid Release" width="100%" />
 
 **<h3 style = "display:inline-block" id="metadata-search">Metadata Search and File Manifest Retrieval from Specimen table of BKP’s Data Catalog</h3>**
 
