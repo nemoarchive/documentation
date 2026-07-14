@@ -22,7 +22,7 @@ Below these are a set of pre-defined queries. As an example, one can easily retr
 
 &nbsp;
 
-### Faceted Search Page
+### Faceted Data Search Page
 
 The NeMO Data Portal provides a simple faceted search query interface to help identify data of interest.
 The faceted search page, accessible through the `Data` button of the landing page welcome box, is divided into 3 sections: the filter panel, the advanced search box and the summary results panel.
