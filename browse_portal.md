@@ -14,15 +14,15 @@ The portal landing page is broken up into 3 section:
 
 ### Welcome Box
 
-Begin exploring data by study or through the faceted or advanced search options. The `studies` button takes users to a summary page listing available studies, with links to all samples or all files associated with the study.
+Begin exploring data by study or through the faceted or advanced search options. The `Studies` button takes users to a summary page listing available studies, with links to all samples or all files associated with the study.
 
-The `data` button takes users to the faceted data search page, the heart of the portal's functionality.
+The `Data` button takes users to the faceted data search page, the heart of the portal's functionality.
 
 Below these are a set of pre-defined queries. As an example, one can easily retrieve all 10x Chromium 3' v2 sequenced FASTQ files, useful if you're interested in finding data suitable to [export to the Terra Optimus pipeline](export_to_terra.md).
 
 &nbsp;
 
-### Faceted Search Page
+### Faceted Data Search Page
 
 The NeMO Data Portal provides a simple faceted search query interface to help identify data of interest.
 The faceted search page, accessible through the `Data` button of the landing page welcome box, is divided into 3 sections: the filter panel, the advanced search box and the summary results panel.
