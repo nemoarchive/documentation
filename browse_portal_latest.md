@@ -4,7 +4,7 @@
 
 The NeMO Data Portal ([portal.nemoarchive.org](https://portal.nemoarchive.org/)) provides faceted search and advanced query tools that enable users to explore data in a more flexible and customized way. 
 
-The portal landing page is broken up into 3 sections:
+The portal landing page is broken up into 3 sections: 
 
  * The **Welcome box** provides your entry to querying data, described in more detail below.
  * A **Bar graph** breaks down number of files per modality per study. 
