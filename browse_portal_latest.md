@@ -30,13 +30,13 @@ G-->H(Adding Files To the Shopping Cart)
  * A **Bar graph** breaks down number of files per modality per study. 
  * The **Data Portal Summary bar** at the bottom provides a high level summary of all data currently available through the NeMO portal.<br><br>
 
-![Landing page detailed](/Users/cthapa/Downloads/NeMO%20Landing%20Page%20edits.png)
-
+![Landing page detailed](https://github.com/thapacrystal984-ux/documentation/blob/e2453fbe50805abf88498423757477c1faddee66/images/nemo_data_portal_latest/NeMO%20Landing%20Page%20edits.png)
 *<p align="center">Fig. 1 : The NEMO portal landing page showing the Welcome box (left) , Bar graph breakdown of files per modality and study (right) and the Data Portal Summary bar (bottom)</p>*<br>
 
 #### Welcome Box
 
 Users can begin exploring data by study or through the faceted or advanced search options. 
+
 -The `Studies` button takes users to a summary page listing available studies, with links to all samples or all files associated with each study.
 
 -The `Data` button takes users to the <u> faceted data search page</u>, the heart of the portal's functionality.
