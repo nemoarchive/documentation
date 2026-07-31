@@ -41,6 +41,7 @@ Users can begin exploring data by study or through the faceted or advanced searc
 
 -The `Data` button takes users to the <u> faceted data search page</u>, the heart of the portal's functionality.
 
+
 Below these buttons is a set of pre-defined queries. For example, the third query can be used to easily retrieve all 10x Chromium 3' v2 sequenced FASTQ files generated from mouse samples. This is particularly useful if you are interested in finding data suitable to [export to the Terra Optimus pipeline](export_to_terra.md).<br>
 
 
@@ -54,6 +55,7 @@ The **Studies** page lists all available studies/grants and labs along with coun
 *<p align="center">Fig. 2 : Summary page of available studies with links to associated samples and files</p>*<br><br>
 
 
+---
 ## Faceted Data Search Page
 
 ![NeMO Faceted Data Search](images/nemo_data_portal_latest/nemo-data-landing-page.png)
