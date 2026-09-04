@@ -8,10 +8,17 @@ The NeMO Archive exposes a RESTful API for users that wish to create code to mak
   - [Paging Through Results](#paging-through-results)
 - [Obtaining Extended Results For Other Users' Submissions](#obtaining-extended-results-for-other-users-submissions)
 - [Searching Submissions](#searching-submissions)
-  - [Searching with Substrings](#searching-with-substrings)
+  - [Search with Substrings](#search-with-substrings)
   - [Pagination Through Search Results](#pagination-through-search-results)
 - [Making a Submission Through the API](#making-a-submission-through-the-api)
+- [Submission Webhooks](#submission-webhooks)
+  - [Notification Document Fields](#notification-document-fields)
+  - [Authentication Styles](#authentication-styles)
+  - [Additional Headers](#additional-headers)
+  - [Callback Payload](#callback-payload)
+  - [Callback Delivery](#callback-delivery)
 - [Dry Runs](#dry-runs)
+  - [Dry Runs and Webhooks](#dry-runs-and-webhooks)
 
 ## Retrieving Status for a Submission
 
@@ -208,6 +215,241 @@ A successful manifest submission will produce a response having the following st
 
 where the "id" property will contain the generated id for the submission.
 
+## Submission Webhooks
+
+Rather than polling the submission status endpoints, submitters can ask NeMO to
+call a URL of their own as a submission progresses through the ingest process.
+To do so, include a `notification` field alongside the `manifest` file when
+creating the submission. The value is a JSON document describing the callback
+URL, the HTTP method to use, and how NeMO should authenticate to it.
+
+A callback is issued at each of the six steps of the ingest process, on both
+success and failure:
+
+| Step | `data.step.name` | Issued when |
+| --- | --- | --- |
+| 1 | `manifest_validated` | The submitted manifest has been validated. |
+| 2 | `upload_complete` | The submitter's data files have finished uploading. |
+| 3 | `qc_complete` | The submission has completed quality control. |
+| 4 | `https_release` | The files have been released for HTTPS download. |
+| 5 | `gcp_release` | The files have been released to Google Cloud Storage. |
+| 6 | `portal_release` | The files have been released to the NeMO Portal. |
+
+Endpoints should key off the `data.step.name` field to determine which step a
+given callback refers to, rather than assuming a particular step or ordering. A
+submission that fails at some step will not produce callbacks for the steps
+after it.
+
+`$ curl -X POST -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission -F manifest=@/path/to/file.tsv -F 'notification={"url":"https://example.org/hooks/nemo","method":"POST","auth_type":"bearer_token","auth_details":{"token":"YOUR_TOKEN"}}'`
+
+With python and the requests module:
+
+```python
+import json
+
+notification = {
+    "url": "https://example.org/hooks/nemo",
+    "method": "POST",
+    "auth_type": "bearer_token",
+    "auth_details": {"token": "YOUR_TOKEN"},
+}
+
+manifest_data = {'manifest': (original_name, open(filename, 'rb'))}
+form_data = {'notification': json.dumps(notification)}
+
+response = requests.post(
+    submission_endpoint, files=manifest_data, data=form_data, headers=auth_header
+)
+```
+
+The notification document is optional. If it is supplied but is not valid JSON,
+or does not conform to the schema described below, the submission is rejected
+with a 422 status and the following response:
+
+```
+{
+  "message": "The 'notification' document was invalid."
+}
+```
+
+### Notification Document Fields
+
+| Field | Required | Description |
+| --- | --- | --- |
+| `url` | Yes | The callback URL. Must begin with `https://` (plain HTTP is not accepted) and be at most 512 characters. |
+| `method` | Yes | The HTTP method NeMO will use for the callback. One of `GET`, `POST`, or `PUT`. |
+| `auth_type` | Yes | How NeMO should authenticate to your endpoint. One of `none`, `secret_token`, `basic`, `bearer_token`, or `api_key`. |
+| `auth_details` | Yes | An object whose shape depends on `auth_type`, as described below. Must be `null` when `auth_type` is `none`. |
+| `headers` | No | An object of additional HTTP headers to send with the callback. Both keys and values must be strings. |
+
+No other fields are permitted; including any unrecognized field will cause the
+document to be rejected.
+
+Note that `auth_details` is always required, even when no authentication is
+being used. When `auth_type` is `none`, the field must be present and explicitly
+set to `null`.
+
+### Authentication Styles
+
+**`none`** — no authentication is performed. `auth_details` must be `null`.
+
+```json
+{
+  "url": "https://example.org/hooks/nemo",
+  "method": "POST",
+  "auth_type": "none",
+  "auth_details": null
+}
+```
+
+**`basic`** — HTTP Basic authentication. Both `username` and `password` are
+required.
+
+```json
+{
+  "url": "https://example.org/hooks/nemo",
+  "method": "POST",
+  "auth_type": "basic",
+  "auth_details": {
+    "username": "nemo",
+    "password": "SECRET"
+  }
+}
+```
+
+**`bearer_token`** — the token is presented as a bearer token, typically a JWT.
+
+```json
+{
+  "url": "https://example.org/hooks/nemo",
+  "method": "POST",
+  "auth_type": "bearer_token",
+  "auth_details": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+  }
+}
+```
+
+**`secret_token`** — the token is sent in an HTTP header. `token` is required.
+The optional `header_name` selects the header the token is placed in; if it is
+omitted, the token is sent in an `X-Secret-Token` header.
+
+```json
+{
+  "url": "https://example.org/hooks/nemo",
+  "method": "POST",
+  "auth_type": "secret_token",
+  "auth_details": {
+    "header_name": "X-My-Token",
+    "token": "SECRET"
+  }
+}
+```
+
+**`api_key`** — the token is sent in an HTTP header. `token` is required. The
+optional `header_name` selects the header the token is placed in; if it is
+omitted, the token is sent in an `X-Api-Key` header.
+
+```json
+{
+  "url": "https://example.org/hooks/nemo",
+  "method": "POST",
+  "auth_type": "api_key",
+  "auth_details": {
+    "header_name": "X-API-Key",
+    "token": "SECRET"
+  }
+}
+```
+
+The `secret_token` and `api_key` types behave identically apart from the header
+used when `header_name` is omitted.
+
+### Additional Headers
+
+The optional `headers` field can be used to send extra headers with each
+callback, which is useful for routing or tagging the request on your side.
+
+```json
+{
+  "url": "https://example.org/hooks/nemo",
+  "method": "POST",
+  "auth_type": "none",
+  "auth_details": null,
+  "headers": {
+    "X-Project": "my-project",
+    "X-Environment": "production"
+  }
+}
+```
+
+### Callback Payload
+
+For `POST` and `PUT` callbacks, NeMO sends a JSON document as the request body,
+with a `Content-Type` of `application/json`. For `GET` callbacks the same data
+is URL-encoded into the query string instead.
+
+```json
+{
+  "event_id": "458ba3d8-c379-4af1-b231-ba7159ce6222",
+  "data": {
+    "step": {
+      "name": "manifest_validated",
+      "status": "success",
+      "step_number": 1,
+      "total_steps": 6,
+      "details": [
+        "Manifest validated"
+      ]
+    },
+    "submission_id": "abc1234",
+    "submission_status": "in_progress",
+    "submitter": {
+      "username": "test_user",
+      "email": "test@example.com",
+      "first": "FirstName",
+      "last": "LastName"
+    }
+  },
+  "timestamp": "2026-09-04T04:55:43Z"
+}
+```
+
+| Field | Description |
+| --- | --- |
+| `event_id` | A UUID that is unique to this delivery. Because a callback may be retried, the same event may be delivered more than once with the same `event_id`; it can be used to recognize and discard duplicates. |
+| `timestamp` | The UTC time the payload was generated, in `YYYY-MM-DDTHH:MM:SSZ` format. |
+| `data.submission_id` | The 7 character submission ID. |
+| `data.submission_status` | The overall status of the submission: `in_progress`, `errored`, or `complete`. |
+| `data.step` | The ingest step this callback is reporting on. |
+| `data.step.name` | Which ingest step this callback reports on. See the table of the six steps [above](#submission-webhooks). |
+| `data.step.status` | Either `success` or `error`. |
+| `data.step.step_number` | The ordinal position of this step in the ingest process, from 1 to 6. |
+| `data.step.total_steps` | The total number of ingest steps, currently 6. |
+| `data.step.details` | A non-empty list of human readable messages about the step. On an error, this contains the validation error messages. |
+| `data.submitter` | The submitter's `username`, `email`, `first`, and `last` name. |
+
+A `submission_status` of `errored` means the submission has failed at the step
+described in `data.step` and will not proceed. A status of `complete` is only
+sent when the final step has succeeded.
+
+### Callback Delivery
+
+NeMO expects your endpoint to respond with a 2xx HTTP status code. Any other
+status code, or a connection failure or timeout, is treated as a failed
+delivery.
+
+Each callback is attempted up to 5 times. Retries use an exponential backoff,
+waiting 1, 2, 4, and then 8 seconds between successive attempts. Each individual
+attempt has a 10 second timeout. If all 5 attempts fail, the callback is
+abandoned and is not retried again later, though the ingest of the submission
+itself is unaffected and continues normally.
+
+Because a delivery may be retried after your endpoint has already processed it
+(for example, if your response was slow enough to time out), your endpoint
+should be idempotent. The `event_id` field can be used to recognize a repeated
+delivery.
+
 ## Dry Runs
 
 Data submitters may wish to test a manifest that they have prepared for errors before actually submitting it to NeMO. The submission API allows users to submit "dry runs." A key difference between a dry run and an actual submission is that a dry run does not trigger the complete ingest process. It simply checks that the submitted manifest file is well formed, that it has the correct number of columns, and that the columns that must adhere to controlled vocabularies are not using any invalid terms. The deeper quality control measures that happen during the QC step of the ingest process are not performed. When the validation is complete the submitter of the dry run is informed of the outcome of the dry run via email, but the generated ID for the submission will NOT appear in the user's submission history in the dashboard.
@@ -219,3 +461,11 @@ Example:
 ```python
 submission_endpoint = "https://nemoarchive.org/api/submission?dryrun=y"
 ```
+
+### Dry Runs and Webhooks
+
+A [notification document](#submission-webhooks) submitted with a dry run is
+validated, and an invalid one will cause the dry run to be rejected, but it is
+not registered and no callbacks will be issued. Dry runs are therefore a
+convenient way to check that your notification document is well formed, but
+they cannot be used to test that your endpoint receives callbacks correctly.
