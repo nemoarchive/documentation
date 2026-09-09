@@ -187,7 +187,9 @@ To download contents, `gsutil -u [billing-project] cp gs://bucket/file.txt /path
 
 example:  
 ```
-gsutil -u my-billing-project cp gs://human-cortex/transcriptome/scell/SSv4/human/raw/Ex_sample_01.fastq.tar /Users/jdoe/Desktop/Ex_sample_01.fastq.tar
+gsutil -u my-billing-project cp \
+       gs://human-cortex/transcriptome/scell/SSv4/human/raw/Ex_sample_01.fastq.tar \
+       /Users/jdoe/Desktop/Ex_sample_01.fastq.tar
 ```
  
  
