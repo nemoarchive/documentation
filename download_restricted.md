@@ -132,16 +132,12 @@ To access the data, the requester must first create an account in [DUOS](https:/
 
 ### <a name="downloading-data"></a> Downloading Data 
 #### using Google Cloud Platform
-
-*If you are a legacy data user and still have access via Aspera, those [download instructions can be found here](https://github.com/nemoarchive/documentation/blob/master/download_restricted_aspera.md).*
   
 Restricted NeMO data is now available through Google Cloud Platform (GCP). There are two mechanisms for access, web interface and command line.
 
 **NeMO data is requester pays, therefore downloading by either mechanism requires the use of a Google billing account. In order to avoid incurring large charges for data download, we strongly recommend that you run data analyses on GCP if possible.**
 
-
 &nbsp;
-
 
 #### Step 1. Creating an institutional Google Cloud account
 Once you have received your NDA approval, the next step is to set up an institutional google account. This can be done by going to [https://myaccount.google.com/](https://myaccount.google.com/) and selecting Create Account, using the SAME institutional email address that you used for NDA account creation. *Not sure what email address is associated with your NDA account? Log in to NDA to access your user dashboard. You will find your email address under your Profile.*  
