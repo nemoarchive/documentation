@@ -1,26 +1,50 @@
+
 <a name="top"></a>
 
 # The NeMO Portal
 
-The NeMO Data Portal ([portal.nemoarchive.org](https://portal.nemoarchive.org/)) provides faceted search and advanced query tools that enable users to explore data in a more flexible and customized way. 
+#### The NeMO Data Portal ([portal.nemoarchive.org](https://portal.nemoarchive.org/)) provides faceted search and advanced query tools that enable users to explore data in a more flexible and customized way. 
+---
+NeMo Portal Process 
+---
 
-The portal landing page is broken up into 3 sections:
+ 
+
+```mermaid 
+graph TD;
+A(Welcome page)-->B(Data)
+A(Welcome page)-->C(Studies)
+C-->B
+B-->D(Faceted Data Search Page)
+D-->E(Faceted Search box)
+D-->F(Advanced Search box)
+D-->I(Summary Results Panel)
+I-->G
+E-->G(Summary Results Panel)
+F-->G
+G-->H(Adding Files To the Shopping Cart)
+```
+## The portal landing page
 
  * The **Welcome box** provides your entry to querying data, described in more detail below.
  * A **Bar graph** breaks down number of files per modality per study. 
  * The **Data Portal Summary bar** at the bottom provides a high level summary of all data currently available through the NeMO portal.<br><br>
 
-![NeMO portal home page](images/nemo_data_portal_latest/nemo-portal-landing-page.png)
-
+![Landing page detailed](https://github.com/thapacrystal984-ux/documentation/blob/e2453fbe50805abf88498423757477c1faddee66/images/nemo_data_portal_latest/NeMO%20Landing%20Page%20edits.png)
 *<p align="center">Fig. 1 : The NEMO portal landing page showing the Welcome box (left) , Bar graph breakdown of files per modality and study (right) and the Data Portal Summary bar (bottom)</p>*<br>
 
-### Welcome Box
+#### Welcome Box
 
-Users can begin exploring data by study or through the faceted or advanced search options. The `Studies` button takes users to a summary page listing available studies, with links to all samples or all files associated with each study.
+Users can begin exploring data by study or through the faceted or advanced search options. 
 
-The `Data` button takes users to the faceted data search page, the heart of the portal's functionality.
+-The `Studies` button takes users to a summary page listing available studies, with links to all samples or all files associated with each study.
+
+-The `Data` button takes users to the <u> faceted data search page</u>, the heart of the portal's functionality.
+
 
 Below these buttons is a set of pre-defined queries. For example, the third query can be used to easily retrieve all 10x Chromium 3' v2 sequenced FASTQ files generated from mouse samples. This is particularly useful if you are interested in finding data suitable to [export to the Terra Optimus pipeline](export_to_terra.md).<br>
+
+
 
 ## Studies Page
 
@@ -31,33 +55,32 @@ The **Studies** page lists all available studies/grants and labs along with coun
 *<p align="center">Fig. 2 : Summary page of available studies with links to associated samples and files</p>*<br><br>
 
 
-### Faceted Data Search Page
+---
+## Faceted Data Search Page
 
-The NeMO Data Portal provides a simple faceted search query interface to help users identify the data of interest. The faceted search page (*Fig. 3*), accessible through the `Data` button in the landing page welcome box, is divided into 3 sections (*Fig.4*): 
+![NeMO Faceted Data Search](images/nemo_data_portal_latest/nemo-data-landing-page.png)
+*<p align="center">Fig. 3: Faceted Data Search page accessible through the Data button of the landing page</p>*<br>
+The NeMO Data Portal provides a simple faceted search query interface to help users identify the data of interest. The faceted search page(*Fig.3*), accessible through the `Data` button in the landing page welcome box, is divided into 3 sections (*Fig.4*): 
 
 * **Faceted Search box**
 * **Advanced Search box**
 * **Summary Results Panel** <br><br>
 
-![NeMO Faceted Data Search](images/nemo_data_portal_latest/nemo-data-landing-page.png)
-
-*<p align="center">Fig. 3: Faceted Data Search page accessible through the Data button of the landing page</p>*<br>
-
-The *Faceted Search box* on the left is a filter panel that allows users to select one or more of the available facets to narrow down the samples of interest (*See #1 in Fig. 4*). Selecting any facet automatically populates the *Advanced Search box* with the current query (*See #2 in Fig. 4*). The *Summary Results Panel* provides dynamic pie charts summarizing data corresponding to the currently selected filters (*See #3 in Fig. 4*).<br><br>
-
 ![NeMO Faceted Data Search_2](images/nemo_data_portal_latest/nemo-data-landing-page-grouped.png)
 
 *<p align="center">Fig. 4 : Screenshot of the Faceted Data Search page showing the 1) Faceted Search box, 2) Advanced Search box and 3) Summary Results Panel</p>*<br><br>
 
+The *Faceted Search box* on the left is a filter panel that allows users to select one or more of the available facets to narrow down the samples of interest (*See #1 in Fig. 4*). Selecting any facet automatically populates the *Advanced Search box* with the current query (*See #2 in Fig. 4*). The *Summary Results Panel* provides dynamic pie charts summarizing data corresponding to the currently selected filters (*See #3 in Fig. 4*).<br><br>
 
-### Faceted Search Box
+
+#### Faceted Search Box
 
 The faceted search box contains two tabs of pre-configured facets associated with
 * **Samples** (taxon, anatomies, specimen type, labs, program name, study name, modality and technique) or
 * **Files** (access, data type, format) <br><br>
 
 
-#### Adding Filters to the Faceted Search box:
+#### How to <u>Add Filters</u> to the Faceted Search box:
 
 Additional facets can be added to the Faceted Search box using *Add a Filter* in the upper left of the faceted search panel. The resulting pop-up lists all additional searchable facets available, which can be browsed or searched for using the search bar at the top. Clicking on any facet will add it to the top of the filter panel for incorporation into the current filter. <br><br>
 
@@ -65,13 +88,15 @@ Additional facets can be added to the Faceted Search box using *Add a Filter* in
 
 *<p align="center">Fig. 5: Adding filters to the Faceted search box. A pop up appears where you can search for available file, sample, subject and study-specific facets</p>*<br>
 
-Figure 5 illustrates how to add a filter and search for available filters using the search bar that pops up.  Note that **Assay** is not listed as a default facet under **Samples** tab in the faceted search panel. However, when you add **Assay** as a filter, it appears under **Samples** in the faceted search panel, as you can see in the figure below (*Fig. 6*). 
+Figure 5 illustrates how to add a filter and search for available filters using the search bar that pops up.
+
+ Note that **Assay** is not listed as a default facet under **Samples** tab in the faceted search panel. However, when you add **Assay** as a filter, it appears under **Samples** in the faceted search panel, as you can see in the figure below (*Fig. 6*). 
 
 Users can search for and add additional filters that are file-, sample-, subject- or study-specific. All study-specific facets can be searched for by typing *study* in the *Add a filter* search box. Similarly,  file-, sample- and subject-specific facets can be searched and added. All study-, sample- and subject-level facets that are added will appear under the **Samples** tab in the faceted search panel, while file-specific facets will appear under the **Files** tab. 
 
-To remove filters, you can either click **Remove Added Filters** to clear all added filters or remove individual filters by clicking the red **X** next to the corresponding filter. Added filters will persist between sessions until you remove them.
+Next to each filter, the alphabet (**AZ**) icon allows you to sort the filter terms in ascending or descending order. This is especially helpful when working with long lists of search terms, such as those under **Anatomies**. <br><br>**To <u>remove filters:**
+ You can either click **Remove Added Filters** to clear all added filters or remove individual filters by clicking the red **X** next to the corresponding filter. Added filters will persist between sessions until you remove them.
 
-Next to each filter, the alphabet (**AZ**) icon allows you to sort the filter terms in ascending or descending order. This is especially helpful when working with long lists of search terms, such as those under **Anatomies**. <br><br>
 
 ![NeMO Add a filter 2](images/nemo_data_portal_latest/nemo-add-a-filter-2.png)
 
@@ -79,9 +104,12 @@ Next to each filter, the alphabet (**AZ**) icon allows you to sort the filter te
 
 ### Summary Results Panel
 
-The results from the faceted search box and additional filters are organized into three views - **Summary**, **Samples** and **Files**. 
+The results from the faceted search box and additional filters are organized into three views 
+- **Summary**
+- **Samples** 
+-  **Files**. 
 
-Under the **Summary** tab, results are displayed as pie charts showing file counts by project, taxonomy, data type, modality, anatomy and file format. 
+ **Summary tab:** Results are displayed as pie charts showing file counts by project, taxonomy, data type, modality, anatomy and file format. 
 
 The number displayed next to each facet in the faceted search box corresponds to the total number of files associated with this attribute across all projects in the portal. As facets are selected, the file count, sample count and total file volume will update to reflect the current filter(s). The pie charts also update accordingly. 
 
@@ -97,12 +125,12 @@ Under the Summary tab in the Summary Results Panel, there is an ‘Add all files
 
 *<p align="center">Fig.7: Screenshot of the Pie chart (left) representing File Counts by Data Type, with the raw data type component selected. The table view (right) lists file counts and total file volume, by data type</p>*<br>
 
-The **Samples** tab in the Summary results panel lists all the samples associated with the query. By default, the displayed columns include sample ID, sample name, anatomical site, species, modality and study name.  Users can customize the displayed columns using the hamburger icon in the upper right corner. 
+**Samples tab:** The Summary results panel lists all the samples associated with the query. By default, the displayed columns include sample ID, sample name, anatomical site, species, modality and study name.  Users can customize the displayed columns using the hamburger icon in the upper right corner. 
 
-Similarly, the **Files** tab lists files that match the search query, along with details such as access (open or restricted), file ID, file name, modality, data format and file size.<br><br>
+ **Files tab:**  Lists files that match the search query, along with details such as access (open or restricted), file ID, file name, modality, data format and file size.<br><br>
 
 
-##### Example query <br>
+#### Example query <br>
 
 Dr. White is interested in mouse ATAC-seq data. Specifically, he wants to see which brain regions have been sequenced and have raw data available at the NeMO archive. Starting at [portal.nemoarchive.org/](https://portal.nemoarchive.org/), he takes the following steps: <br>
 
@@ -128,11 +156,10 @@ Dr. White is interested in mouse ATAC-seq data. Specifically, he wants to see wh
 
 ### Advanced Search Box
 
-The Advanced Search feature simulates querying a database directly. To begin an advanced search, click the "Advanced Search" button in the upper right corner of the advanced search box. <br><br>
-
 ![NeMO Advanced Search button](images/nemo_data_portal_latest/nemo-advanced-search.png)
 
 *<p align="center">Fig. 10: Screenshot of Advanced Search box in the Faceted Data Search page</p>*<br>
+The Advanced Search feature simulates querying a database directly. To begin an advanced search, click the "Advanced Search" button in the upper right corner of the advanced search box. <br><br>
 
 A query requires the following basic format:
 
@@ -219,6 +246,3 @@ An **Apps** button is located at the upper-right corner, next to the Cart icon. 
 ![NeMO Apps button](images/nemo_data_portal_latest/nemo-apps-links.png)
 
 *<p align="center">Fig. 16 : Screenshot of the links accessible through the Apps button on the NeMO portal home page</p>*<br>
-
-
-
