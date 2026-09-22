@@ -152,6 +152,8 @@ To set up a new billing account go to [https://console.cloud.google.com/billing]
 
 More information is available in the [Google Cloud billing account documentation](https://cloud.google.com/billing/docs/).  
 
+Charges are billed through a Google Cloud *project* linked to your billing account. If you do not already have one, create a project at [https://console.cloud.google.com/projectcreate](https://console.cloud.google.com/projectcreate) and select your billing account when prompted. Make a note of the project's **Project ID**. This is your GCP project code, which you will need for the command line examples in Step 3b.  
+
 
 #### Step 3a. Access via the GCP Browser Web Interface
 
@@ -161,27 +163,53 @@ Go to https://console.cloud.google.com/storage/browser/<bucket name without lead
 In the upper right corner, ensure that you are logged in with your institutional account, not a personal account, or you will not see any data listed.  
 If it is not already populated, click on the button to select the billing account that you previously created.  
 
-Navigate by clicking on the directory listed in the table. Individual files can be downloaded using the GCP Browser. Batch downloads require running the gsutil command line tool. Click on the directory you want to download, and click on DOWNLOAD in the menu directly above the data table. A popup will appear providing the gsutil command to run on your command line. For more on gsutil, read on.  
+Navigate by clicking on the directory listed in the table. Individual files can be downloaded using the GCP Browser. Batch downloads require a command line tool (`gcloud storage` or `gsutil`). Click on the directory you want to download, and click on DOWNLOAD in the menu directly above the data table. A popup will appear providing the command to run on your command line. For more on the command line tools, read on.  
 
 
-#### Step 3b. Access via gsutil on the command line
+#### Step 3b. Access via the command line (gcloud storage or gsutil)
 
-See the [gsutil installation instructions](https://cloud.google.com/storage/docs/gsutil_install) for installing gsutil as part of the Google Cloud SDK.  
+We recommend `gcloud storage`, which is Google's current command line tool for Cloud Storage. `gsutil` is Google's legacy tool.
+
+See the [Google Cloud CLI installation instructions](https://cloud.google.com/sdk/docs/install) for more information.  
 
 To access restricted data, you must authenticate your account. At the command line prompt, type `gcloud auth login`  
  
 Follow the directions on the terminal, which will point you to a URL which you must navigate to from your browser. Here you will log in to your institutional google account. Once logged in, you will be provided with a verification code on your browser screen. Copy this and paste it onto the prompt on the command line. You should then see a message verifying your account, and billing project, if available.  
+
+**What is the project code (`[billing-project]`)?**  
+Because NeMO buckets are requester pays, every command must name the Google Cloud project that will be billed for the download. With `gcloud storage` you pass it with the `--billing-project` option, and with `gsutil` you pass it with the `-u` option. In both cases the value is the **Project ID** of your billing project, the Google Cloud project linked to your billing account (see Step 2). This is sometimes informally called the "project code."  
+
+* To find it, open the project selector at the top of the [Google Cloud console](https://console.cloud.google.com/) and copy the value in the **ID** column, or run `gcloud projects list` and use the `PROJECT_ID` column.
+* A project ID is lowercase letters, digits and hyphens, for example `my-billing-project` or `jdoe-nemo-123456`.
+* Do not use the project *name* (which can contain spaces and capitals), the project *number* (all digits), or the billing account ID (formatted like `0X0X0X-0X0X0X-0X0X0X`).
+
+In the examples below, replace `[billing-project]` and `my-billing-project` with your own project ID.  
  
-To list bucket contents,  `gsutil -u [billing-project]  ls -l gs://bucket`
- 
+To list bucket contents:
+
+* gcloud storage (recommended): `gcloud storage ls -l gs://bucket --billing-project=[billing-project]`
+* gsutil (legacy): `gsutil -u [billing-project] ls -l gs://bucket`
+
 example:  
+```
+gcloud storage ls -l gs://human-cortex --billing-project=my-billing-project
+```
 ```
 gsutil -u my-billing-project ls -l gs://human-cortex
 ```
  
-To download contents, `gsutil -u [billing-project] cp gs://bucket/file.txt /path/to/local/machine/file.txt`
+To download contents:
+
+* gcloud storage (recommended): `gcloud storage cp gs://bucket/file.txt /path/to/local/machine/file.txt --billing-project=[billing-project]`
+* gsutil (legacy): `gsutil -u [billing-project] cp gs://bucket/file.txt /path/to/local/machine/file.txt`
 
 example:  
+```
+gcloud storage cp \
+       gs://human-cortex/transcriptome/scell/SSv4/human/raw/Ex_sample_01.fastq.tar \
+       /Users/jdoe/Desktop/Ex_sample_01.fastq.tar \
+       --billing-project=my-billing-project
+```
 ```
 gsutil -u my-billing-project cp \
        gs://human-cortex/transcriptome/scell/SSv4/human/raw/Ex_sample_01.fastq.tar \
@@ -189,9 +217,15 @@ gsutil -u my-billing-project cp \
 ```
  
  
-Batch downloading a directory can be done in the same way, adding the recursive option to the copy command, if necessary, `gsutil -u [billing-project] cp -r gs://bucket/* /path/to/local/machine/`
+Batch downloading a directory works the same way. Add the recursive option (`-r`) to the copy command if necessary:
+
+* gcloud storage (recommended): `gcloud storage cp -r gs://bucket/* /path/to/local/machine/ --billing-project=[billing-project]`
+* gsutil (legacy): `gsutil -u [billing-project] cp -r gs://bucket/* /path/to/local/machine/`
 
 example:  
+```
+gcloud storage cp -r gs://human-cortex/transcriptome/* /Users/jdoe/Desktop --billing-project=my-billing-project
+```
 ```
 gsutil -u my-billing-project cp -r gs://human-cortex/transcriptome/* /Users/jdoe/Desktop
 ```
