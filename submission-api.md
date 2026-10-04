@@ -3,6 +3,7 @@
 The NeMO Archive exposes a RESTful API for users that wish to create code to make submissions and retrieve the status of their past submissions. Since the API is RESTful, any modern programming language that has a suitable HTTP library should be able to easily obtain the data. Results are returned in JSON format to make the parsing of the data easier. In the examples provided here, we will be using the fairly ubiquitous `curl` command-line utility to demonstrate the operation of the submission status API. Requests are currently rate limited to 3 requests per second (subject to change).
 
 - [Retrieving Status for a Submission](#retrieving-status-for-a-submission)
+- [Retrieving Metadata for a Submission](#retrieving-metadata-for-a-submission)
 - [Retrieving Submission History](#retrieving-submission-history)
   - [Interpreting the Results](#interpreting-the-results)
   - [Paging Through Results](#paging-through-results)
@@ -61,6 +62,32 @@ Each "step" in the "steps" list property, will have the following structure:
 The "step" property names the ingest step, of which there are 6: manifest_validated, upload_complete, qc_complete, https_release, gcp_release and portal_release.
 
 The "success" property will contain a boolean value, and will indicate whether the step succeeded or failed. The "date" property will contain the UTC timestamp of when the step succeeded (or failed). Finally, the "msg" property will have a message containing some brief message about completion of the status, or why the step failed. Steps that are in-progress and not yet complete will not be included in the "steps" list. Since the ingest process contains 6 steps, a fully complete and successful submission will therefore have 6 objects in the "steps" list property.
+
+## Retrieving Metadata for a Submission
+
+Alongside a submission's status, the API can return the metadata recorded for it during ingest, such as the lab, program, grant and number of files. Issue a GET request to the submission's `/metadata` endpoint, with the same "Authorization" header used elsewhere. As above, the token is shown as a series of "X" characters and the submission ID as a series of "Y" characters.
+
+Example:
+
+`$ curl -X GET -H "Authorization: Bearer XXXXXXXXXXXXXXXXXXX" https://nemoarchive.org/api/submission/YYYYYYY/metadata`
+
+```
+{
+  "id": "YYYYYYY",
+  "metadata": {
+    "program": "SCORCH",
+    "lab": "cheng",
+    "taxid": "NCBI:txid9606",
+    "file-format": "h5ad,fastq",
+    "number-of-files": "23",
+    "grant-name": "UM1DA051411_cheng"
+  }
+}
+```
+
+The "id" property repeats the submission ID that was requested. The "metadata" property maps each metadata key recorded for the submission to its value. The keys present depend on what the manifest and the ingest process recorded, so do not assume any particular key will be there. A submission with no metadata recorded against it returns an empty object rather than an error.
+
+Which submissions you may read metadata for is governed by the same rules as the rest of the API: your own submissions always, those of the members of your group if you are a group leader, and all submissions if you are a NeMO system superuser. Requesting metadata for a submission you are not entitled to see returns a 403 response, and requesting an ID that does not exist returns a 404.
 
 ## Retrieving Submission History
 
