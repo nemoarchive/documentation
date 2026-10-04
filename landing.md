@@ -9,7 +9,7 @@ NeMO Archive provides the following documentation. If you have questions not cov
 
 ### Browsing & Downloading Data
 
- * [HTTP Access](browse_http.md)
+ * [HTTP Access](download_public.md#http-directory-structure-browser)
  * NeMO Data Portal
   * File Manifest
   * Portal Client
