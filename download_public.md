@@ -57,11 +57,11 @@ Data can be downloaded from the NeMO HTTP browser using any tools that support h
 <img alt="HTTP browser" src="https://raw.githubusercontent.com/nemoarchive/documentation/master/images/HTTP_browser.png" style="width:50%;">
 
 The top, or root, level of the HTTP browser separates data based on release or project:
-##### Releases
+### Releases
  * `nemo_release/` contains a [BDBag](https://bd2k.ini.usc.edu/tools/bdbag/) corresponding to quarterly NeMO releases. NeMO releases are synchronized to the same release schedule as the BCDC release schedule. These bags contain BICCN data only.
  * `publication_release/` contains one or more [BDBags](https://github.com/nemoarchive/documentation/blob/master/download_bdbag.md) corresponding to dataset(s) analyzed for BICCN-associated publications. See [Data citation](https://github.com/nemoarchive/documentation/blob/master/data_citation.md) for more information.
 
-##### Projects
+### Projects
  * `biccc/` contains data generated within the BRAIN Initiative Cell Census Consortium, precursor to the BICCN
  * `biccn/` contains data generated as part of the ongoing [BRAIN Initiative Cell Census Network](https://biccn.org/)
  * `other/` In addition to hosting BRAIN Initiative data, the NeMO repository also hosts 'omics data from other neuroscience projects. Contact us if you would like to discuss submission of your dataset(s) to the NeMO Archives.
