@@ -3,6 +3,7 @@
 The NeMO Archive exposes a RESTful API for users that wish to create code to make submissions and retrieve the status of their past submissions. Since the API is RESTful, any modern programming language that has a suitable HTTP library should be able to easily obtain the data. Results are returned in JSON format to make the parsing of the data easier. In the examples provided here, we will be using the fairly ubiquitous `curl` command-line utility to demonstrate the operation of the submission status API. Requests are currently rate limited to 3 requests per second (subject to change).
 
 - [Retrieving Status for a Submission](#retrieving-status-for-a-submission)
+  - [Deprecated Step Names](#deprecated-step-names)
 - [Retrieving Metadata for a Submission](#retrieving-metadata-for-a-submission)
 - [Retrieving Submission History](#retrieving-submission-history)
   - [Interpreting the Results](#interpreting-the-results)
@@ -59,9 +60,32 @@ Each "step" in the "steps" list property, will have the following structure:
 }
 ```
 
-The "step" property names the ingest step, of which there are 6: manifest_validated, upload_complete, qc_complete, https_release, gcp_release and portal_release.
+The "step" property names the ingest step, of which there are 6: manifest_validated, upload_complete, qc_complete, https_release, cloud_release and portal_release.
 
-The "success" property will contain a boolean value, and will indicate whether the step succeeded or failed. The "date" property will contain the UTC timestamp of when the step succeeded (or failed). Finally, the "msg" property will have a message containing some brief message about completion of the status, or why the step failed. Steps that are in-progress and not yet complete will not be included in the "steps" list. Since the ingest process contains 6 steps, a fully complete and successful submission will therefore have 6 objects in the "steps" list property.
+The "success" property will contain a boolean value, and will indicate whether the step succeeded or failed. The "date" property will contain the UTC timestamp of when the step succeeded (or failed). Finally, the "msg" property will have a message containing some brief message about completion of the status, or why the step failed. Steps that are in-progress and not yet complete will not be included in the "steps" list. Since the ingest process contains 6 steps, a fully complete and successful submission will therefore have 6 objects in the "steps" list property, plus the deprecated "gcp_release" object described below.
+
+### Deprecated Step Names
+
+The "cloud_release" step was previously named "gcp_release". So that existing code continues to work, the API currently reports this step twice: once as "cloud_release", and again as "gcp_release". The "gcp_release" object carries the same "success", "date" and "msg" values, along with two additional properties. The "deprecated" property is always true, and the "replaced_by" property contains the name of the step that replaces it.
+
+Example:
+
+```
+{
+    "name": "gcp_release",
+    "success": true,
+    "date": "2021-01-01T10:00:00Z",
+    "msg": "Files were released successfully",
+    "deprecated": true,
+    "replaced_by": "cloud_release"
+}
+```
+
+Responses from the submission status, history and search endpoints also carry a "Deprecation" HTTP header and a "Link" header that points to this section, as described in [RFC 9745](https://www.rfc-editor.org/rfc/rfc9745), along with a "Sunset" header ([RFC 8594](https://www.rfc-editor.org/rfc/rfc8594)) giving the date on which "gcp_release" will be removed. One can see them by adding the `-i` option to the `curl` examples in this document.
+
+The "gcp_release" object will be removed on March 1, 2027. One should therefore update any code that looks for "gcp_release" to look for "cloud_release" instead. Please note that while both names are reported, a fully complete and successful submission has 7 objects in its "steps" list rather than 6. Code that counts the steps to decide whether a submission is finished should use the "complete" and "success" properties instead.
+
+Please note that [webhook callbacks](#submission-webhooks) continue to report this step as "gcp_release" until March 1, 2027, after which they will report it as "cloud_release".
 
 ## Retrieving Metadata for a Submission
 
@@ -259,8 +283,10 @@ success and failure:
 | 2 | `upload_complete` | The submitter's data files have finished uploading. |
 | 3 | `qc_complete` | The submission has completed quality control. |
 | 4 | `https_release` | The files have been released for HTTPS download. |
-| 5 | `gcp_release` | The files have been released to Google Cloud Storage. |
+| 5 | `gcp_release` | The files have been released to cloud storage. |
 | 6 | `portal_release` | The files have been released to the NeMO Portal. |
+
+> **Note:** From March 1, 2027, callbacks for step 5 will report a `data.step.name` of `cloud_release` instead of `gcp_release`, matching the name already used by the submission status endpoints (see [Deprecated Step Names](#deprecated-step-names)). Endpoints that key off `gcp_release` should be updated to accept `cloud_release` before then.
 
 Endpoints should key off the `data.step.name` field to determine which step a
 given callback refers to, rather than assuming a particular step or ordering. A
