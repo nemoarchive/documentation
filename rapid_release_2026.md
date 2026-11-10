@@ -67,7 +67,7 @@ A “Rapid Release” collection represents a specific point-in-time snapshot of
 <br />
 All data collections released through the two Rapid Releases are publicly accessible. All collections from the September, 2024 Rapid Release contain open-access files available for free download. Except for two collections, all other January 2026 Rapid Release collections containing open-access data are freely available for download. The two exceptions contain restricted human fastq files, which can be accessed only upon <a href = "https://nemoarchive.org/resources/accessing-controlled-access-data#nda-approval-process">approval</a> from the NIMH Data Archive (NDA).
 
-[Here](https://docs.google.com/spreadsheets/d/1cN_dqdG-2fhCcHqCuxiXQ0Pn2sUo8o2J/edit?usp=sharing&ouid=109292309009829585903&rtpof=true&sd=true) are the collection NeMO identifiers associated with Sept, 2024 and Jan, 2026 Rapid Releases.
+[Here](https://docs.google.com/spreadsheets/d/1jWRpn9YXaui9k06ntXl9rksO0jmM2mjv/edit?usp=sharing&ouid=106143818500123084294&rtpof=true&sd=true) are the collection NeMO identifiers associated with Sept, 2024 and Jan and Sept 2026 Rapid Releases.
 
 
 
