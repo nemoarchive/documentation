@@ -35,7 +35,7 @@ Please refer to the section "[Accessing Rapid Release Data](#accessing-rapid-rel
 
 <img src="images/image1.png" alt="Diagram 1: Illustration of how snapshot and meta-snapshot collections are generated for each Rapid Release" style = "display:block; margin: 0 auto" />
 
-
+<br />
 <h3 id="cumulative-collections" style="display: inline">Cumulative Collections (dynamic)</h3>
 
 A “Cumulative” collection acts as a stable "container" that tracks a specific dataset as it evolves across multiple releases. It represents a "collection of collections", where the members are all the individual static snapshot collections defined by a unique combination of seven criteria produced over various Rapid Release cycles. Please refer to ‘Diagram 2’ below. Unlike snapshot collection NeMO identifiers, cumulative collection identifiers don’t change as new Rapid Releases occur. The cumulative collection landing page provides a chronological list of individual static snapshot collection landing page links. They provide a persistent entry point for researchers to find the most current version of a dataset or view its history. They don’t contain BDBag links but provide links to the HTTPS location for accessing open data or the GCP release bucket path (“gs://”) for restricted data. The pages are hosted at [assets.nemoarchive.org](https://assets.nemoarchive.org/). To access the landing page for a specific collection in a web browser, append the NeMO identifier (‘col’ or ‘dat’ identifier) to the end of the URL, example: <https://assets.nemoarchive.org/nemo:col-afddrzj>. The landing page can be identified as a cumulative collection by the presence of "Cumulative" in parentheses within the collection name.
@@ -46,6 +46,7 @@ A “Meta-Cumulative” collection is a specialized cumulative collection that t
 
 <img src="images/image2.png" alt="Diagram 2: Illustration of cumulative and meta-cumulative collections as stable containers tracking datasets across multiple Rapid Releases" style = "display:block; margin: 0 auto" />
 
+<br />
 <h3 id="rapid-release-collection" style="display: inline">Rapid Release Collection (static)</h3>
 
 A “Rapid Release” collection represents a specific point-in-time snapshot of various datasets i.e., temporal grouping of all data released during a specific window of time. Each rapid release collection is composed of multiple unique static snapshot and meta-snapshot collections generated during that period. A new persistent rapid release NeMO identifier is generated with every rapid release. Each rapid release has a dedicated landing page including links to member snapshot collection landing pages. The landing page does not include a BDBag, nor does it provide HTTPS or GCP release bucket paths. Please refer to  ‘Diagram 3’ below. The landing page can be identified as a rapid release collection by the presence of "BICAN Rapid Release Inventory" in the beginning of the collection name. The Rapid Release version is provided as "(BICAN-\<year\>-\<month\>-RR-\<release type\>)" in the end of the collection name.
@@ -61,19 +62,16 @@ A “Rapid Release” collection represents a specific point-in-time snapshot of
 
 
 
-
+<br />
 <h2 id="data-collections-available" style="display: inline">Data Collections available through Rapid Releases</h2>
 
 <br />
 Most data collections released through the Rapid Releases are publicly accessible, however, there is a small subset of snapshot collections that contain restricted datasets. To see the access status of a specific collection, please see the snapshot landing page for the collection.  If it is a restricted collection, the files can be accessed only upon <a href = "https://nemoarchive.org/resources/accessing-controlled-access-data#nda-approval-process">approval</a> from the NIMH Data Archive (NDA).
 
 
-
 <br />
 
 [Here](https://docs.google.com/spreadsheets/d/1jWRpn9YXaui9k06ntXl9rksO0jmM2mjv/edit?usp=sharing&ouid=106143818500123084294&rtpof=true&sd=true) are the collection NeMO identifiers associated with Sept, 2024 and Jan and Sept 2026 Rapid Releases.
-
-
 
 
 
